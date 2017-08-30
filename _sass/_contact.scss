@@ -1,0 +1,33 @@
+.contacts-section {
+  .sky-form {
+    box-shadow: none;
+
+    input:hover {
+      border-radius: initial;
+    }
+  }
+
+  .form-group {
+    .input-group-addon {
+      color: rgba(255, 255, 255, .7);
+      background: #1a2e39;
+      border: 1px solid #1a2e39;
+      min-width: 40px;
+    }
+
+    &.has-error {
+      .input-group-addon {
+        color: #a94442;
+        border-color: #a94442;
+      }
+
+      .form-control {
+        border-color: #a94442;
+      }
+    }
+  }
+
+  label.control-label {
+    color: rgba(255, 255, 255, .7);
+  }
+}

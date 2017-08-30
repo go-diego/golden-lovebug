@@ -1,0 +1,19 @@
+{
+  "main": [{
+      "url": "index.html",
+      "text": "About Me"
+    },
+    {
+      "url": "services.html",
+      "text": "Services"
+    },
+    {
+      "url": "listings.html",
+      "text": "Listings"
+    },
+    {
+      "url": "contact.html",
+      "text": "Contact"
+    }
+  ]
+}

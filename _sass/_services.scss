@@ -1,0 +1,17 @@
+.services-section {
+    .services-list {
+      padding-left: 5rem;
+      padding-right: 5rem;
+        .service {
+            height: 15rem;
+
+            i.fa {
+                font-size: 47px;
+                margin-top: 24px;
+                margin-bottom: 24px;
+                margin-right: 38px;
+                color: #e74c3c;
+            }
+        }
+    }
+};
