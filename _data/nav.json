@@ -1,19 +1,18 @@
-{
-  "main": [{
-      "url": "index.html",
-      "text": "About Me"
-    },
-    {
-      "url": "services.html",
-      "text": "Services"
-    },
-    {
-      "url": "listings.html",
-      "text": "Listings"
-    },
-    {
-      "url": "contact.html",
-      "text": "Contact"
-    }
-  ]
-}
+[
+  {
+    "url": "index.html",
+    "text": "About Me"
+  },
+  {
+    "url": "events.html",
+    "text": "Events"
+  },
+  {
+    "url": "my-work.html",
+    "text": "My Work"
+  },
+  {
+    "url": "contact.html",
+    "text": "Contact"
+  }
+]

@@ -1,10 +1,5 @@
-.section {
-  height: 100%;
-  padding-top: 250px;
-}
-// Global styling for this template
-
 body {
+  -webkit-tap-highlight-color: $theme-primary;
   overflow-x: hidden;
   @include body-font;
 }
@@ -35,6 +30,7 @@ h6 {
 }
 
 section {
+  min-height: 100vh;
   padding: 100px 0;
 
   h2.section-heading {
@@ -57,7 +53,7 @@ section {
     padding: 150px 0;
   }
 }
-// Highlight color customization
+
 ::-moz-selection {
   background: $theme-primary;
   text-shadow: none;
@@ -74,8 +70,4 @@ img::selection {
 
 img::-moz-selection {
   background: transparent;
-}
-
-body {
-  -webkit-tap-highlight-color: $theme-primary;
 }
