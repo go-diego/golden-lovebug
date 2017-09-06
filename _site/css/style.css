@@ -136,6 +136,36 @@ header.masthead {
   header.masthead .profile-image {
     height: 13rem;
     width: 13rem; }
+  header.masthead ul.social-buttons {
+    margin-bottom: 0; }
+    header.masthead ul.social-buttons li a {
+      font-size: 20px;
+      line-height: 40px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      color: white;
+      border-radius: 100%;
+      outline: none;
+      background-color: #222222; }
+  header.masthead ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: #222222; }
+    header.masthead ul.social-buttons li a:active, header.masthead ul.social-buttons li a:focus, header.masthead ul.social-buttons li a:hover {
+      background-color: #fed136; }
 
 @media (min-width: 768px) {
   header.masthead .intro-text {

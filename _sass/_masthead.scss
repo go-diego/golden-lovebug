@@ -45,6 +45,46 @@ header.masthead {
     height: 13rem;
     width: 13rem;
   }
+
+  ul.social-buttons {
+    margin-bottom: 0;
+
+    li a {
+      font-size: 20px;
+      line-height: 40px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      color: white;
+      border-radius: 100%;
+      outline: none;
+      background-color: #222222;
+    }
+  }
+
+  ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: #222222;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $theme-primary;
+    }
+  }
 }
 @media(min-width:768px) {
   header.masthead {
