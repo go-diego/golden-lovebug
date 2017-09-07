@@ -71,3 +71,46 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+
+// ul.social-buttons {
+//   margin-bottom: 0;
+//
+//   li a {
+//     font-size: 20px;
+//     line-height: 40px;
+//     display: block;
+//     width: 40px;
+//     height: 40px;
+//     -webkit-transition: all 0.3s;
+//     -moz-transition: all 0.3s;
+//     transition: all 0.3s;
+//     color: white;
+//     border-radius: 100%;
+//     outline: none;
+//     background-color: #222222;
+//   }
+// }
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 100%;
+  outline: none;
+  background-color: #222222;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken($theme-primary,25%);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    //filter: brightness(130%);
+  }
+}

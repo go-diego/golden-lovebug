@@ -1,68 +1,120 @@
-.center {
-    text-align: center;
+.h-center {
+    text-align: center !important;
 }
 
-.left {
+.h-left {
     text-align: left !important;
 }
 
-.right {
-    text-align: right;
+.h-right {
+    text-align: right !important;
 }
 
-.no-wrap {
-    white-space: nowrap;
+.h-no-wrap {
+    white-space: nowrap !important;
 }
 
-.layout-padding {
+.h-layout-padding {
     padding: 15px;
 }
 
-.layout-margin {
-    margin: 15px !important;
+.h-horizontal-padding {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
 }
 
-.no-padding {
-    padding: 0;
+.h-vertical-padding {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
 }
 
-.no-padding-bottom {
-    padding-bottom: 0;
+.h-padding-bottom{
+  padding-bottom: 15px !important;
 }
 
-.no-padding-top {
-    padding-top: 0;
+.h-padding-top{
+  padding-top: 15px !important;
 }
 
-.no-padding-left {
-    padding-left: 0;
+.h-no-padding {
+    padding: 0 !important;
 }
 
-.no-padding-right {
-    padding-right: 0;
+.h-no-horizontal-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
-.no-margins {
+.h-no-vertical-padding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.h-layout-margins {
+    margin: 15px;
+}
+
+.h-horizontal-margins {
+    margin-left: 15px !important;
+    margin-left: 15px !important;
+}
+
+.h-vertical-margins {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.h-no-margins {
     margin: 0 !important;
 }
 
-.no-margins-bottom {
-    padding-bottom: 0;
+.h-no-horizontal-margins {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }
 
-.no-margins-top {
-    padding-top: 0;
+.h-no-vertical-margins {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
-.no-margins-left {
-    padding-left: 0;
+.h-fill {
+    width: 100% !important;
+    height: 100% !important;
 }
 
-.no-margins-right {
-    padding-right: 0;
+.h-text-uppercase {
+    text-transform: uppercase;
 }
 
-.fill {
-    width: 100%;
-    height: 100%;
+.h-truncate {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.h-word-wrap {
+    word-wrap: break-word !important;
+    text-overflow: initial !important;
+    white-space: initial !important;
+}
+
+.h-image-fill {
+  //background: url(../assets/images/img.gif) center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.h-image-contain {
+  //background: url(../assets/images/img.gif) center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background-size: contain;
 }
