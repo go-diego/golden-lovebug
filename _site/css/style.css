@@ -166,7 +166,7 @@ ul.social-buttons li a {
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); }
 
-header.masthead {
+header.hero {
   text-align: center;
   color: white;
   background-image: url("../assets/img/blurry-1.jpg");
@@ -177,26 +177,26 @@ header.masthead {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  header.masthead .intro-text {
+  header.hero .intro-text {
     padding-top: 150px;
     padding-bottom: 100px; }
-    header.masthead .intro-text .intro-lead-in {
+    header.hero .intro-text .intro-lead-in {
       color: #fed136;
       line-height: 75px;
       font-family: Roboto, Helvetica, Arial, sans-serif;
       font-size: 4rem;
       font-weight: 300;
       text-shadow: 0 2px rgba(0, 0, 0, 0.2); }
-    header.masthead .intro-text .intro-heading {
-      font-size: 50px;
+    header.hero .intro-text .intro-heading {
+      font-size: 3rem;
       color: #fff;
       font-weight: 500;
       text-align: center;
       text-shadow: 0 2px rgba(0, 0, 0, 0.2); }
-  header.masthead .profile-image {
+  header.hero .profile-image {
     height: 13rem;
     width: 13rem; }
-  header.masthead a.btn-see-more {
+  header.hero a.btn-see-more {
     color: #fff;
     font-size: 14px;
     font-weight: 600;
@@ -204,19 +204,27 @@ header.masthead {
     border: 1px solid #6e6d6c;
     border-radius: 4px;
     margin-top: 5rem; }
-    header.masthead a.btn-see-more:hover {
+    header.hero a.btn-see-more:hover {
       border-color: #fed136;
       color: #fed136; }
 
-@media (min-width: 768px) {
-  header.masthead .intro-text {
-    padding-top: 200px;
-    padding-bottom: 200px; } }
-#mainNav {
+@media (max-width: 575px) {
+  header.hero .intro-text {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    header.hero .intro-text .intro-lead-in {
+      font-size: 2.25rem;
+      margin: 15px 0 0 0 !important; }
+    header.hero .intro-text .intro-heading {
+      font-size: 1.50rem;
+      margin: 0 0 15px 0 !important; }
+  header.hero .profile-image {
+    height: 8rem;
+    width: 8rem; } }
+nav.navbar {
   background-color: #222222; }
-  #mainNav .navbar-toggler {
+  nav.navbar .navbar-toggler {
     font-size: 12px;
-    right: 0;
     padding: 13px;
     text-transform: uppercase;
     color: white;
@@ -224,12 +232,12 @@ header.masthead {
     background-color: #fed136;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
-  #mainNav .navbar-brand {
+  nav.navbar .navbar-brand {
     color: #fed136;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
-    #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    nav.navbar .navbar-brand.active, nav.navbar .navbar-brand:active, nav.navbar .navbar-brand:focus, nav.navbar .navbar-brand:hover {
       color: #fec503; }
-  #mainNav .navbar-nav .nav-item .nav-link {
+  nav.navbar .navbar-nav .nav-item .nav-link {
     font-size: 90%;
     font-weight: 400;
     padding: 0.75em 0;
@@ -237,11 +245,11 @@ header.masthead {
     color: white;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
-    #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    nav.navbar .navbar-nav .nav-item .nav-link.active, nav.navbar .navbar-nav .nav-item .nav-link:hover {
       color: #fed136; }
 
 @media (min-width: 992px) {
-  #mainNav {
+  nav.navbar {
     padding-top: 25px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -249,18 +257,18 @@ header.masthead {
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent; }
-    #mainNav .navbar-brand {
+    nav.navbar .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
-    #mainNav .navbar-nav .nav-item .nav-link {
+    nav.navbar .navbar-nav .nav-item .nav-link {
       padding: 1.1em 1em !important; }
-    #mainNav.navbar-shrink {
+    nav.navbar.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
       background-color: #222222; }
-      #mainNav.navbar-shrink .navbar-brand {
+      nav.navbar.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0; } }
 .text-primary {
@@ -339,3 +347,15 @@ footer {
   width: 100vw;
   background-color: #222222;
   text-align: center; }
+  footer a.made-with-heart {
+    color: rgba(255, 255, 255, 0.54); }
+    footer a.made-with-heart i {
+      animation: beat .50s infinite alternate;
+      color: #f44336; }
+    footer a.made-with-heart:hover {
+      text-decoration: none; }
+
+@keyframes beat {
+  to {
+    transform: scale(1.2);
+    color: #b71c1c; } }

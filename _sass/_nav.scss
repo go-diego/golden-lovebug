@@ -1,11 +1,10 @@
 // Styling for the navbar
 
-#mainNav {
+nav.navbar {
   background-color: $gray-darker;
 
   .navbar-toggler {
     font-size: 12px;
-    right: 0;
     padding: 13px;
     text-transform: uppercase;
     color: white;
@@ -45,7 +44,7 @@
   }
 }
 @media(min-width:992px) {
-  #mainNav {
+  nav.navbar {
     padding-top: 25px;
     padding-bottom: 25px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
