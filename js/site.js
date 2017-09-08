@@ -23,7 +23,6 @@ $(document).ready(function() {
   });
 
   function collapseNavbar() {
-    console.log('navbar.offset().top', navbar.offset().top);
     // Collapse the navbar if page position is greater than 100px from the top
     if (navbar.offset().top > 100) {
       navbar.addClass("navbar-shrink");
