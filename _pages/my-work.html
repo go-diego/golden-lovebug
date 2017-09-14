@@ -3,6 +3,22 @@ layout: default
 title: My Work
 permalink: my-work.html
 ---
-<section>
-  <h1>{{page.title}}</h1>
+<section class="container">
+  <h1 class="h-center">{{page.title}}</h1>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>A Fox one day spied a beautiful bunch of ripe grapes hanging from a vine trained along the branches of a tree. The grapes seemed ready to burst with juice, and the Fox's mouth watered as he gazed longingly at them.</p>
+      <p>The bunch hung from a high branch, and the Fox had to jump for it. The first time he jumped he missed it by a long way. So he walked off a short distance and took a running leap at it, only to fall short once more. Again and again he tried, but
+        in vain.</p>
+    </div>
+  </div>
+  {% for work in site.data.works %}
+  <div class="row h-layout-padding">
+    <div class="col-sm-12">
+      <h4 class="h-center">{{work.title}}</h4>
+      <p>{{work.description}}</p>
+      {% include works/{{work.include}} %}
+    </div>
+  </div>
+  {% endfor %}
 </section>
