@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
         file: "_data/works.json"
         description: "List of my work"
         fields:
-          - name: list-of-featured
+        - name: list-of-featured
           label: Featured
           widget: list
           fields:
