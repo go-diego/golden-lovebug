@@ -18,18 +18,25 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+    meta:
+    - {label: "SEO Description", name: "description", widget: "text"}
+
   - name: "my-work"
     label: "My Work"
     create: true
     files:
-      - name: "my-work"
-        label: "My Work"
+      - name: "features"
+        label: "Featured Work"
         file: "_data/works.json"
         description: "List of my work"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "string"}
-          - {label: "Link", name: "url", widget: "string"}
+          - name: list-of-featured
+          label: Featured
+          widget: list
+          fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Description", name: "description", widget: "string"}
+            - {label: "Link", name: "url", widget: "string"}
 
  
 
