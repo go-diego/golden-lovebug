@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: https://github.com/go-diego/golden-lovebug # Path to your Github repository
+  repo: go-diego/golden-lovebug # Path to your Github repository
   branch: master # Branch to update (master by default)
 
 media_folder: "assets/img" # Folder where user uploaded files should go
