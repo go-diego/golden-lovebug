@@ -31,7 +31,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
         - name: list
           label: My Work
-          widget: list
+          widget: object
           fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Description", name: "description", widget: "string"}
@@ -42,7 +42,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
         - name: list
           label: Events
-          widget: list
+          widget: object
           fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Description", name: "description", widget: "string"}
