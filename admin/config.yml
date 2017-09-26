@@ -21,24 +21,33 @@ collections: # A list of collections the CMS should be able to edit
     meta:
     - {label: "SEO Description", name: "description", widget: "text"}
 
-  - name: "my-work"
-    label: "My Work"
-    create: true
-    editor:
-      preview: false
+  - name: "data"
+    label: "Data"
+    #create: true
     files:
-      - name: "features"
-        label: "Featured Work"
+      - name: "work"
+        label: "My Work"
         file: "_data/works.json"
-        description: "List of my work"
         fields:
-        - name: list-of-featured
-          label: Featured
+        - name: list
+          label: My Work
           widget: list
           fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Description", name: "description", widget: "string"}
             - {label: "Include", name: "include", widget: "string"}
+      - name: "events"
+        label: "Events"
+        file: "_data/events.json"
+        fields:
+        - name: list
+          label: Events
+          widget: list
+          fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Description", name: "description", widget: "string"}
+            - {label: "Date", name: "date", widget: "datetime"}
+            - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
 
  
 
