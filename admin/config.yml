@@ -28,8 +28,9 @@ collections: # A list of collections the CMS should be able to edit
       - name: "work"
         label: "My Work"
         file: "_data/works.json"
+        create: true
         fields:
-        - name: list
+        - name: works
           label: My Work
           widget: object
           fields:
@@ -39,8 +40,9 @@ collections: # A list of collections the CMS should be able to edit
       - name: "events"
         label: "Events"
         file: "_data/events.json"
+        create: true
         fields:
-        - name: list
+        - name: events
           label: Events
           widget: object
           fields:
