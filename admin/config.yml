@@ -23,7 +23,8 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "my-work"
     label: "My Work"
-    create: true
+    editor:
+      preview: false
     files:
       - name: "features"
         label: "Featured Work"
