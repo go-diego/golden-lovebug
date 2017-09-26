@@ -23,6 +23,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "my-work"
     label: "My Work"
+    create: true
     editor:
       preview: false
     files:
@@ -37,7 +38,6 @@ collections: # A list of collections the CMS should be able to edit
           fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Description", name: "description", widget: "string"}
-            - {label: "Link", name: "url", widget: "string"}
 
  
 
