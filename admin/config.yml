@@ -22,8 +22,6 @@ collections: # A list of collections the CMS should be able to edit
     - {label: "SEO Description", name: "description", widget: "text"}
   - name: "data"
     label: "Data"
-    editor:
-      preview: false
     files:
       - name: "work"
         label: "My Work"
