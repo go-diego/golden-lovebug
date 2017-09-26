@@ -20,34 +20,37 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime"}
     meta:
     - {label: "SEO Description", name: "description", widget: "text"}
-
   - name: "data"
     label: "Data"
-    create: true
+    editor:
+      preview: false
     files:
       - name: "work"
         label: "My Work"
+        description: "List of My Work"
         file: "_data/works.json"
         fields:
-        - name: works
-          label: My Work
-          widget: object
-          fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Description", name: "description", widget: "string"}
-            - {label: "Include", name: "include", widget: "string"}
+          - name: works
+            label: My Work
+            widget: object
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Include", name: "include", widget: "string"}
       - name: "events"
         label: "Events"
         file: "_data/events.json"
         fields:
-        - name: events
-          label: Events
-          widget: object
-          fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Description", name: "description", widget: "string"}
-            - {label: "Date", name: "date", widget: "datetime"}
-            - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
+          - name: events
+            label: Events
+            widget: object
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Date", name: "date", widget: "datetime"}
+              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
+
+
 
  
 
