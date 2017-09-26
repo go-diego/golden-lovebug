@@ -23,12 +23,11 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "data"
     label: "Data"
-    #create: true
+    create: true
     files:
       - name: "work"
         label: "My Work"
         file: "_data/works.json"
-        create: true
         fields:
         - name: works
           label: My Work
@@ -40,7 +39,6 @@ collections: # A list of collections the CMS should be able to edit
       - name: "events"
         label: "Events"
         file: "_data/events.json"
-        create: true
         fields:
         - name: events
           label: Events
