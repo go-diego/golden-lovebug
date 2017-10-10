@@ -1,4 +1,5 @@
-[
+{
+  "content" : [
   {
      "title": "Waist Trainer",
      "description": "A Dog, to whom the butcher had thrown a bone, was hurrying home with his prize as fast as he could go. As he crossed a narrow footbridge, he happened to look down and saw himself reflected in the quiet water as if in a mirror.",
@@ -10,3 +11,4 @@
      "include": "only-we-can-pull.embed.html"
    }
 ]
+}
