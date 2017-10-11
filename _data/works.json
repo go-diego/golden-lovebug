@@ -13,17 +13,17 @@
         {
             "title": "Test New Work",
             "description": "This is a test for adding new work via CMS",
-            "include": "test.html"
+            "include": "waist-trainer.embed.html"
         },
         {
             "title": "Test New Work 2",
             "description": "Second test ",
-            "include": "test2.html"
+            "include": "waist-trainer.embed.html"
         },
         {
             "title": "Test New Work 3",
             "description": "Test number 3",
-            "include": "test3.html"
+            "include": "waist-trainer.embed.html"
         }
     ]
 }
