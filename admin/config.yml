@@ -34,6 +34,7 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
+              - {label: "Url", name: "url", widget: "string"}
               - {label: "Include", name: "include", widget: "string"}
       - name: "events"
         label: "Events"
@@ -41,11 +42,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - name: events
             label: Events
-            widget: object
+            widget: list
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
               - {label: "Date", name: "date", widget: "datetime"}
+              - {label: "Url", name: "url", widget: "string"}
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
 
 
