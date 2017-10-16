@@ -14,7 +14,7 @@ permalink: my-work.html
     </div>
   </div>
   {% for work in site.data.works.works %}
-    {% if work.include != "" %}
+    {% if work.include != "N/A" %}
         <div class="row h-layout-padding">
             <div class="col-sm-12">
             <h4 class="h-center">{{work.title}}</h4>
