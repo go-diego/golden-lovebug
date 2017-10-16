@@ -3,6 +3,7 @@ layout: default
 title: My Work
 permalink: my-work.html
 ---
+
 <section class="container">
   <h1 class="h-center">{{page.title}}</h1>
   <div class="row">
@@ -13,12 +14,14 @@ permalink: my-work.html
     </div>
   </div>
   {% for work in site.data.works.works %}
-  <div class="row h-layout-padding">
-    <div class="col-sm-12">
-      <h4 class="h-center">{{work.title}}</h4>
-      <p>{{work.description}}</p>
-      {% include works/{{work.include}} %}
-    </div>
-  </div>
+    {% if work.include.length > 0 %}
+        <div class="row h-layout-padding">
+            <div class="col-sm-12">
+            <h4 class="h-center">{{work.title}}</h4>
+            <p>{{work.description}}</p>
+            {% include works/{{work.include}} %}
+            </div>
+        </div>
+    {% endif %}
   {% endfor %}
 </section>
