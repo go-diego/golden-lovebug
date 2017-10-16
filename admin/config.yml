@@ -35,7 +35,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "string"}
               - {label: "Url", name: "url", widget: "string"}
-              - {label: "Include", name: "include", widget: "string", default: ""}
+              - {label: "Include", name: "include", widget: "string", default: "N/A"}
       - name: "events"
         label: "Events"
         file: "_data/events.json"
