@@ -33,8 +33,9 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Url", name: "url", widget: "string"}
+              - {label: "Type", name: "type", widget: "select", options: ["Poem", "Essay", "Article", "Other"]}
               - {label: "Include", name: "include", widget: "string", default: "N/A"}
       - name: "events"
         label: "Events"
@@ -45,7 +46,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Date", name: "date", widget: "datetime"}
               - {label: "Url", name: "url", widget: "string"}
               - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
