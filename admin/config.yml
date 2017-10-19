@@ -35,7 +35,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Description", name: "description", widget: "markdown"}
               - {label: "Url", name: "url", widget: "string"}
-              - {label: "Type", name: "type", widget: "select", options: ["Poem", "Essay", "Article", "Other"]}
+              - {label: "Type", name: "type", widget: "select", options: ["Poem", "Essay", "Article", "Interview", "Other"]}
               - {label: "Include", name: "include", widget: "string", default: "N/A"}
       - name: "events"
         label: "Events"
