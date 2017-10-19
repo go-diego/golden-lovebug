@@ -4,12 +4,6 @@ title: My Work
 permalink: my-work.html
 ---
 
-{% assign groupedWorkItems = site.data.works.works | group_by: "type" %}
-{{groupedWorkItems}}
-{% for groupedByType in groupedWorkItems %}
-  {{groupedByType.name}}
-{% endfor %}
-
 <section class="container">
   <h1 class="h-center">{{page.title}}</h1>
   <div class="row">
@@ -20,7 +14,6 @@ permalink: my-work.html
     </div>
   </div>
 
-  <h2 class="h-center">Poems</h2>
   {% for work in site.data.works.works %}
     {% if work.include != "N/A" %}
         <div class="row h-layout-padding">
