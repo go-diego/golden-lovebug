@@ -6,6 +6,10 @@ permalink: my-work.html
 
 {% assign groupedWorkItems = site.data.works.works | group_by: "type" %}
 {{groupedWorkItems}}
+{% for groupedByType in groupedWorkItems %}
+  {{groupedByType.name}}
+{% endfor %}
+
 <section class="container">
   <h1 class="h-center">{{page.title}}</h1>
   <div class="row">
