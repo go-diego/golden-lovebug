@@ -3,8 +3,10 @@
 {% include head.html %}
 <body>
   {% include nav-default.html %}
+  {% comment %} {% include loader.html %} {% endcomment %}
   {{content}}
   {% include footer.html %}
   {% include scripts.html %}
+  <script src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>  
 </body>
 </html>

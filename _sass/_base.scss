@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  line-height: 1.75;
+  //line-height: 1.75;
 }
 
 a {
@@ -48,7 +48,7 @@ section {
     @include serif-font;
   }
 }
-@media(min-width:768px) {
+@media (min-width: 768px) {
   section {
     padding: 150px 0;
   }
@@ -108,9 +108,9 @@ ul.social-buttons li a {
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($theme-primary,25%);
+    background-color: darken($theme-primary, 25%);
     transform: translateY(-3px);
-    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     //filter: brightness(130%);
   }
 }

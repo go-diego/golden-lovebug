@@ -2,9 +2,14 @@
 layout: default
 title: My Work
 permalink: my-work.html
+card-theme: dark
 ---
+{% assign poems = site.data.works.works | where: "type", "Poem" %}
+{% assign articles = site.data.works.works | where: "type", "Article" %}
+{% assign essays = site.data.works.works | where: "type", "Essay" %}
 
-<section class="container">
+<section class="container work-section">
+
   <h1 class="h-center">{{page.title}}</h1>
   <div class="row">
     <div class="col-sm-12">
@@ -14,16 +19,71 @@ permalink: my-work.html
     </div>
   </div>
 
-  {% for work in site.data.works.works %}
-    {% if work.include != "N/A" %}
-        <div class="row h-layout-padding">
-            <div class="col-sm-12">
-            <h4 class="h-center">{{work.title}}</h4>
-            <p>{{work.description | markdownify }}</p>
-            {% include works/{{work.include}} %}
+  {% if poems.size > 0 %}
+  <h2 class="h-center work-section__header-type">Poems</h2>
+  <div class="work-section__header-underline"></div/>
+  <div class="row">
+    <div class="col-xs-12">
+      {% for poem in poems %}
+        {% if poem.include != "N/A" %}
+            <div class="row h-layout-padding">
+                <div class="col-sm-12 work-item h-vertical-margins">
+                  <h3 class="h-center work-item__header--title">{{poem.title}}</h3>
+                  <div class="work-item__description">
+                    {{poem.description}}
+                  </div>
+                  {% include works/{{poem.include}} %}
+                </div>
             </div>
-        </div>
-    {% endif %}
-  {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if articles.size > 0 %}
+    <h2 class="h-center work-section__header-type">Articles</h2>
+    <div class="work-section__header-underline"></div/>
+    <div class="row">
+      <div class="col-xs-12">
+        {% for article in articles %}
+          {% if article.include != "N/A" %}
+              <div class="row h-layout-padding">
+                  <div class="col-sm-12 work-item">
+                    <h3 class="h-center work-item__header--title">{{article.title}}</h3>
+                    <div class="work-item__description">
+                      {{article.description | markdownify }}
+                    </div>
+                    {% include works/{{article.include}} %}
+                  </div>
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if essay.size > 0 %}
+    <h2 class="h-center work-section__header-type">Essays</h2>
+    <div class="work-section__header-underline"></div/>
+    <div class="row">
+      <div class="col-xs-12">
+        {% for essay in essays %}
+          {% if essay.include != "N/A" %}
+              <div class="row h-layout-padding">
+                  <div class="col-sm-12 work-item">
+                    <h3 class="h-center work-item__header--title">{{essay.title}}</h3>
+                    <div class="work-item__description">
+                      {{essay.description | markdownify }}
+                    </div>
+                    {% include works/{{essay.include}} %}
+                  </div>
+              </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
 </section>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+{% comment %} <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script> {% endcomment %}

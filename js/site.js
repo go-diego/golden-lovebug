@@ -1,18 +1,35 @@
+// TODO: add fade animation to spinner
+// TODO: Skeleton pages
+// TODO: Set active page by url
+// TODO: Test onload functionality
+
 $(document).ready(function() {
-  var navbar = $('nav.navbar.nav-home');
-  var seeMoreBtn = $('.js-scroll-trigger.btn-see-more');
-  $('.footerYear').html(new Date().getFullYear());
+  //var preloader = $(".preloader");
+  var navbar = $("nav.navbar.nav-home");
+  var seeMoreBtn = $(".js-scroll-trigger.btn-see-more");
+
+  //removeSpinner();
+
+  $(".footerYear").html(new Date().getFullYear());
 
   collapseNavbar();
 
   seeMoreBtn.click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top)
-        }, 1000, "easeInOutSine");
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top
+          },
+          1000,
+          "easeInOutSine"
+        );
         return false;
       }
     }
@@ -31,4 +48,9 @@ $(document).ready(function() {
     }
   }
 
+  // function removeSpinner() {
+  //   setTimeout(function() {
+  //     preloader.remove();
+  //   }, 1000);
+  // }
 });
