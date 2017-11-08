@@ -2,6 +2,13 @@ body {
   -webkit-tap-highlight-color: $theme-primary;
   overflow-x: hidden;
   @include body-font;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main{
+  flex: 1 0 auto;
 }
 
 p {
