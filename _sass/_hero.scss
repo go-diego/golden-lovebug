@@ -3,7 +3,7 @@ header.hero {
   min-height: 100vh;
   text-align: center;
   color: white;
-  background-image: url('../assets/img/blurry-1.jpg');
+  background-image: url("../assets/img/blurry-1.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -24,7 +24,7 @@ header.hero {
       font-family: Roboto, Helvetica, Arial, sans-serif;
       font-size: 4rem;
       font-weight: 300;
-      text-shadow: 0 2px rgba(0,0,0,.2);
+      text-shadow: 0 2px rgba(0, 0, 0, 0.2);
     }
 
     .intro-heading {
@@ -32,7 +32,7 @@ header.hero {
       color: #fff;
       font-weight: 500;
       text-align: center;
-      text-shadow: 0 2px rgba(0,0,0,.2);
+      text-shadow: 0 2px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -59,7 +59,7 @@ header.hero {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
-  header.hero{
+  header.hero {
     .intro-text {
       padding-top: 100px;
       padding-bottom: 100px;
@@ -70,7 +70,7 @@ header.hero {
       }
 
       .intro-heading {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
         margin: 0 0 15px 0 !important;
       }
     }
@@ -79,15 +79,17 @@ header.hero {
       height: 8rem;
       width: 8rem;
     }
-
   }
 }
 
 // Small devices (landscape phones, less than 768px)
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+}
 
 // Medium devices (tablets, less than 992px)
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+}
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199px) {}
+@media (max-width: 1199px) {
+}

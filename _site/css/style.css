@@ -96,7 +96,13 @@
 body {
   -webkit-tap-highlight-color: #fed136;
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
 
 a {
   color: #fed136; }
@@ -164,12 +170,19 @@ ul.social-buttons li a {
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); }
 
 header.hero {
+  flex: 1 0 auto;
+  min-height: 100vh;
   text-align: center;
   color: white;
   background-image: url("../assets/img/blurry-1.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
+  margin: 0px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -213,7 +226,7 @@ header.hero {
       font-size: 2.25rem;
       margin: 15px 0 0 0 !important; }
     header.hero .intro-text .intro-heading {
-      font-size: 1.50rem;
+      font-size: 1.5rem;
       margin: 0 0 15px 0 !important; }
   header.hero .profile-image {
     height: 8rem;
@@ -230,10 +243,15 @@ nav.navbar {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   nav.navbar .navbar-brand {
-    color: #fed136;
+    line-height: 2.5rem;
+    border-radius: 50%;
+    padding: 0 !important;
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fed136;
+    color: #fff;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
-    nav.navbar .navbar-brand.active, nav.navbar .navbar-brand:active, nav.navbar .navbar-brand:focus, nav.navbar .navbar-brand:hover {
-      color: #fec503; }
   nav.navbar .navbar-nav .nav-item .nav-link {
     font-size: 90%;
     font-weight: 400;
@@ -359,6 +377,7 @@ nav.navbar {
     background-color: white; }
 
 footer {
+  flex: none;
   color: rgba(255, 255, 255, 0.54);
   width: 100vw;
   background-color: #222222;

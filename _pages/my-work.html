@@ -26,15 +26,15 @@ card-theme: dark
     <div class="col-xs-12">
       {% for poem in poems %}
         {% if poem.include != "N/A" %}
-            <div class="row h-layout-padding">
-                <div class="col-sm-12 work-item h-vertical-margins">
-                  <h3 class="h-center work-item__header--title">{{poem.title}}</h3>
-                  <div class="work-item__description">
-                    {{poem.description}}
+             <div class="card h-layout-margins">
+                <div class="card-block">
+                  <h4 class="card-title">{{poem.title}}</h4>
+                  <p class="card-text">{{poem.description | markdownify }}</p>
+                  <div class="card-content">
+                    {% include works/{{poem.include}} %}
                   </div>
-                  {% include works/{{poem.include}} %}
                 </div>
-            </div>
+              </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -48,14 +48,14 @@ card-theme: dark
       <div class="col-xs-12">
         {% for article in articles %}
           {% if article.include != "N/A" %}
-              <div class="row h-layout-padding">
-                  <div class="col-sm-12 work-item">
-                    <h3 class="h-center work-item__header--title">{{article.title}}</h3>
-                    <div class="work-item__description">
-                      {{article.description | markdownify }}
-                    </div>
+              <div class="card h-layout-margins">
+                <div class="card-block">
+                  <h4 class="card-title">{{article.title}}</h4>
+                  <p class="card-text">{{article.description | markdownify }}</p>
+                  <div class="card-content">
                     {% include works/{{article.include}} %}
                   </div>
+                </div>
               </div>
           {% endif %}
         {% endfor %}
@@ -70,14 +70,14 @@ card-theme: dark
       <div class="col-xs-12">
         {% for essay in essays %}
           {% if essay.include != "N/A" %}
-              <div class="row h-layout-padding">
-                  <div class="col-sm-12 work-item">
-                    <h3 class="h-center work-item__header--title">{{essay.title}}</h3>
-                    <div class="work-item__description">
-                      {{essay.description | markdownify }}
-                    </div>
+               <div class="card h-layout-margins">
+                <div class="card-block">
+                  <h4 class="card-title">{{essay.title}}</h4>
+                  <p class="card-text">{{essay.description | markdownify }}</p>
+                  <div class="card-content">
                     {% include works/{{essay.include}} %}
                   </div>
+                </div>
               </div>
           {% endif %}
         {% endfor %}
@@ -86,4 +86,3 @@ card-theme: dark
   {% endif %}
 
 </section>
-{% comment %} <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script> {% endcomment %}
