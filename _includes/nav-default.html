@@ -9,7 +9,7 @@
     <ul class="navbar-nav ml-auto">
       {% for link in site.data.nav %}
       <li class="nav-item">
-        <a class="nav-link js-scroll-trigger" href="{{link.url}}">{{link.text}}</a>
+        <a class="nav-link {% if page.url contains link.url %} active {% endif %}" href="{{link.url}}">{{link.text}}</a>
       </li>
       {% endfor %}
     </ul>
