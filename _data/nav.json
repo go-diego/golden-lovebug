@@ -6,5 +6,9 @@
   {
     "url": "my-work.html",
     "text": "My Work"
+  },
+  {
+    "url": "contact.html",
+    "text": "Contact"
   }
 ]

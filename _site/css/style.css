@@ -102,7 +102,8 @@ body {
   flex-direction: column; }
 
 main {
-  flex: 1 0 auto; }
+  flex: 1 0 auto;
+  min-height: 100%; }
 
 a {
   color: #fed136; }
@@ -120,7 +121,6 @@ h6 {
   text-transform: uppercase; }
 
 section {
-  min-height: 100vh;
   padding: 100px 0; }
   section h2.section-heading {
     font-size: 40px;
@@ -424,3 +424,20 @@ footer {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .work-section div.embedly-card:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+.contact-section .form-group .input-group-addon {
+  color: rgba(255, 255, 255, 0.7);
+  background: #1a2e39;
+  border: 1px solid #1a2e39;
+  width: 2.75rem; }
+.contact-section .form-group.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442; }
+.contact-section .form-group.has-error .form-control {
+  border-color: #a94442; }
+.contact-section .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 1.5px rgba(0, 123, 255, 0.25); }
