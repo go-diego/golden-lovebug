@@ -68,6 +68,8 @@ $(document).ready(function() {
                         .replace(/\s\s+/g, "");
 
                     cardContent.append(successAlert);
+
+                    contactForm.trigger("reset");
                 },
                 function error() {
                     var errorAlert = [
@@ -82,6 +84,8 @@ $(document).ready(function() {
                         .replace(/\s\s+/g, "");
 
                     cardContent.append(errorAlert);
+
+                    contactForm.trigger("reset");
                 }
             );
         }
