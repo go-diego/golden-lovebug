@@ -1,24 +1,24 @@
----
-layout: default
-title: Contact
-permalink: contact.html
+--- 
+layout: default 
+title: Contact 
+permalink: contact.html 
 ---
 
 <section class="container contact-section">
     <div class="card">
         <div class="card-block">
             <h1 class="card-title h-center">Contact Me</h1>
-            <p class="card-text h-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text h-center">Leave me a message</p>
             <div class="card-content">
                 <form netlify netlify-honeypot="bot-field" id="contact-form" class="form" method="post" novalidate="true">
-                    <input type="hidden" name="bot-field">       
-                    <div class="messages"></div>
-                
+                    <input type="hidden" name="bot-field">
+
                     <div class="form-group input-group">
                         <label for="form_name" class="input-group-addon">
-                          <i class="fa fa-user" aria-hidden="true"></i>
+                            <i class="fa fa-user" aria-hidden="true"></i>
                         </label>
-                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Your Full Name Here" required="required" data-error="name is required.">
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Your Full Name Here" required="required"
+                            data-error="name is required.">
                     </div>
 
                     <div class="form-group input-group">
@@ -27,18 +27,19 @@ permalink: contact.html
                         </label>
                         <input id="form_email" type="email" name="email" class="form-control" placeholder="You Email Here" required="required" data-error="Valid email is required.">
                     </div>
-                    
+
 
                     <div class="form-group input-group">
-                      <label for="form_message" class="input-group-addon">
-                        <i class="fa fa-comment" aria-hidden="true"></i>
-                      </label>
-                      <textarea id="form_message" name="message" class="form-control" placeholder="Message For Me" rows="4" required="required" data-error="Please leave me a message."></textarea>
+                        <label for="form_message" class="input-group-addon">
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                        </label>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Message For Me" rows="4" required="required"
+                            data-error="Please leave me a message."></textarea>
                     </div>
-                    <button disabled type="submit" class="btn mx-auto d-block btn-submit" style="width: 200px">Send</button>
-              </form>
+                    <button disabled type="submit" class="btn btn-primary mx-auto d-block btn-submit" style="width: 200px">Send</button>
+                </form>
             </div>
-            
+
         </div>
     </div>
 </section>
