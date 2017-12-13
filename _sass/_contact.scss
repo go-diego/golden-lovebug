@@ -1,18 +1,10 @@
-.contacts-section {
-  .sky-form {
-    box-shadow: none;
-
-    input:hover {
-      border-radius: initial;
-    }
-  }
-
+.contact-section {
   .form-group {
     .input-group-addon {
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255, 255, 255, 0.7);
       background: #1a2e39;
       border: 1px solid #1a2e39;
-      min-width: 40px;
+      width: 2.75rem;
     }
 
     &.has-error {
@@ -27,7 +19,11 @@
     }
   }
 
-  label.control-label {
-    color: rgba(255, 255, 255, .7);
+  .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 1.5px rgba(0, 123, 255, 0.25);
   }
 }
