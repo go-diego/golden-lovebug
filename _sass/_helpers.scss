@@ -28,12 +28,12 @@
     padding-bottom: 15px !important;
 }
 
-.h-padding-bottom{
-  padding-bottom: 15px !important;
+.h-padding-bottom {
+    padding-bottom: 15px !important;
 }
 
-.h-padding-top{
-  padding-top: 15px !important;
+.h-padding-top {
+    padding-top: 15px !important;
 }
 
 .h-no-padding {
@@ -104,17 +104,17 @@
 }
 
 .h-image-fill {
-  //background: url(../assets/images/img.gif) center no-repeat;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
-  background-size: cover;
+    //background: url(../assets/images/img.gif) center no-repeat;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    overflow: hidden;
+    background-size: cover !important;
 }
 
 .h-image-contain {
-  //background: url(../assets/images/img.gif) center no-repeat;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
-  background-size: contain;
+    //background: url(../assets/images/img.gif) center no-repeat;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    overflow: hidden;
+    background-size: contain !important;
 }

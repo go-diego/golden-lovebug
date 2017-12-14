@@ -1,28 +1,29 @@
 footer {
-  flex: none;
-  color: rgba(255, 255, 255, 0.54);
-  //position: absolute;
-  width: 100vw;
-  background-color: #222222;
-  text-align: center;
-
-  a.made-with-heart {
+    flex: none;
     color: rgba(255, 255, 255, 0.54);
+    //position: absolute;
+    width: 100vw;
+    //background-color: #222222;
+    background-color: #3c3c3c;
+    text-align: center;
 
-    i {
-      animation: beat .50s infinite alternate;
-      color: #f44336;
-    }
+    a.made-with-heart {
+        color: rgba(255, 255, 255, 0.54);
 
-    &:hover {
-      text-decoration: none;
+        i {
+            animation: beat 0.5s infinite alternate;
+            color: #f44336;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
     }
-  }
 }
 
-@keyframes beat{
-	to {
-    transform: scale(1.2);
-    color: #b71c1c;
-  }
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+        color: #b71c1c;
+    }
 }
