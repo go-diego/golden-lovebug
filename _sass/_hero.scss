@@ -3,7 +3,8 @@ header.hero {
     min-height: 100vh;
     text-align: center;
     color: white;
-    background-image: url("../assets/img/blurry-1.jpg");
+    //background-image: url("https://i.ytimg.com/vi/THjEclMFmRU/maxresdefault.jpg");
+    background-image: url("../assets/img/polygons.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -24,16 +25,16 @@ header.hero {
             font-family: Roboto, Helvetica, Arial, sans-serif;
             // font-size: 4rem;
             font-weight: 300;
-            text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+            // text-shadow: 0 2px rgba(0, 0, 0, 0.2);
             text-transform: none;
         }
 
         .intro-heading {
             // font-size: 3rem;
-            color: #fff;
+            // color: #fff;
             font-weight: 500;
             text-align: center;
-            text-shadow: 0 2px rgba(0, 0, 0, 0.2);
+            // text-shadow: 0 2px rgba(0, 0, 0, 0.2);
             text-transform: none;
         }
     }
@@ -44,18 +45,18 @@ header.hero {
     }
 
     a.btn-see-more {
-        color: #fff;
+        // color: #fff;
         font-size: 14px;
         font-weight: 600;
         padding: 14px 40px;
-        border: 1px solid #6e6d6c;
+        // border: 1px solid #6e6d6c;
         border-radius: 4px;
         margin-top: 5rem;
 
-        &:hover {
-            border-color: $theme-primary;
-            color: $theme-primary;
-        }
+        // &:hover {
+        //     border-color: $theme-primary;
+        //     color: $theme-primary;
+        // }
     }
 }
 
