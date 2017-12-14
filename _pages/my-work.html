@@ -19,57 +19,68 @@ card-theme: dark
     </div>
   </div>
 
+  <div class="col-xs-12 pt-2 pb-2">
+    <div class="card card-inverse card-info book-card d-flex flex-row h-layout-padding">
+      <div class="col-xs-4 card-image h-image-contain" style="background: url(https://images-na.ssl-images-amazon.com/images/I/51dtdu36gpL._SY344_BO1,204,203,200_.jpg)"></div>
+      <div class="col-xs-8 card-block h-no-padding">
+        <h4 class="card-title">Songs After Memory Fractures</h4>
+        <p class="card-text">Write some stuff here about your book blah blah blah blah. In a spell of dry weather, when the Birds could find very little to drink, a thirsty Crow found a pitcher with a little water in it. But the pitcher was high and had a narrow neck, and no matter how he tried, the Crow could not reach the water</p>
+        <a href="https://www.finishinglinepress.com/product/songs-after-memory-fractures-by-allyson-jeffredo/" target="_blank" class="btn btn-primary">Buy it here!</a>
+      </div>
+    </div>
+  </div>
+
   {% if poems.size > 0 %}
   <h2 class="h-center work-section__header-type">Poems</h2>
-  <div class="work-section__header-underline"></div/>
+  <div class="work-section__header-underline"></div>
   <div class="row">
-    <div class="col-xs-12">
       {% for poem in poems %}
         {% if poem.include != "N/A" %}
-             <div class="card h-layout-margins">
+        <div class="col-xs-12 col-md-4 h-no-padding card-deck">
+            <div class="card h-layout-margins">
                 <div class="card-block">
-                  <h4 class="card-title">{{poem.title}}</h4>
-                  <p class="card-text">{{poem.description | markdownify }}</p>
-                  <div class="card-content">
-                    {% include works/{{poem.include}} %}
-                  </div>
+                    <h4 class="card-title">{{poem.title}}</h4>
+                    {% comment %} <p class="card-text">{{poem.description | markdownify }}</p> {% endcomment %}
+                    <div class="card-content">
+                        {% include works/{{poem.include}} %}
+                    </div>
                 </div>
-              </div>
+            </div>
+        </div>
         {% endif %}
       {% endfor %}
-    </div>
   </div>
   {% endif %}
 
   {% if articles.size > 0 %}
     <h2 class="h-center work-section__header-type">Articles</h2>
-    <div class="work-section__header-underline"></div/>
+    <div class="work-section__header-underline"></div>
     <div class="row">
-      <div class="col-xs-12">
         {% for article in articles %}
           {% if article.include != "N/A" %}
+          <div class="col-xs-12 col-md-6 h-no-padding card-deck">
               <div class="card h-layout-margins">
                 <div class="card-block">
                   <h4 class="card-title">{{article.title}}</h4>
-                  <p class="card-text">{{article.description | markdownify }}</p>
+                  {% comment %} <p class="card-text">{{article.description | markdownify }}</p> {% endcomment %}
                   <div class="card-content">
                     {% include works/{{article.include}} %}
                   </div>
                 </div>
               </div>
+          </div>
           {% endif %}
         {% endfor %}
-      </div>
     </div>
   {% endif %}
 
   {% if essay.size > 0 %}
     <h2 class="h-center work-section__header-type">Essays</h2>
-    <div class="work-section__header-underline"></div/>
+    <div class="work-section__header-underline"></div>
     <div class="row">
-      <div class="col-xs-12">
         {% for essay in essays %}
           {% if essay.include != "N/A" %}
+          <div class="col-xs-12 col-md-6 h-no-padding card-deck">
                <div class="card h-layout-margins">
                 <div class="card-block">
                   <h4 class="card-title">{{essay.title}}</h4>
@@ -79,9 +90,9 @@ card-theme: dark
                   </div>
                 </div>
               </div>
+          </div>
           {% endif %}
         {% endfor %}
-      </div>
     </div>
   {% endif %}
 
