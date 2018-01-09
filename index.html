@@ -3,23 +3,131 @@ layout: home
 title: About Me
 permalink: index.html
 ---
-<section class="container" id="aboutMe">
-  <h1>{{page.title}}</h1>
-  <div class="h-vertical-padding">
-    <p>A Stag, drinking from a crystal spring, saw himself mirrored in the clear water. He greatly admired the graceful arch of his antlers, but he was very much ashamed of his spindling legs.</p>
-    <p>"How can it be," he sighed, "that I should be cursed with such legs when I have so magnificent a crown."</p>
-    <p>At that moment he scented a panther and in an instant was bounding away through the forest. But as he ran his wide-spreading antlers caught in the branches of the trees, and soon the Panther overtook him. Then the Stag perceived that the legs of which
-      he was so ashamed would have saved him had it not been for the useless ornaments on his head.</p>
-    <p>We often make much of the ornamental and despise the useful.</p>
-  </div>
-  <h4>The Fox & the Grapes</h4>
-  <div class="h-vertical-padding">
-    <p>A Fox one day spied a beautiful bunch of ripe grapes hanging from a vine trained along the branches of a tree. The grapes seemed ready to burst with juice, and the Fox's mouth watered as he gazed longingly at them.</p>
-    <p>The bunch hung from a high branch, and the Fox had to jump for it. The first time he jumped he missed it by a long way. So he walked off a short distance and took a running leap at it, only to fall short once more. Again and again he tried, but in
-      vain.</p>
-    <p>Now he sat down and looked at the grapes in disgust.</p>
-    <p>"What a fool I am," he said. "Here I am wearing myself out to get a bunch of sour grapes that are not worth gaping for."</p>
-    <p>And off he walked very, very scornfully.</p>
-    <p>There are many who pretend to despise and belittle that which is beyond their reach.</p>
-  </div>
+<section class="container about-section" id="aboutMe">
+    <div class="card">
+      <div class="cv-intro p-2">
+          <img class="cv-intro--profile-image rounded-circle card-img-top" alt="{{site.authorName}}" src="assets/img/profile.jpeg" />
+          <div class="card-block">
+            <h1 class="card-title display-3 cv-intro--name">{{site.authorName}}</h1>
+            <h2 class="card-text cv-intro--description">Poet. Writer. Educator.<h2/>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="{{site.twitterUrl}}" target="_blank">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="{{site.facebookUrl}}" target="_blank">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="{{site.linkedInUrl}}" target="_blank">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="{{site.email}}" target="_blank">
+                  <i class="fa fa-envelope-o"></i>
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary btn-sm btn-download-resume">
+                <i class="fa fa-download"></i>
+                Download Resume
+            </a>
+          </div>
+      </div>  
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="card">
+          <div class="card-header" role="tab" id="educationHeader">
+            <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#educationCollapse" aria-expanded="true" aria-controls="educationCollapse">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              Education            
+            </h4>
+          </div>
+          <div id="educationCollapse" class="collapse" role="tabpanel" aria-labelledby="educationHeader">
+              <div class="card-block">
+                <div class="list-group list-group-flush">
+                {% for education in site.data.cv.education %}
+                  <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">{{education.degree}}</h5>
+                      <small>{{education.date}}</small>
+                    </div>
+                    <p class="mb-1">{{education.school}}</p>
+                  </div>
+                {% endfor %}
+                </div>
+              </div>
+          </div>
+        </div> 
+        <div class="card">
+          <div class="card-header" role="tab" id="teachingHeader">
+            <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#teachingCollapse" aria-expanded="true" aria-controls="teachingCollapse">
+                <i class="fa fa-briefcase" aria-hidden="true"></i>
+                Teaching Experience          
+            </h4>
+          </div>
+          <div id="teachingCollapse" class="collapse" role="tabpanel" aria-labelledby="teachingHeader">
+            <div class="card-block">
+              <div class="list-group list-group-flush">
+              {% for teaching in site.data.cv.teachingExperience %}
+                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{teaching.campus}}</h5>
+                    <small>{{teaching.date}}</small>
+                  </div>
+                  <p class="mb-1">{{teaching.title}}</p>
+                </div>
+              {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div> 
+         <div class="card">
+          <div class="card-header" role="tab" id="awardsHeader">
+            <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#awardsCollapse" aria-expanded="true" aria-controls="awardsCollapse">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              Honors & Awards            
+            </h4>
+          </div>
+          <div id="awardsCollapse" class="collapse" role="tabpanel" aria-labelledby="awardsHeader">
+              <div class="card-block">
+                <div class="list-group list-group-flush">
+                {% for award in site.data.cv.awards %}
+                  <div class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">{{award.award}}</h5>
+                      <small>{{award.date}}</small>
+                    </div>
+                    {% comment %} <p class="mb-1">{{education.school}}</p> {% endcomment %}
+                  </div>
+                {% endfor %}
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
+
+
+{% comment %} 
+<div id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div> 
+  {% endcomment %}
