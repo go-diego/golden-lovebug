@@ -4,8 +4,12 @@
     "text": "About Me"
   },
   {
-    "url": "my-work.html",
-    "text": "My Work"
+    "url": "publications.html",
+    "text": "Publications"
+  },
+  {
+    "url": "cv.html",
+    "text": "CV"
   },
   {
     "url": "contact.html",

@@ -2,9 +2,10 @@
 <html lang="en-US">
 {% include head.html %}
 <body>
-  {% include nav-default.html %}
+  {% comment %} {% include nav-default.html %} {% endcomment %}
+  {% include nav-home.html %}
   {% comment %} {% include loader.html %} {% endcomment %}
-  {% comment %} {% include hero.html %} {% endcomment %}
+  {% include hero.html %}
   <main>
     {{content}}
   </main>
