@@ -2,6 +2,7 @@ nav.navbar {
     background-color: #3c3c3c;
 
     .navbar-toggler {
+        border-radius: 50%;
         font-size: 12px;
         padding: 13px;
         text-transform: uppercase;
@@ -9,6 +10,9 @@ nav.navbar {
         border: 0;
         background-color: $theme-primary;
         @include heading-font;
+        &:focus{
+            outline: none;
+        }
     }
 
     .navbar-brand {
