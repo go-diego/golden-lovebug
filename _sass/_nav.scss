@@ -1,5 +1,3 @@
-// Styling for the navbar
-
 nav.navbar {
     background-color: #3c3c3c;
 
@@ -14,22 +12,10 @@ nav.navbar {
     }
 
     .navbar-brand {
-        line-height: 2.5rem;
-        border-radius: 50%;
-        padding: 0 !important;
-        text-align: center;
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: $theme-primary;
+        //font-family: 'Londrina Outline', cursive;
+        font-family: 'Caveat', cursive;
+        font-weight: bolder;
         color: #fff;
-        @include script-font;
-
-        // &.active,
-        // &:active,
-        // &:focus,
-        // &:hover {
-        //   color: darken($theme-primary, 10%);
-        // }
     }
 
     .navbar-nav {
