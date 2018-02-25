@@ -2,17 +2,23 @@
     <title>{{page.title}} | {{site.authorName}}</title>
     <meta name="description" content="Hello, I'm Allyson Jeffredo" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Hello, I'm Allyson Jeffredo" />
-    <meta property="og:title" content="Allyson Jeffredo" />
-    <meta property="og:url" content="https://www.allysonjeffredo.com" />
+    <meta property="og:description" content="{{site.ogDescription}}" />
+    <meta property="og:title" content="{{site.ogTitle}}" />
+    <meta property="og:url" content="{{site.ogUrl}}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{site.ogTitle}}" />
+    <meta name="twitter:description" content="{{site.ogDescription}}" />
+    <meta name="twitter:img" content="{{site.ogImage}}" />
+    <meta name="twitter:url" content="{{site.ogUrl}}" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="{{site.favicon}}" />
     <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="assets/vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="assets/vendor/animate.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet"
         type="text/css">
-    <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,400italic,700,700italic|Oswald:300,400,700"> -->
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
 </head>

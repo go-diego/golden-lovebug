@@ -1,12 +1,14 @@
 authorName: Allyson Jeffredo
-title: Your awesome title
+favicon: assets/img/favicon.ico
+title: Allyson Jeffredo
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "golden-lovebug.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
+ogTitle: Hello! I'm Allyson
+ogType: website
+ogDescription: I'm Allyson, poet, writer, educator
+ogImage: assets/img/preview.png
+ogUrl: https://www.allysonjeffredo.com
+#baseurl: "" # the subpath of your site, e.g. /blog
+url: "allysonjeffredo.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitterUrl: https://twitter.com/?lang=en
 facebookUrl: https://www.facebook.com/
 linkedInUrl: https://www.linkedin.com/
@@ -23,3 +25,4 @@ include: [_pages]
 exclude:
   - Gemfile
   - Gemfile.lock
+  - package.json

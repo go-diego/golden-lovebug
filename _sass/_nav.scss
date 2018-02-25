@@ -10,14 +10,14 @@ nav.navbar {
         border: 0;
         background-color: $theme-primary;
         @include heading-font;
-        &:focus{
+        &:focus {
             outline: none;
         }
     }
 
     .navbar-brand {
         //font-family: 'Londrina Outline', cursive;
-        font-family: 'Caveat', cursive;
+        font-family: "Caveat", cursive;
         font-weight: bolder;
         color: #fff;
     }
