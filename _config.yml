@@ -1,7 +1,7 @@
 authorName: Allyson Jeffredo
 favicon: assets/img/favicon.ico
 title: Allyson Jeffredo
-email: your-email@domain.com
+email: a.jeffredo2@gmail.com
 ogTitle: Hello! I'm Allyson
 ogType: website
 ogDescription: I'm Allyson, poet, writer, educator
@@ -9,9 +9,9 @@ ogImage: assets/img/preview.png
 ogUrl: https://www.allysonjeffredo.com
 #baseurl: "" # the subpath of your site, e.g. /blog
 url: "allysonjeffredo.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitterUrl: https://twitter.com/?lang=en
-facebookUrl: https://www.facebook.com/
-linkedInUrl: https://www.linkedin.com/
+twitterUrl: https://twitter.com/allyj0_0
+facebookUrl: https://www.facebook.com/allyson.jeffredo
+instagramUrl: https://www.instagram.com/allyj0_0
 
 # Build settings
 markdown: kramdown
