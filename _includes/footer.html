@@ -1,28 +1,7 @@
 <footer class="h-layout-padding">
   <div class="row h-no-margins">
     <div class="col-sm-12">
-      <ul class="list-inline social-buttons">
-        <li class="list-inline-item">
-          <a href="{{site.twitterUrl}}" target="_blank">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="{{site.facebookUrl}}" target="_blank">
-            <i class="fa fa-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="{{site.instagramUrl}}" target="_blank">
-            <i class="fa fa-instagram"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a href="mailto:{{site.email}}">
-            <i class="fa fa-envelope-o"></i>
-          </a>
-        </li>
-      </ul>
+      {% include social-buttons.html %}
     </div>
     <div class="col-sm-12 col-md-12">
       <span class="float-left">

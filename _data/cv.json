@@ -1,5 +1,5 @@
 {
-    "education":[
+    "education": [
         {
             "degree": "MFA in Creative Writing, Poetry",
             "school": "CSU San Bernardino",
@@ -16,7 +16,7 @@
             "date": "June 2012"
         }
     ],
-    "teachingExperience":[
+    "teachingExperience": [
         {
             "campus": "Riverside City College, Riverside, CA",
             "title": "Associate English Faculty",
@@ -48,7 +48,7 @@
             "date": "Mar 2015 – June 2016"
         }
     ],
-    "awards":[
+    "awards": [
         {
             "award": "The Loft Spoken Word Immersion Fellowship",
             "date": "Dec 2015 – Dec 2016"
@@ -62,7 +62,7 @@
             "date": "Sept 2015"
         }
     ],
-    "communityOutreach":[
+    "communityOutreach": [
         {
             "description": "Mosaic Program Facilitator/Event Coordinator",
             "date": "July 2017 – Dec 2017"
@@ -112,7 +112,7 @@
             "date": "Jan 2015"
         }
     ],
-    "editor":[
+    "editor": [
         {
             "work": "Great American Literary Magazine (National), Poetry Editor",
             "date": "Aug 2015 – Aug 2016"
@@ -126,7 +126,7 @@
             "date": "Jan 2013 – June 2014"
         }
     ],
-    "publications":[
+    "publications": [
         {
             "title": "(In)Flame",
             "date": "Nov 2016",
@@ -182,7 +182,7 @@
             "publisherUrl": "http://www.slipstreampress.org/"
         },
         {
-            "title": "To:,",
+            "title": "To:",
             "date": "June 2016",
             "publisher": "White Stag Press",
             "publisherUrl": "http://www.whitestagpublishing.com/about-1.html"
