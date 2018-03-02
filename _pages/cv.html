@@ -7,7 +7,7 @@ permalink: cv.html
 <section class="container about-section" id="aboutMe">
     <div class="card">
       <div class="cv-intro p-2">
-          <div class="card-block">
+          <div class="card-body">
             <h1 class="card-title display-3 cv-intro--name">{{site.authorName}}</h1>
             {% include social-buttons.html %}
             {% comment %} <a href="#" class="btn btn-outline-primary btn-sm btn-download-resume">
@@ -25,7 +25,7 @@ permalink: cv.html
               </h4>
             </div>
             <div id="educationCollapse" class="collapse" role="tabpanel" aria-labelledby="educationHeader">
-                <div class="card-block">
+                <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for education in site.data.cv.education %}
                     <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -48,7 +48,7 @@ permalink: cv.html
               </h4>
             </div>
             <div id="teachingCollapse" class="collapse" role="tabpanel" aria-labelledby="teachingHeader">
-              <div class="card-block">
+              <div class="card-body">
                 <div class="list-group list-group-flush">
                 {% for teaching in site.data.cv.teachingExperience %}
                   <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -71,7 +71,7 @@ permalink: cv.html
               </h4>
             </div>
             <div id="awardsCollapse" class="collapse" role="tabpanel" aria-labelledby="awardsHeader">
-                <div class="card-block">
+                <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for award in site.data.cv.awards %}
                     <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -94,7 +94,7 @@ permalink: cv.html
               </h4>
             </div>
             <div id="communityOutreachCollapse" class="collapse" role="tabpanel" aria-labelledby="communityOutreachHeader">
-                <div class="card-block">
+                <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for outreach in site.data.cv.communityOutreach %}
                     <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -116,7 +116,7 @@ permalink: cv.html
               </h4>
             </div>
             <div id="editorialCollapse" class="collapse" role="tabpanel" aria-labelledby="editorialHeader">
-                <div class="card-block">
+                <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for work in site.data.cv.editor %}
                     <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -138,7 +138,7 @@ permalink: cv.html
               </h4>
             </div>
             <div id="publicationsCollapse" class="collapse" role="tabpanel" aria-labelledby="publicationsHeader">
-                <div class="card-block">
+                <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for work in site.data.cv.publications %}
                     <div class="list-group-item list-group-item-action flex-column align-items-start">

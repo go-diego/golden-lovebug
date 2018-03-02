@@ -45,7 +45,7 @@ card-theme: dark
         {% if poem.include != "N/A" %}
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
             <div class="card h-100">
-                <div class="card-block">
+                <div class="card-body">
                     <h4 class="card-title">{{poem.title}}</h4>
                     {% comment %} <p class="card-text">{{poem.description | markdownify }}</p> {% endcomment %}
                     <div class="card-content">
@@ -67,7 +67,7 @@ card-theme: dark
           {% if article.include != "N/A" %}
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
               <div class="card h-100">
-                <div class="card-block">
+                <div class="card-body">
                   <h4 class="card-title">{{article.title}}</h4>
                   {% comment %} <p class="card-text">{{article.description | markdownify }}</p> {% endcomment %}
                   <div class="card-content">
@@ -89,7 +89,7 @@ card-theme: dark
           {% if essay.include != "N/A" %}
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
                <div class="card h-100">
-                <div class="card-block">
+                <div class="card-body">
                   <h4 class="card-title">{{essay.title}}</h4>
                   <p class="card-text">{{essay.description | markdownify }}</p>
                   <div class="card-content">

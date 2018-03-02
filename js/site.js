@@ -1,39 +1,15 @@
-// TODO: add fade animation to spinner
-// TODO: Skeleton pages
-// TODO: Set active page by url
-// TODO: Test onload functionality
-
-$(document).ready(function() {
+(function($) {
+    "use strict";
     //var preloader = $(".preloader");
     var navbar = $("nav.navbar.nav-home");
-    var seeMoreBtn = $(".js-scroll-trigger.btn-see-more");
     var contactForm = $("#contact-form");
-    var requiredFormFields = contactForm.find('[required="required"]');
     var formSubmitButton = $("button.btn-submit");
-    var formGroupHasError;
 
     //removeSpinner();
 
     $(".footerYear").html(new Date().getFullYear());
 
     collapseNavbar();
-
-    seeMoreBtn.click(function() {
-        if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top
-                    },
-                    1000,
-                    "easeInOutSine"
-                );
-                return false;
-            }
-        }
-    });
 
     $(window).scroll(function() {
         collapseNavbar();
@@ -48,12 +24,14 @@ $(document).ready(function() {
         }
     }
 
-    contactForm.submit(function(e) {
+    var $contactForm = $("#contact-form");
+    var $formSubmitButton = $("button.btn-submit");
+    $contactForm.submit(function(e) {
         e.preventDefault();
 
         var $form = $(this);
-        if (isFormValid()) {
-            var cardContent = contactForm.parent();
+        if ($form[0].checkValidity()) {
+            var $cardContent = $contactForm.parent();
             $.post($form.attr("action"), $form.serialize()).then(
                 function success() {
                     var successAlert = [
@@ -67,9 +45,9 @@ $(document).ready(function() {
                         .join("")
                         .replace(/\s\s+/g, "");
 
-                    cardContent.append(successAlert);
+                    $cardContent.append(successAlert);
 
-                    contactForm.trigger("reset");
+                    $contactForm.trigger("reset");
                 },
                 function error() {
                     var errorAlert = [
@@ -77,43 +55,47 @@ $(document).ready(function() {
                         '<button type="button" class="close" data-dismiss="alert" aria-label="Close">',
                         '<span aria-hidden="true">&times;</span>',
                         "</button>",
-                        '<strong>Oops!</strong> An error occurred while sending your message. Please try again or email me directly at <a class="alert-link" href="mailto:email@example.com">email@example.com</a>.',
+                        '<strong>Oops!</strong> An error occurred while sending your message. Please try again or email me directly at <a class="alert-link" href="mailto:a.jeffredo2@gmail.com">a.jeffredo2@gmail.com</a>.',
                         "</div>"
                     ]
                         .join("")
                         .replace(/\s\s+/g, "");
 
-                    cardContent.append(errorAlert);
+                    $cardContent.append(errorAlert);
 
-                    contactForm.trigger("reset");
+                    $contactForm.trigger("reset");
+
+                    $formSubmitButton.attr("disabled", true);
                 }
             );
         }
     });
 
-    function isFormValid() {
-        formGroupHasError = $(".form-group.has-error");
-        return formGroupHasError.length > 0 ? false : true;
-    }
+    var inputs = document.querySelectorAll("input, select, textarea, select");
+    inputs.forEach(function(input) {
+        var $input = $(input);
+        var $formGroup = $input.parents(".form-group");
+        var $feedback = $formGroup.find(".form-control-feedback");
 
-    requiredFormFields.change(function() {
-        var $this = $(this);
-        var $formGroup = $this.parents(".form-group");
-        if (!$this.val() || $this.val() == "") {
-            $formGroup.addClass("has-error");
-        } else {
-            $formGroup.removeClass("has-error");
-        }
+        input.addEventListener("input", function() {
+            if (input.validity.valid) {
+                $formGroup.removeClass("has-danger");
+            } else {
+                $formGroup.addClass("has-danger");
+                if (input.validity.typeMismatch && $input.attr("name") == "email") {
+                    $feedback.html("Please provide a valid email");
+                }
+                if (input.validity.valueMissing && $input.attr("name") == "email") {
+                    $feedback.html("Email is required");
+                }
+            }
 
-        var emptyRequiredFields = requiredFormFields.filter(function() {
-            return $(this).val() == "";
+            if ($contactForm[0].checkValidity()) {
+                $formSubmitButton.removeAttr("disabled");
+            } else {
+                $formSubmitButton.attr("disabled", true);
+            }
         });
-
-        if (isFormValid() && emptyRequiredFields.length == 0) {
-            formSubmitButton.removeAttr("disabled");
-        } else {
-            formSubmitButton.attr("disabled", true);
-        }
     });
 
     // function removeSpinner() {
@@ -121,4 +103,4 @@ $(document).ready(function() {
     //     preloader.remove();
     //   }, 1000);
     // }
-});
+})(jQuery);

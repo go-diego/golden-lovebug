@@ -4,6 +4,27 @@
     @include heading-font;
 }
 
+.has-danger .col-form-label,
+.has-danger .custom-control,
+.has-danger .form-check-label,
+.has-danger .form-control-feedback,
+.has-danger .form-control-label {
+    color: #d9534f;
+}
+
+#contact-form {
+    .form-group {
+        .form-control-feedback {
+            display: none;
+        }
+        &.has-danger {
+            .form-control-feedback {
+                display: inline;
+            }
+        }
+    }
+}
+
 html,
 body {
     font-size: 14px !important;

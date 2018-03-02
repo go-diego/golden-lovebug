@@ -1,30 +1,30 @@
 body {
-  -webkit-tap-highlight-color: $theme-primary;
-  overflow-x: hidden;
-  @include body-font;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    -webkit-tap-highlight-color: $theme-primary;
+    overflow-x: hidden;
+    @include body-font;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 main {
-  flex: 1 0 auto;
-  min-height: 100%;
+    flex: 1 0 auto;
+    min-height: 100%;
 }
 
 p {
-  //line-height: 1.75;
+    //line-height: 1.75;
 }
 
 a {
-  color: $theme-primary;
+    color: $theme-primary;
 
-  &.active,
-  &:active,
-  &:focus,
-  &:hover {
-    color: darken($theme-primary, 10%);
-  }
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+        color: darken($theme-primary, 10%);
+    }
 }
 
 h1,
@@ -33,50 +33,50 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  @include heading-font;
+    font-weight: 700;
+    @include heading-font;
 }
 
 section {
-  padding: 100px 0;
+    padding: 100px 0;
 
-  h2.section-heading {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
+    h2.section-heading {
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
 
-  h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 75px;
-    text-transform: none;
-    @include serif-font;
-  }
+    h3.section-subheading {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 75px;
+        text-transform: none;
+        @include serif-font;
+    }
 }
 @media (min-width: 768px) {
-  section {
-    padding: 150px 0;
-  }
+    section {
+        padding: 150px 0;
+    }
 }
 
 ::-moz-selection {
-  background: $theme-primary;
-  text-shadow: none;
+    background: $theme-primary;
+    text-shadow: none;
 }
 
 ::selection {
-  background: $theme-primary;
-  text-shadow: none;
+    background: $theme-primary;
+    text-shadow: none;
 }
 
 img::selection {
-  background: transparent;
+    background: transparent;
 }
 
 img::-moz-selection {
-  background: transparent;
+    background: transparent;
 }
 
 // ul.social-buttons {
@@ -99,25 +99,25 @@ img::-moz-selection {
 // }
 
 ul.social-buttons li a {
-  font-size: 20px;
-  line-height: 40px;
-  display: block;
-  width: 40px;
-  height: 40px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  color: white;
-  border-radius: 100%;
-  outline: none;
-  background-color: #222222;
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: #222222;
 
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: darken($theme-primary, 25%);
-    transform: translateY(-3px);
-    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-    //filter: brightness(130%);
-  }
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: darken($theme-primary, 10%);
+        transform: translateY(-3px);
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+        //filter: brightness(130%);
+    }
 }
