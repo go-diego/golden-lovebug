@@ -16,15 +16,15 @@ permalink: cv.html
             </a> {% endcomment %}
           </div>
       </div>  
-      <div id="accordion" role="tablist" aria-multiselectable="true">
+      <div id="accordion">
         <div class="card">
-            <div class="card-header" role="tab" id="educationHeader">
-              <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#educationCollapse" aria-expanded="true" aria-controls="educationCollapse">
+            <div class="card-header" id="educationHeader">
+              <h4 class="mb-0" data-toggle="collapse" data-target="#educationCollapse" aria-expanded="true" aria-controls="educationCollapse">
                 <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 Education            
               </h4>
             </div>
-            <div id="educationCollapse" class="collapse" role="tabpanel" aria-labelledby="educationHeader">
+            <div id="educationCollapse" class="collapse" role="tabpanel" aria-labelledby="educationHeader" data-parent="#accordion">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for education in site.data.cv.education %}
@@ -41,13 +41,13 @@ permalink: cv.html
             </div>
         </div> 
         <div class="card">
-            <div class="card-header" role="tab" id="teachingHeader">
-              <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#teachingCollapse" aria-expanded="true" aria-controls="teachingCollapse">
+            <div class="card-header" id="teachingHeader">
+              <h4 class="mb-0" data-toggle="collapse"  data-target="#teachingCollapse" aria-expanded="false" aria-controls="teachingCollapse">
                   <i class="fa fa-briefcase" aria-hidden="true"></i>
                   Teaching Experience          
               </h4>
             </div>
-            <div id="teachingCollapse" class="collapse" role="tabpanel" aria-labelledby="teachingHeader">
+            <div id="teachingCollapse" class="collapse" data-parent="#accordion" aria-labelledby="teachingHeader">
               <div class="card-body">
                 <div class="list-group list-group-flush">
                 {% for teaching in site.data.cv.teachingExperience %}
@@ -64,13 +64,13 @@ permalink: cv.html
             </div>
         </div> 
          <div class="card">
-            <div class="card-header" role="tab" id="awardsHeader">
-              <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#awardsCollapse" aria-expanded="true" aria-controls="awardsCollapse">
+            <div class="card-header" id="awardsHeader">
+              <h4 class="mb-0" data-toggle="collapse" data-target="#awardsCollapse" aria-expanded="false" aria-controls="awardsCollapse">
                 <i class="fa fa-trophy" aria-hidden="true"></i>
                 Honors & Awards            
               </h4>
             </div>
-            <div id="awardsCollapse" class="collapse" role="tabpanel" aria-labelledby="awardsHeader">
+            <div id="awardsCollapse" class="collapse" data-parent="#accordion" aria-labelledby="awardsHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for award in site.data.cv.awards %}
@@ -88,12 +88,12 @@ permalink: cv.html
         </div>
          <div class="card">
             <div class="card-header" role="tab" id="communityOutreachHeader">
-              <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#communityOutreachCollapse" aria-expanded="true" aria-controls="communityOutreachCollapse">
+              <h4 class="mb-0" data-toggle="collapse" data-target="#communityOutreachCollapse" aria-expanded="false" aria-controls="communityOutreachCollapse">
                 <i class="fa fa-handshake-o" aria-hidden="true"></i>
                 Community Outreach           
               </h4>
             </div>
-            <div id="communityOutreachCollapse" class="collapse" role="tabpanel" aria-labelledby="communityOutreachHeader">
+            <div id="communityOutreachCollapse" class="collapse" data-parent="#accordion" aria-labelledby="communityOutreachHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for outreach in site.data.cv.communityOutreach %}
@@ -110,12 +110,12 @@ permalink: cv.html
         </div>
          <div class="card">
             <div class="card-header" role="tab" id="editorialHeader">
-              <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#editorialCollapse" aria-expanded="true" aria-controls="editorialCollapse">
+              <h4 class="mb-0" data-toggle="collapse" data-target="#editorialCollapse" aria-expanded="false" aria-controls="editorialCollapse">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
                 Editorial Work           
               </h4>
             </div>
-            <div id="editorialCollapse" class="collapse" role="tabpanel" aria-labelledby="editorialHeader">
+            <div id="editorialCollapse" class="collapse" data-parent="#accordion" aria-labelledby="editorialHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for work in site.data.cv.editor %}
@@ -132,12 +132,12 @@ permalink: cv.html
         </div>
          <div class="card">
             <div class="card-header" role="tab" id="publicationsHeader">
-              <h4 class="mb-0" data-toggle="collapse" data-parent="#accordion" href="#publicationsCollapse" aria-expanded="true" aria-controls="publicationsCollapse">
+              <h4 class="mb-0" data-toggle="collapse" data-target="#publicationsCollapse" aria-expanded="false" aria-controls="publicationsCollapse">
                 <i class="fa fa-book" aria-hidden="true"></i>
                 Publications           
               </h4>
             </div>
-            <div id="publicationsCollapse" class="collapse" role="tabpanel" aria-labelledby="publicationsHeader">
+            <div id="publicationsCollapse" class="collapse" data-parent="#accordion" aria-labelledby="publicationsHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for work in site.data.cv.publications %}
