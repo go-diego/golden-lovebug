@@ -12,6 +12,13 @@
     color: #d9534f;
 }
 
+.header-underline {
+    background-color: $theme-accent;
+    display: block;
+    height: 1px;
+    // margin: 5px auto 40px;
+}
+
 #contact-form {
     .form-group {
         .form-control-feedback {

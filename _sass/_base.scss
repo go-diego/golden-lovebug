@@ -1,5 +1,4 @@
 body {
-    -webkit-tap-highlight-color: $theme-primary;
     overflow-x: hidden;
     @include body-font;
     display: flex;
@@ -59,16 +58,6 @@ section {
     section {
         padding: 150px 0;
     }
-}
-
-::-moz-selection {
-    background: $theme-primary;
-    text-shadow: none;
-}
-
-::selection {
-    background: $theme-primary;
-    text-shadow: none;
 }
 
 img::selection {

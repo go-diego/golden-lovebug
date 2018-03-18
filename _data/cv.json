@@ -128,16 +128,16 @@
     ],
     "publications": [
         {
-            "title": "(In)Flame",
-            "date": "Nov 2016",
-            "publisher": "Luna Luna Magazine",
-            "publisherUrl": "http://www.lunalunamagazine.com/"
-        },
-        {
             "title": "No Matter",
             "date": "Mar 2017",
             "publisher": "Hermeneutic Chaos Journal",
             "publisherUrl": "http://www.hermeneuticchaosjournal.com/"
+        },
+        {
+            "title": "(In)Flame",
+            "date": "Nov 2016",
+            "publisher": "Luna Luna Magazine",
+            "publisherUrl": "http://www.lunalunamagazine.com/"
         },
         {
             "title": "Songs After Memory Fractures",

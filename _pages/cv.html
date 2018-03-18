@@ -7,8 +7,8 @@ permalink: cv.html
 <section class="container cv-section">
     <div class="card">
       <div class="cv-intro p-2">
-          <div class="card-body">
-            <h1 class="card-title display-3 cv-intro--name">{{site.authorName}}</h1>
+          <div class="card-body p-0">
+            <h1 class="card-title h1 cv-intro--name">Curriculum Vitae</h1>
             {% include social-buttons.html %}
             {% comment %} <a href="#" class="btn btn-outline-primary btn-sm btn-download-resume">
                 <i class="fa fa-download"></i>
@@ -26,7 +26,7 @@ permalink: cv.html
                   </button>   
               </h4>
             </div>
-            <div id="educationCollapse" class="collapse" role="tabpanel" aria-labelledby="educationHeader" data-parent="#accordion">
+            <div id="educationCollapse" class="collapse" aria-labelledby="educationHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for education in site.data.cv.education %}
@@ -51,7 +51,7 @@ permalink: cv.html
                   </button>                   
               </h4>
             </div>
-            <div id="teachingCollapse" class="collapse" data-parent="#accordion" aria-labelledby="teachingHeader">
+            <div id="teachingCollapse" class="collapse" aria-labelledby="teachingHeader">
               <div class="card-body">
                 <div class="list-group list-group-flush">
                 {% for teaching in site.data.cv.teachingExperience %}
@@ -76,7 +76,7 @@ permalink: cv.html
                   </button>             
               </h4>
             </div>
-            <div id="awardsCollapse" class="collapse" data-parent="#accordion" aria-labelledby="awardsHeader">
+            <div id="awardsCollapse" class="collapse" aria-labelledby="awardsHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for award in site.data.cv.awards %}
@@ -101,7 +101,7 @@ permalink: cv.html
                   </button>              
               </h4>
             </div>
-            <div id="communityOutreachCollapse" class="collapse" data-parent="#accordion" aria-labelledby="communityOutreachHeader">
+            <div id="communityOutreachCollapse" class="collapse" aria-labelledby="communityOutreachHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for outreach in site.data.cv.communityOutreach %}
@@ -125,7 +125,7 @@ permalink: cv.html
                   </button>        
               </h4>
             </div>
-            <div id="editorialCollapse" class="collapse" data-parent="#accordion" aria-labelledby="editorialHeader">
+            <div id="editorialCollapse" class="collapse" aria-labelledby="editorialHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for work in site.data.cv.editor %}
@@ -149,7 +149,7 @@ permalink: cv.html
                   </button>            
               </h4>
             </div>
-            <div id="publicationsCollapse" class="collapse" data-parent="#accordion" aria-labelledby="publicationsHeader">
+            <div id="publicationsCollapse" class="collapse" aria-labelledby="publicationsHeader">
                 <div class="card-body">
                   <div class="list-group list-group-flush">
                   {% for work in site.data.cv.publications %}
