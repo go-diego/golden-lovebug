@@ -4,6 +4,12 @@
     @include heading-font;
 }
 
+.btn-accent {
+    font-weight: 700;
+    @include button-variant(white, $theme-accent, $theme-accent);
+    @include heading-font;
+}
+
 .has-danger .col-form-label,
 .has-danger .custom-control,
 .has-danger .form-check-label,

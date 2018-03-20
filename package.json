@@ -1,7 +1,8 @@
 {
-  "name": "golden-lovebug",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "bundle exec jekyll serve"
-  }
+    "name": "golden-lovebug",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "bundle exec jekyll serve",
+        "build": "bundle exec jekyll build"
+    }
 }
