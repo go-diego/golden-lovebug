@@ -12,15 +12,7 @@ url: "allysonjeffredo.com" # the base hostname & protocol for your site, e.g. ht
 twitterUrl: https://twitter.com/allyj0_0
 facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
-
-# Build settings
 markdown: kramdown
-#permalink: pretty
-
-#theme: minima
-#gems:
-#  - jekyll-feed
-
 include: [_pages]
 exclude:
   - Gemfile

@@ -1,18 +1,22 @@
 [
-  {
-    "url": "index.html",
-    "text": "About Me"
-  },
-  {
-    "url": "publications.html",
-    "text": "Publications"
-  },
-  {
-    "url": "cv.html",
-    "text": "CV"
-  },
-  {
-    "url": "contact.html",
-    "text": "Contact"
-  }
+    {
+        "url": "index.html",
+        "text": "About Me"
+    },
+    {
+        "url": "publications.html",
+        "text": "Publications"
+    },
+    {
+        "url": "cv.html",
+        "text": "CV"
+    },
+    {
+        "url": "contact.html",
+        "text": "Contact"
+    },
+    {
+        "url": "blog.html",
+        "text": "Blog"
+    }
 ]
