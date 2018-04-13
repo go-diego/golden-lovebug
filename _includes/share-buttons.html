@@ -2,13 +2,13 @@
     Share this</small>
 <ul class="list-inline social-buttons">
     <li class="list-inline-item">
-        <a class="twitter-btn text-center" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitterUsername }}&related={{ site.twitterUsername }}"
+        <a class="twitter-btn text-center" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | absolute_url }}&via={{ site.twitterUsername }}&related={{ site.twitterUsername }}"
             rel="nofollow" target="_blank" title="Share on Twitter">
             <i class="fa fa-twitter"></i>
         </a>
     </li>
     <li class="list-inline-item">
-        <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook" class="facebook-btn text-center">
+        <a href="https://facebook.com/sharer.php?u={{ page.url | absolute_url }}" rel="nofollow" target="_blank" title="Share on Facebook" class="facebook-btn text-center">
             <i class="fa fa-facebook"></i>
         </a>
     </li>
