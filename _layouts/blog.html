@@ -6,13 +6,13 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="{{page.excerpt | strip_html}}" />
     <meta property="og:title" content="{{page.title}} | Writing Behind-the-Scenes" />
-    <meta property="og:url" content="{{site.ogUrl}}" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
     <meta property="og:image" content="{{site.ogUrl}}{{site.ogImage}}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{page.title}} | Writing Behind-the-Scenes" />
     <meta name="twitter:description" content="{{page.excerpt | strip_html}}" />
     <meta name="twitter:image" content="{% if page.image %} {{site.ogUrl}}{{page.image}} {%else%} {{site.ogUrl}}{{site.ogImage}} {% endif %}" />
-    <meta name="twitter:url" content="{{site.ogUrl}}" />
+    <meta name="twitter:url" content="{{site.url}}{{page.url}}" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="{{site.favicon | absolute_url}}" />
