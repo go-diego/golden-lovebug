@@ -10,6 +10,7 @@ ogUrl: https://www.allysonjeffredo.com/
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "allysonjeffredo.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitterUrl: https://twitter.com/allyj0_0
+twitterUsername: allyj0_0
 facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
 markdown: kramdown

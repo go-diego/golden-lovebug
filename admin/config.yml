@@ -19,6 +19,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Permalink", name: "permalink", widget: "hidden", required: false, default: "blog/:year/:month/:day/:title:output_ext" }
     meta:
     - {label: "SEO Description", name: "description", widget: "text"}
   - name: "data"

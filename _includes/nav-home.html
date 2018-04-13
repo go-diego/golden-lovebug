@@ -10,7 +10,7 @@
         {% if link.url contains 'blog' %}
           {% assign newPost = site.posts.first %}
           <li class="nav-item">
-            <a class="nav-link {% if page.url contains newPost.url %} active {% endif %}" href="{{newPost.url | absolute_url}}">{{link.text}}</a>
+            <a class="nav-link {% if page.url contains 'blog' %} active {% endif %}" href="{{newPost.url | absolute_url}}">{{link.text}}</a>
           </li>
         {% else %}
           <li class="nav-item">
