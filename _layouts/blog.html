@@ -4,7 +4,7 @@
     <title>{{page.title}} | Writing Behind-the-Scenes</title>
     <meta name="description" content="{{page.excerpt | strip_html}}" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="{{page.excerpt | strip_html}}" />
+    <meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
     <meta property="og:title" content="{{page.title}} | Writing Behind-the-Scenes" />
     <meta property="og:url" content="{{site.url}}{{page.url}}" />
     <meta property="og:image" content="{{site.ogUrl}}{{site.ogImage}}" />
