@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: The Wild Boar and the Fox
-date: 2017-11-02T18:08:10-07:00
+date: 2017-10-31T18:08:10-07:00
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
 A Wild Boar was sharpening his tusks busily against the stump of a tree, when a Fox happened by. Now the Fox was always looking for a chance to make fun of his neighbors. So he made a great show of looking anxiously about, as if in fear of some hidden enemy. But the Boar kept right on with his work.
