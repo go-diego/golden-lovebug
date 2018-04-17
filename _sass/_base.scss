@@ -110,7 +110,7 @@ ul.social-buttons li a {
         //filter: brightness(130%);
     }
 
-    &.facebook-btn{
+    &.facebook-btn {
         background-color: #3b5998;
         &:active,
         &:focus,
@@ -119,7 +119,7 @@ ul.social-buttons li a {
         }
     }
 
-    &.twitter-btn{
+    &.twitter-btn {
         background-color: #55acee;
         &:active,
         &:focus,
@@ -127,11 +127,10 @@ ul.social-buttons li a {
             background-color: darken(#55acee, 10%);
         }
     }
-
 }
 
-.blog-sidebar{
-    .recent-post.active a{
+.blog-sidebar {
+    .post.active a {
         color: $theme-primary !important;
     }
 }

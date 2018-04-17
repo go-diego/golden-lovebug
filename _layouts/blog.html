@@ -39,7 +39,7 @@
         </div>
       </div>
       <aside class="col-md-4 blog-sidebar">
-        <h3 class="h4 text-capitalize">Recent Posts</h3>
+        {% comment %} <h3 class="h4 text-capitalize">Recent Posts</h3>
         <ol class="list-unstyled mb-0">
           {% for post in site.posts %}
           <li class="recent-post{% if page.url contains post.url %} active {% endif %}">
@@ -47,6 +47,55 @@
           </li>
           {% endfor %}
         </ol>
+        <h3 class="h4 text-capitalize pt-4">Archive</h3>
+        {% for post in site.posts %}
+            {% assign currentdate = post.date | date: "%b %Y" %}
+              {% if currentdate != date %}
+                {% unless forloop.first %}</ul>{% endunless %}
+                <h5 id="y{{post.date | date: "%b%Y"}}">{{ currentdate }}</h5>
+                <ul class="list-unstyled">
+                {% assign date = currentdate %}
+              {% endif %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% if forloop.last %}</ul>{% endif %}
+        {% endfor %} {% endcomment %}
+
+        {% assign currentMonthYear = site.time | date: '%b %Y' %}
+        {% assign recentPostsArr =  "" | split: ',' %}
+        {% assign archivedPostsArr = "" | split: ',' %}
+        {% for post in site.posts %}
+          {% assign postMonthYear = post.date | date: '%b %Y' %}
+          {% if postMonthYear == currentMonthYear %}
+            {% assign recentPostsArr = recentPostsArr | push: post %}
+          {% else %}
+            {% assign archivedPostsArr = archivedPostsArr | push: post %}
+          {% endif %}
+        {% endfor %}
+
+        <h3 class="h4 text-capitalize">Recent Posts</h3>
+        <ul class="list-unstyled mb-0">
+          {% for post in recentPostsArr %}   
+              <li class="post{% if page.url contains post.url %} active {% endif %}">
+                <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+          {% endfor %}
+        </ul>
+
+        <h3 class="h4 text-capitalize mt-5">Archive</h3>
+        {% for post in archivedPostsArr %}
+            {% assign currentdate = post.date | date: "%b %Y" %}
+              {% if currentdate != date %}
+                {% unless forloop.first %}</ul>{% endunless %}
+                <h5 class="text-capitalize h6 mt-1 mb-0" id="y{{post.date | date: "%b%Y"}}">{{ currentdate }}</h5>
+                <ul class="list-unstyled">
+                {% assign date = currentdate %}
+              {% endif %}
+              <li class="post {% if page.url contains post.url %}active{% endif %}">
+                <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+              {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+
       </aside>
     </div>
   </main>
