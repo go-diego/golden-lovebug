@@ -55,7 +55,7 @@
         <ul class="list-unstyled mb-0">
           {% for post in recentPostsArr %}   
               <li class="post{% if page.url contains post.url %} active {% endif %}">
-                {% if forloop.first %} :new: {% endif %} <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
+                {% if forloop.first %} :boom: {% endif %} <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
               </li>
           {% endfor %}
         </ul>
