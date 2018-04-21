@@ -6,10 +6,19 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
-      {% for link in site.data.nav %}
-      <li class="nav-item">
-        <a class="nav-link {% if page.url contains link.url %} active {% endif %}" href="{{link.url}}">{{link.text}}</a>
-      </li>
+        {% for link in site.data.nav %}
+          {% if link.url contains 'blog' %}
+            {% if site.posts.size > 0 %}
+            {% assign newPost = site.posts.first %}
+              <li class="nav-item">
+                <a class="nav-link {% if page.url contains 'blog' %} active {% endif %}" href="{{newPost.url | absolute_url}}">{{link.text}}</a>
+              </li>
+            {% endif %}
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link {% if page.url contains link.url %} active {% endif %}" href="{{link.url | absolute_url}}">{{link.text}}</a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
