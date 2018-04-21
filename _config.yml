@@ -15,9 +15,14 @@ twitterUrl: https://twitter.com/allyj0_0
 twitterUsername: allyj0_0
 facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
+googleAnalyticsId: UA-116050053-1
 markdown: kramdown
 include: [_pages]
 exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
+  - node_modules
+  - package-lock.json
+  - vendors.js
+  - gulpfile.js

@@ -1,11 +1,8 @@
 (function($) {
     "use strict";
-    //var preloader = $(".preloader");
     var navbar = $("nav.navbar.nav-home");
     var contactForm = $("#contact-form");
     var formSubmitButton = $("button.btn-submit");
-
-    //removeSpinner();
 
     $(".footerYear").html(new Date().getFullYear());
 
@@ -97,10 +94,4 @@
             }
         });
     });
-
-    // function removeSpinner() {
-    //   setTimeout(function() {
-    //     preloader.remove();
-    //   }, 1000);
-    // }
 })(jQuery);
