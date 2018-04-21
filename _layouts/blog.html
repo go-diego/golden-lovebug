@@ -60,7 +60,9 @@
           {% endfor %}
         </ul>
 
-        <h3 class="h4 text-capitalize mt-5">Archive</h3>
+        {% if archivedPostsArr.size > 0 %}
+          <h3 class="h4 text-capitalize mt-5">Archive</h3>
+        {% endif %}
         {% for post in archivedPostsArr %}
             {% assign currentdate = post.date | date: "%b %Y" %}
               {% if currentdate != date %}
