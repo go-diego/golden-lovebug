@@ -1,8 +1,7 @@
 backend:
   name: github
   repo: go-diego/golden-lovebug # Path to your Github repository
-  # branch: master # Branch to update (master by default)
-  branch: feature-blog
+  branch: master
   # site_domain: golden-lovebug.netlify.com
 
 media_folder: "assets/img" # Folder where user uploaded files should go
