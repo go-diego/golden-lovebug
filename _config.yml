@@ -7,22 +7,24 @@ ogType: website
 ogDescription: I'm Allyson. Poet, writer, educator.
 ogImage: assets/img/preview.png
 ogUrl: https://www.allysonjeffredo.com/
-#baseurl: "" # the subpath of your site, e.g. /blog
-url: "allysonjeffredo.com" # the base hostname & protocol for your site, e.g. http://example.com
+facebookAppId: 397283870738655
+#url: "https://allysonjeffredo.com"
+#url: https://feature-blog--golden-lovebug.netlify.com
+url: https://development--golden-lovebug.netlify.com
 twitterUrl: https://twitter.com/allyj0_0
+twitterUsername: allyj0_0
 facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
-
-# Build settings
+googleAnalyticsId: UA-116050053-1
 markdown: kramdown
-#permalink: pretty
-
-#theme: minima
-#gems:
-#  - jekyll-feed
-
+plugins:
+  - jemoji
 include: [_pages]
 exclude:
   - Gemfile
   - Gemfile.lock
   - package.json
+  - node_modules
+  - package-lock.json
+  - vendors.js
+  - gulpfile.js

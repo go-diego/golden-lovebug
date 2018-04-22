@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>{{page.title}} | Writing Behind-the-Scenes</title>
+    <meta property="fb:app_id" content="site.facebookAppId">
+    <meta name="description" content="{{page.excerpt | strip_html}}" />
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
+    <meta property="og:title" content="{{page.title}} | Writing Behind-the-Scenes" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    <meta property="og:image" content="{{site.ogUrl}}{{site.ogImage}}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{page.title}} | Writing Behind-the-Scenes" />
+    <meta name="twitter:description" content="{{page.excerpt | strip_html}}" />
+    <meta name="twitter:image" content="{% if page.image %} {{site.ogUrl}}{{page.image}} {%else%} {{site.ogUrl}}{{site.ogImage}} {% endif %}" />
+    <meta name="twitter:url" content="{{site.url}}{{page.url}}" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{site.favicon | absolute_url}}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href="{{'css/site.css' | absolute_url}}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+</head>
+
+<body>
+  {% include nav-default.html %}
+  <main class="container pt-5 mt-5">
+    <div class="row">
+      <div class="col-md-8 blog-main">
+        <h1>{{page.title}}</h1>
+        <h2 class="h6 text-muted pb-2 text-capitalize">{{page.date | date_to_string}}</h2>
+        <div class="pb-3">{% include share-buttons.html %}</div>
+        <div class="text-justify">
+          {{content}}
+        </div>
+      </div>
+      <aside class="col-md-4 blog-sidebar">
+        {% assign currentMonthYear = site.time | date: '%b %Y' %}
+        {% assign recentPostsArr =  "" | split: ',' %}
+        {% assign archivedPostsArr = "" | split: ',' %}
+        {% for post in site.posts %}
+          {% assign postMonthYear = post.date | date: '%b %Y' %}
+          {% if postMonthYear == currentMonthYear %}
+            {% assign recentPostsArr = recentPostsArr | push: post %}
+          {% else %}
+            {% assign archivedPostsArr = archivedPostsArr | push: post %}
+          {% endif %}
+        {% endfor %}
+
+        <h3 class="h4 text-capitalize">Recent Posts</h3>
+        <ul class="list-unstyled mb-0">
+          {% for post in recentPostsArr %}   
+              <li class="post{% if page.url contains post.url %} active {% endif %}">
+                {% if forloop.first %} :boom: {% endif %} <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+          {% endfor %}
+        </ul>
+
+        {% if archivedPostsArr.size > 0 %}
+          <h3 class="h4 text-capitalize mt-5">Archive</h3>
+        {% endif %}
+        {% for post in archivedPostsArr %}
+            {% assign currentdate = post.date | date: "%b %Y" %}
+              {% if currentdate != date %}
+                {% unless forloop.first %}</ul>{% endunless %}
+                <h5 class="text-capitalize h6 mt-1 mb-0" id="y{{post.date | date: "%b%Y"}}">{{ currentdate }}</h5>
+                <ul class="list-unstyled">
+                {% assign date = currentdate %}
+              {% endif %}
+              <li class="post {% if page.url contains post.url %}active{% endif %}">
+                <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+              {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+      </aside>
+    </div>
+  </main>
+  {% include footer.html %} 
+  {% include scripts.html %}
+</body>
+
+</html>

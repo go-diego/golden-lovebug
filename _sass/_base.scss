@@ -109,4 +109,28 @@ ul.social-buttons li a {
         box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
         //filter: brightness(130%);
     }
+
+    &.facebook-btn {
+        background-color: #3b5998;
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: darken(#3b5998, 10%);
+        }
+    }
+
+    &.twitter-btn {
+        background-color: #55acee;
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: darken(#55acee, 10%);
+        }
+    }
+}
+
+.blog-sidebar {
+    .post.active a {
+        color: $theme-primary !important;
+    }
 }

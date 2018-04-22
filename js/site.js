@@ -1,11 +1,8 @@
 (function($) {
     "use strict";
-    //var preloader = $(".preloader");
     var navbar = $("nav.navbar.nav-home");
     var contactForm = $("#contact-form");
     var formSubmitButton = $("button.btn-submit");
-
-    //removeSpinner();
 
     $(".footerYear").html(new Date().getFullYear());
 
@@ -16,7 +13,6 @@
     });
 
     function collapseNavbar() {
-        // Collapse the navbar if page position is greater than 100px from the top
         if (navbar.length > 0 && navbar.offset().top > 100) {
             navbar.addClass("navbar-shrink");
         } else {
@@ -97,10 +93,4 @@
             }
         });
     });
-
-    // function removeSpinner() {
-    //   setTimeout(function() {
-    //     preloader.remove();
-    //   }, 1000);
-    // }
 })(jQuery);
