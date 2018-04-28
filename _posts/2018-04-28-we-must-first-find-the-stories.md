@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: We Must First Find the Stories
-image: ''
+image: /assets/img/fedupsnail.jpeg
 date: 2018-04-28T17:20:15.965Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
