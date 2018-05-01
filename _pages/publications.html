@@ -10,7 +10,7 @@ card-theme: dark
 
 <section class="container work-section">
 
-  <h1 class="h-center pb-4">{{page.title}}</h1>
+  <h1 class="text-center pb-4">{{page.title}}</h1>
   <div class="row">
     <div class="col-sm-12">
       <p>
@@ -51,7 +51,7 @@ card-theme: dark
 
 
   {% if poems.size > 0 %}
-  <h2 class="h-center work-section__header-type">Poems</h2>
+  <h2 class="text-center work-section__header-type">Poems</h2>
   <div class="work-section__header-underline"></div>
   <div class="row d-flex flex-wrap">
       {% for poem in poems %}
@@ -73,7 +73,7 @@ card-theme: dark
   {% endif %}
 
   {% if articles.size > 0 %}
-    <h2 class="h-center work-section__header-type">Articles</h2>
+    <h2 class="text-center work-section__header-type">Articles</h2>
     <div class="work-section__header-underline"></div>
     <div class="row d-flex flex-wrap">
         {% for article in articles %}
@@ -95,13 +95,13 @@ card-theme: dark
   {% endif %}
 
   {% if essays.size > 0 %}
-    <h2 class="h-center work-section__header-type">Essays</h2>
+    <h2 class="text-center work-section__header-type">Essays</h2>
     <div class="work-section__header-underline"></div>
     <div class="row d-flex flex-wrap">
         {% for essay in essays %}
           {% if essay.include != "N/A" %}
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
-               <div class="card h-100">
+              <div class="card h-100">
                 <div class="card-body">
                   <h4 class="card-title">{{essay.title}}</h4>
                   <p class="card-text">{{essay.description | markdownify }}</p>
