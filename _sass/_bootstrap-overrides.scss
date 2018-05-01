@@ -21,8 +21,12 @@
 .header-underline {
     background-color: $theme-accent;
     display: block;
-    height: 1px;
+    height: 3px;
     // margin: 5px auto 40px;
+    &.center {
+        margin: 5px auto 40px;
+        width: 100px;
+    }
 }
 
 #contact-form {
