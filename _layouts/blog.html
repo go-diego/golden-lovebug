@@ -51,7 +51,9 @@
           {% endif %}
         {% endfor %}
 
+        {% if recentPostsArr.size > 0 %}
         <h3 class="h4 text-capitalize">Recent Posts</h3>
+        {% endif %}
         <ul class="list-unstyled mb-0">
           {% for post in recentPostsArr %}   
               <li class="post{% if page.url contains post.url %} active {% endif %}">
