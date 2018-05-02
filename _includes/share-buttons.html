@@ -1,5 +1,5 @@
 <small class="text-muted">
-    Share this {{page.url | absolute_url}}</small>
+    Share this {{site.url}}{{page.url}}</small>
 <ul class="list-inline social-buttons">
     <li class="list-inline-item">
         <a class="twitter-btn text-center" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{page.url | absolute_url}}&via={{ site.twitterUsername }}&related={{ site.twitterUsername }}"
@@ -8,7 +8,7 @@
         </a>
     </li>
     <li class="list-inline-item">
-        <a href="https://facebook.com/sharer/sharer.php?u={{page.url | absolute_url}}&title={{page.title | url_escape}}" rel="nofollow"
+        <a href="https://facebook.com/sharer/sharer.php?u={{site.url}}{{page.url}}&title={{page.title | url_escape}}" rel="nofollow"
             target="_blank" title="Share on Facebook" class="facebook-btn text-center">
             <i class="fab fa-facebook"></i>
         </a>
