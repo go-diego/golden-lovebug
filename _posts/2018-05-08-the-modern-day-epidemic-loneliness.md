@@ -5,7 +5,7 @@ image: /assets/img/hellomynameis.jpg
 date: 2018-05-08T16:55:32.856Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
-Bouts of loneliness are inevitable, and I often feel [lonely](https://youtu.be/6EEW-9NDM5k). In the midst of this mindset, I feel like the only person who has ever felt alone. Yet, as solitary as this struggle with loneliness can feel, we all feel it. NPR ran a story on this, “[Americans are a Lonely Lot, and Young People Bear the Heaviest Burden.](https://www.npr.org/sections/health-shots/2018/05/01/606588504/americans-are-a-lonely-lot-and-young-people-bear-the-heaviest-burden)” While listening to this segment stuck in late night traffic, I realized nothing makes me feel lonelier than sitting in the car by myself reflecting on how often I feel lonely. In this article, there are some pretty outstanding numbers from a UCLA study on loneliness. The first being:
+Bouts of loneliness are inevitable, and I often feel [lonely](https://youtu.be/6EEW-9NDM5k). In the midst of this mindset, I feel like the only person who has ever felt alone. Yet, as solitary as this struggle with loneliness can feel, we all feel it. NPR ran a story on this, “[Americans are a Lonely Lot, and Young People Bear the Heaviest Burden.](https://www.npr.org/sections/health-shots/2018/05/01/606588504/americans-are-a-lonely-lot-and-young-people-bear-the-heaviest-burden)” While listening to this segment stuck in late night traffic, I realized nothing makes me feel lonelier than sitting in the car by myself reflecting on how often I feel lonely. In this article, there are some pretty outstanding numbers from a UCLA study on loneliness to exaggerate this feeling. The first being:
 
 * 54% of 20,000 surveyed, “always or sometimes felt that no one know them well.”
 
@@ -13,11 +13,11 @@ This means that 10,800 people surveyed feel misunderstood. By using the phrase �
 
 Unlike my family, who always misunderstand me. I hadn’t been this misunderstood from someone outside my family in a while. My family frequently thinks I’m mad when I’m not; they think I’m going to get mad when I won’t. Every path leads to me being mad when I rarely am. But, I don’t feel misunderstood like this by my peers often. Usually, though, I don’t need a moment of legitimate misunderstanding to feel misunderstood. I’m definitely someone who falls in this percentage closer to “always” than “sometimes.”
 
-The next statistic is one I don’t necessarily identify with:
+The next statistic is one I don’t necessarily identify with:
 
 * 56% of those 20,000 either “always or sometimes” felt those around them were “’not necessarily with them.’”
 
-However, it means that 11,600 people in this group believe the people they’re with aren’t present, which may point to phone usage and another article by Business Insider, “[This is Why Our Phones are Making Us Miserable: Happiness Isn’t the Same Thing as Pleasure, and Our Brains Know It.](http://www.businessinsider.com/why-our-phones-are-making-us-miserable-pleasure-isnt-happiness-2018-3)” Our phones make us feel good momentarily without any long-lasting effects, and our brains do not confuse short-term pleasure for long-term happiness, which keeps us in a state of dissatisfaction. With the constancy of social media, it’s hard to pull away from it—even if we want to—because these “pleasure and reward stressors” end up mirroring addiction. So, unfortunately, it is easy to be distant from someone sitting right next to you.
+However, it means that 11,600 people in this group believe the people they’re with aren’t present, which may point to phone usage and another article by Business Insider, “[This is Why Our Phones are Making Us Miserable: Happiness Isn’t the Same Thing as Pleasure, and Our Brains Know It.](http://www.businessinsider.com/why-our-phones-are-making-us-miserable-pleasure-isnt-happiness-2018-3)” Our phones make us feel good momentarily without any long-lasting effects, and our brains do not confuse short-term pleasure for long-term happiness, which keeps us in a state of dissatisfaction. With the constancy of social media, it’s hard to pull away from it—even if we want to—because these “pleasure and reward stressors” end up mirroring addiction. So, unfortunately, it is easy to be distant from someone sitting right next to you.
 
 The last statistic crushed me:
 
