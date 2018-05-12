@@ -7,101 +7,41 @@ permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
 During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley](https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/). They went missing. There's no perfect present for _disappear_. Only for _missing_. One can exist in a continuous state of _missing_, but usually in the simple past when they've _dissappeared_. So, Audrey _disappeared Wednesday, May 10, 2017, but she remains missing_. Continuously. Either forever or ceasing. I think about her frequently.
 
-> (how can a body so solid make us believe
->
-> \
->
->
-> in magic, spontaneous combustion & time
->
-> \
->
->
+> (how can a body so solid make us believe\
+> in magic, spontaneous combustion & time\
 > machines in the same sentence)
 >
 > what might your hair have been caught upon—long
 >
->
-> \
->
->
 > strands flowing to the ground
->
->
-> \
->
 >
 > caught in door jambs, under the nails
 >
->
-> \
->
->
 > of hands we see when we look
->
->
-> \
->
 >
 > at our brothers or partners
 >
 > what might your hands have found
 >
->
-> \
->
->
 > that the wind kept for herself
 >
->
-> \
->
->
 > locked in mountainsides
->
->
-> \
->
 >
 > and the dark sides of bridges
 >
 > what might your feet have felt
 >
->
-> \
->
->
 > to be weightless or so heavy 
 >
->
-> \
->
->
 > they couldn’t bend all those small
->
->
-> \
->
 >
 > bones into position
 >
 > what might your voice have formed,
 >
->
-> \
->
->
 > your mother, la virgen, some strong
 >
->
-> \
->
->
 > breath of innocence before reality
->
->
-> \
->
 >
 > took the exhale away like a dream
 
@@ -122,60 +62,37 @@ I’m not sure if Audrey is a part of the categorized 39,043 or if she’s a par
 
 > (there is absorption and evaporation,
 >
-> \
->
->
 > and neither’s a choice)
 >
 > too many bodies have found doors i 
->
-> \
->
 >
 > couldn’t
 >
 > and i wish for these doors to be a choice
 >
-> \
->
->
 > versus
 >
 > a virus unintentionally put in their mouth
+>
 > because,
 >
 > like me, they have the bad habit of chewing their 
->
-> \
->
 >
 > cuticles
 >
 > when anxious. sometimes i stand in places and 
 >
-> \
->
->
 > try
 >
 > to locate the memory that place must have
->
-> \
->
 >
 > inscribed 
 >
 > within the atoms that marks its space, asphalt,
 >
-> \
->
->
 > hillside
 >
 > door jamb or cross. something witnessed the
->
-> \
->
 >
 > missing,
 >
