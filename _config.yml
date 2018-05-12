@@ -3,11 +3,11 @@ url: https://www.allysonjeffredo.com/
 favicon: assets/img/favicon.ico
 title: Allyson Jeffredo
 email: a.jeffredo2@gmail.com
-ogTitle: Hello! I'm Allyson
-ogType: website
-ogDescription: I'm Allyson. Poet, writer, educator.
-ogImage: assets/img/preview.png
-ogUrl: https://www.allysonjeffredo.com/
+title: Hello! I'm Allyson
+type: website
+description: I'm Allyson. Poet, writer, educator.
+image: assets/img/preview.png
+url: https://www.allysonjeffredo.com/
 facebookAppId: 397283870738655
 twitterUrl: https://twitter.com/allyj0_0
 twitterUsername: allyj0_0
