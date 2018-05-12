@@ -35,7 +35,7 @@
         <h2 class="h6 text-muted pb-2 text-capitalize">{{page.date | date_to_string}}</h2>
         <div class="pb-3">{% include share-buttons.html %}</div>
         <div class="text-justify pb-5">
-          {{content}}
+          {{content | markdownify | smartify}}
         </div>
       </div>
       <aside class="col-md-4 blog-sidebar pb-5">
