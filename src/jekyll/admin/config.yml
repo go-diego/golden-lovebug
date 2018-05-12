@@ -8,7 +8,7 @@ media_folder: "src/jekyll/assets/img" # Folder where user uploaded files should 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
     label: "Post" # Used in the UI, e.g., "New Post"
-    folder: "_posts" # The path to the folder where the documents are stored
+    folder: "src/jekyll/_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
     fields:  # The fields for each document, usually in front matter
@@ -26,7 +26,7 @@ collections: # A list of collections the CMS should be able to edit
       - name: "work"
         label: "My Work"
         description: "List of My Work"
-        file: "_data/works.json"
+        file: "src/jekyll/_data/works.json"
         fields:
           - name: works
             label: My Work
@@ -39,7 +39,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Include", name: "include", widget: "string", default: "N/A"}
       - name: "events"
         label: "Events"
-        file: "_data/events.json"
+        file: "src/jekyll/_data/events.json"
         fields:
           - name: events
             label: Events
