@@ -7,8 +7,12 @@ permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
 During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley](https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/). They went missing. There's no perfect present for _disappear_. Only for _missing_. One can exist in a continuous state of _missing_, but usually in the simple past when they've _dissappeared_. So, Audrey _disappeared Wednesday, May 10, 2017, but she remains missing_. Continuously. Either forever or ceasing. I think about her frequently.
 
-> (how can a body so solid make us believe\
-> in magic, spontaneous combustion & time\
+
+
+> (how can a body so solid make us believe
+>
+> in magic, spontaneous combustion & time
+>
 > machines in the same sentence)
 >
 > what might your hair have been caught upon—long
@@ -45,6 +49,8 @@ During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her bo
 >
 > took the exhale away like a dream
 
+
+
 Audrey and I went to middle school together, but she hung out in the “popular” quad. My best friend would hate on her, the curse of being pretty and cool--which meant these kids wore bright white Nikes and rubberbands to bunch their pants at the ankle. Things we never shared when, later, I ended up doing her hair. She had long, naturally dark hair, so I enjoyed reshaping the layers and taking inches off the ends to make it bounce back to life.
 
 I did her family’s hair, too. Her tía, her sister, and maybe even her mom. This intimacy of touching, conversing and knowing one’s family might be what has struck me so about her disappearance. This use of _disappearance, _a noun,_ _as if it's a thing she owns, something she possesses. Where is she? And why does this state of displacement belong to her? An investigating sargeant, Sgt. Walt Mendez, "believes their disappearance to be involuntary." Yet, even in this structure, _disappearance_, whether voluntary or involuntary,_ _still belongs to Audrey and Jonathan. If I’ve been contemplating these questions over the past year, I can’t imagine what questions her family still worry. 
@@ -59,6 +65,8 @@ Even with the continuity of Audrey's _missing, _it’s hard to imagine someone c
 Living alone, my mom was really worried about me after Audrey went missing. Even with the proximity, I didn't feel concern for myself at the time. As the time passes, I can feel the fatalistic attitude of the women who raised me becoming more and more apparent. Especially when I start reading numbers, [3,125 adults went mysteriously missing last year in California alone](https://oag.ca.gov/sites/all/files/agweb/pdfs/missing/adults/2017-5-adult-annual-reports.pdf), and 38,985 have gone missing under other circumstances. About 34% are located by police and the known status of other reports increase this number. Yet, [the status of 3,067 of these missing individuals is not accounted for in these numbers](< https://oag.ca.gov/sites/all/files/agweb/pdfs/missing/adults/2017-6-adult-reports-status.pdf>). What's happened to these people? What's happened to Audrey?
 
 I’m not sure if Audrey is a part of the categorized 39,043 or if she’s a part of the 3,067 that is unaccounted for. Despite the fatalism that's been growing inside me, I’m hopeful they’ll find her. 
+
+
 
 > (there is absorption and evaporation,
 >
