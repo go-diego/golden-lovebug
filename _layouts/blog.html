@@ -8,7 +8,7 @@
     <meta property="og:description" content="{{page.excerpt | strip_html | strip_newlines}}" />
     <meta property="og:title" content="{{page.title}} | Writing Behind-the-Scenes" />
     <meta property="og:url" content="{{site.url}}{{page.url}}" />
-    <meta property="og:image" content="{{site.ogUrl}}{{site.ogImage}}" />
+    <meta property="og:image" content="{% if page.image %} {{site.ogUrl}}{{page.image}} {%else%} {{site.ogUrl}}{{site.ogImage}} {% endif %}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{page.title}} | Writing Behind-the-Scenes" />
     <meta name="twitter:description" content="{{page.excerpt | strip_html}}" />
