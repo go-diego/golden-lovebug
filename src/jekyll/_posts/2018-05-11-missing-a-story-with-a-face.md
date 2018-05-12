@@ -5,17 +5,13 @@ image: /src/jekyll/assets/img/questionmark.jpg
 date: 2018-05-12T04:26:43.925Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
-During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley](https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/). They went missing. There's no perfect present for _disappear_. Only for _missing_. One can exist in a continuous state of _missing_, but usually in the simple past when they've _disappeared_. So, Audrey _disappeared_ Wednesday, May 10, 2017, but she remains _missing_. Continuously. Either forever or ceasing. I think about her frequently.
-
-
+During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley](https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/). They went missing. There's no use for the perfect present for _disappear—_one cannot be _disappearing_. That’s reserved for magicians and cats. There’s only _missing_. One can exist in a continuous state of _missing_, but usually in the simple past when they've _disappeared_. So, Audrey _disappeared_ Wednesday, May 10, 2017, but she remains _missing_. Continuously. Either forever or ceasing. I think about her frequently.
 
 > (how can a body so solid make us believe
 >
 > in magic, spontaneous combustion & time
 >
 > machines in the same sentence)
->
->
 >
 > what might your hair have been caught upon—long
 >
@@ -50,8 +46,6 @@ During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her bo
 > breath of innocence before reality
 >
 > took the exhale away like a dream
->
->
 
 Audrey and I went to middle school together, but she hung out in the “popular” quad. My best friend would hate on her, the curse of being pretty and cool--which meant these kids wore bright white Nikes and rubberbands to bunch their pants at the ankle. Things we never shared when, later, I ended up doing her hair. She had long, naturally dark hair, so I enjoyed reshaping the layers and taking inches off the ends to make it bounce back to life.
 
@@ -67,13 +61,9 @@ Living alone, my mom was really worried about me after Audrey went missing. Even
 
 I’m not sure if Audrey is a part of the categorized 39,043 or if she’s a part of the 3,067 that is unaccounted for. Despite the fatalism that's been growing inside me, I’m hopeful they’ll find her. And, there is something inherently hopeful, even without the original use, in this simple future, _they will_ find her.
 
-  
-
 > (there is absorption and evaporation,
 >
 > and neither’s a choice)
->
->
 >
 > too many bodies have found doors i 
 >
