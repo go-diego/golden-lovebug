@@ -5,7 +5,7 @@
         "start": "bundle exec jekyll serve",
         "build": "npm run browserify && bundle exec jekyll build",
         "browserify":
-            "browserify -t [ browserify-css --stripComments=true src/vendors.css --output css/vendors.bundle.css] src/vendors.js -o js/vendors.bundle.js"
+            "browserify -t [ browserify-css --stripComments=true src/vendors/vendors.css --output src/jekyll/vendors.bundle.css] src/vendors/vendors.js -o src/jekyll/vendors.bundle.js"
     },
     "dependencies": {
         "bootstrap": "^4.1.0",

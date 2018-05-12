@@ -14,9 +14,12 @@ facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
 googleAnalyticsId: UA-116050053-1
 markdown: kramdown
+source: src/jekyll
+destination: dist
 plugins:
   - jemoji
-include: [_pages]
+include: 
+  - _pages
 exclude:
   - Gemfile
   - Gemfile.lock

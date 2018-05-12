@@ -2,21 +2,21 @@
     <title>{{page.title}} | {{site.authorName}}</title>
     <meta name="description" content="Hello, I'm Allyson Jeffredo" />
     <meta property="og:type" content="website">
-    <meta property="og:description" content="{{site.ogDescription}}" />
-    <meta property="og:title" content="{{site.ogTitle}}" />
-    <meta property="og:url" content="{{site.ogUrl}}" />
-    <meta property="og:image" content="{{site.ogUrl}}{{site.ogImage}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    <meta property="og:title" content="{{site.title}}" />
+    <meta property="og:url" content="{{site.url}}" />
+    <meta property="og:image" content="{{site.image | absolute_url}}" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{{site.ogTitle}}" />
-    <meta name="twitter:description" content="{{site.ogDescription}}" />
-    <meta name="twitter:image" content="{{site.ogImage}}" />
-    <meta name="twitter:url" content="{{site.ogUrl}}{{site.ogImage}}" />
+    <meta name="twitter:title" content="{{site.title}}" />
+    <meta name="twitter:description" content="{{site.description}}" />
+    <meta name="twitter:image" content="{{site.image | absolute_url}}" />
+    <meta name="twitter:url" content="{{site.url}}" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="shortcut icon" href="{{site.favicon | absolute_url}}" />
-    <link href="{{'css/vendors.bundle.css' | absolute_url}}" rel="stylesheet" type="text/css">
-    <link href="{{'css/site.css' | absolute_url}}" rel="stylesheet" type="text/css">
+    <link href="{{'vendors.bundle.css' | absolute_url}}" rel="stylesheet" type="text/css">
+    <link href="{{'site.css' | absolute_url}}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet"
         type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
