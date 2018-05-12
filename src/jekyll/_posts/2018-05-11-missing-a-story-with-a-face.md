@@ -59,7 +59,7 @@ Even with the continuity of Audrey's _missing,_ it’s hard to imagine someone c
 
 Living alone, my mom was really worried about me after Audrey went missing. Even with the proximity, I didn't feel concern for myself at the time. As the time passes, I can feel the fatalistic attitude of the women who raised me becoming more and more apparent. Especially when I start reading numbers, [3,125 adults went mysteriously missing last year in California alone](https://oag.ca.gov/sites/all/files/agweb/pdfs/missing/adults/2017-5-adult-annual-reports.pdf), and 38,985 have gone missing under other circumstances. About 34% are located by police and the known status of other reports increase this number. Yet, [the status of 3,067 of these missing individuals is not accounted for in these numbers](< https://oag.ca.gov/sites/all/files/agweb/pdfs/missing/adults/2017-6-adult-reports-status.pdf>). What's happened to these people? What's happened to Audrey?
 
-I’m not sure if Audrey is a part of the categorized 39,043 or if she’s a part of the 3,067 that is unaccounted for. Despite the fatalism that's been growing inside me, I’m hopeful they’ll find her. 
+I’m not sure if Audrey is a part of the categorized 39,043 or if she’s a part of the 3,067 that is unaccounted for. Despite the fatalism that's been growing inside me, I’m hopeful they’ll find her. And, there is something inherently hopeful, even without the original use, in this simple future, _they will_ find her. 
 
 > (there is absorption and evaporation,
 >
