@@ -5,7 +5,7 @@ image: /src/jekyll/assets/img/questionmark.jpg
 date: 2018-05-12T04:26:43.925Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 ---
-During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley](https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/). They went missing. There's no perfect present for _disappear_. Only for _missing_. One can exist in a continuous state of _missing_, but usually in the simple past when they've _disappeared_. So, Audrey disappeared Wednesday, May 10, 2017, but she remains missing. Continuously. Either forever or ceasing. I think about her frequently.
+During last year’s Dia de las Madres, a young woman, [Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley](https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/). They went missing. There's no perfect present for _disappear_. Only for _missing_. One can exist in a continuous state of _missing_, but usually in the simple past when they've _disappeared_. So, Audrey _disappeared_ Wednesday, May 10, 2017, but she remains _missing_. Continuously. Either forever or ceasing. I think about her frequently.
 
 > (how can a body so solid make us believe
 >
