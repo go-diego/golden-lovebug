@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 'Missing: A Story'
+title: 'Missing: A Story, A Question, A Riddle'
 image: /src/jekyll/assets/img/questionmark.jpg
 date: 2018-05-12T04:26:43.925Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
