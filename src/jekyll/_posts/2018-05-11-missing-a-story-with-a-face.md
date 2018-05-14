@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 'Missing: A Story with a Face'
+title: 'Missing: A Story'
 image: /src/jekyll/assets/img/questionmark.jpg
 date: 2018-05-12T04:26:43.925Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
