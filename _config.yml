@@ -3,9 +3,8 @@ url: https://www.allysonjeffredo.com
 favicon: assets/img/favicon.ico
 title: Allyson Jeffredo
 email: a.jeffredo2@gmail.com
-title: Hello! I'm Allyson
 type: website
-description: I'm Allyson. Poet, writer, educator.
+description: Hello! I'm Allyson. Poet, writer, educator.
 image: assets/img/preview.png
 facebookAppId: 397283870738655
 twitterUrl: https://twitter.com/allyj0_0
@@ -14,8 +13,8 @@ facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
 googleAnalyticsId: UA-116050053-1
 markdown: kramdown
+destination: jekyll-dist
 source: src/jekyll
-destination: dist
 plugins:
   - jemoji
 include: 
@@ -26,5 +25,5 @@ exclude:
   - package.json
   - node_modules
   - package-lock.json
-  - src
+  - src/vendors
 timezone: America/Los_Angeles
