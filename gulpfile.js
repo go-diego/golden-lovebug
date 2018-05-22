@@ -97,3 +97,7 @@ gulp.task("inject", function() {
             throw new Error(err);
         });
 });
+
+gulp.task("copy-admin", function() {
+    return gulp.src(["jekyll-dist/admin/*.yml", "jekyll-dist/admin/*.html"]).pipe(gulp.dest("dist/admin"));
+});
