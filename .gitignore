@@ -1,5 +1,6 @@
 dist/
 jekyll-dist
+package-lock.json
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
