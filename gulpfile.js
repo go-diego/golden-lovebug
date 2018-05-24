@@ -67,7 +67,7 @@ gulp.task("minify:css", function() {
 gulp.task("minify:html", function() {
     return gulp
         .src("jekyll-dist/**/*.html")
-        .pipe(htmlmin({ collapseWhitespace: true, minifyJs: true, minifyCss: true }))
+        .pipe(htmlmin({ collapseWhitespace: true, removeComments: true, minifyJs: true, minifyCss: true }))
         .pipe(gulp.dest("dist"));
 });
 
