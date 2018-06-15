@@ -100,6 +100,10 @@ gulp.task("inject", function() {
         });
 });
 
-gulp.task("copy-admin", function() {
-    return gulp.src(["jekyll-dist/admin/*.yml", "jekyll-dist/admin/*.html"]).pipe(gulp.dest("dist/admin"));
+gulp.task("copy:admin", function() {
+    return gulp.src(["jekyll-dist/admin/**/*"], { base: "jekyll-dist" }).pipe(gulp.dest("dist"));
+});
+
+gulp.task("copy:assets", function() {
+    return gulp.src(["jekyll-dist/static/**/*"], { base: "jekyll-dist" }).pipe(gulp.dest("dist"));
 });
