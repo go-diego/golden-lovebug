@@ -14,8 +14,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{{page.title}} | Writing Behind-the-Scenes" />
   <meta name="twitter:description" content="{{page.excerpt | strip_html}}" />
-  <meta name="twitter:image" content="{% if page.image %} {{page.image | absolute_url}} {%else%} {{site.image | absolute_url}} {% endif %}"
-  />
+  <meta name="twitter:image" content="{% if page.image %} {{page.image | absolute_url}} {%else%} {{site.image | absolute_url}} {% endif %}"/>
   <meta name="twitter:url" content="{{page.url | absolute_url}}" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,6 +27,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet"
     type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+  <link href="{{'feed.xml' | absolute_url}}" type="application/rss+xml" rel="alternate" title="Latest 10 blog posts" />
 </head>
 
 <body>
@@ -38,17 +38,28 @@
         <h1 class="text-center">{{page.title}}</h1>
         <div class="header-underline center mb-4"></div>
         <h2 class="h6 text-muted pb-2 text-capitalize">{{page.date | date_to_string}}</h2>
-        <div class="pb-3">{% include share-buttons.html %}</div>
+        <div class="pb-3">
+          {% include share-buttons.html %} 
+        </div>
         <div class="text-justify pb-5 blog-content">
           {{content | markdownify | smartify}}
         </div>
       </div>
       <aside class="col-md-4 blog-sidebar pb-5">
-        {% assign currentMonthYear = site.time | date: '%b %Y' %} {% assign recentPostsArr = "" | split: ',' %} {% assign archivedPostsArr
-        = "" | split: ',' %} {% for post in site.posts %} {% assign postMonthYear = post.date | date: '%b %Y' %} {% if postMonthYear
-        == currentMonthYear %} {% assign recentPostsArr = recentPostsArr | push: post %} {% else %} {% assign archivedPostsArr
-        = archivedPostsArr | push: post %} {% endif %} {% endfor %} {% if recentPostsArr.size > 0 %}
-        <h3 class="h4 text-capitalize">Recent Posts</h3>
+        {% assign currentMonthYear = site.time | date: '%b %Y' %} 
+        {% assign recentPostsArr = "" | split: ',' %} 
+        {% assign archivedPostsArr = "" | split: ',' %} 
+        {% for post in site.posts %} 
+          {% assign postMonthYear = post.date | date: '%b %Y' %} 
+          {% if postMonthYear == currentMonthYear %} 
+            {% assign recentPostsArr = recentPostsArr | push: post %} 
+          {% else %} 
+            {% assign archivedPostsArr = archivedPostsArr | push: post %} 
+          {% endif %} 
+        {% endfor %} 
+
+        {% if recentPostsArr.size > 0 %}
+          <h3 class="h4 text-capitalize">Recent Posts</h3>
         {% endif %}
         <ul class="list-unstyled mb-0">
           {% for post in recentPostsArr %}

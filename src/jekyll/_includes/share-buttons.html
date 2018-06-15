@@ -10,12 +10,17 @@
     <li class="list-inline-item">
         <a href="https://facebook.com/sharer/sharer.php?u={{page.url | absolute_url}}&title={{page.title | url_escape}}" rel="nofollow"
             target="_blank" title="Share on Facebook" class="facebook-btn text-center">
-            <i class="fab fa-facebook"></i>
+            <i class="fab fa-facebook-f"></i>
         </a>
     </li>
     <li class="list-inline-item">
         <a class="text-center" href="mailto:?subject={{ page.title }}&amp;body=Check out this site {{page.url | absolute_url}}" title="Share via Email">
             <i class="fas fa-envelope"></i>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a class="rss-btn text-center" href="{{'feed.xml' | absolute_url}}" target="_blank" title="Subscribe to this blog's feed">
+            <i class="fas fa-rss"></i>
         </a>
     </li>
 </ul>

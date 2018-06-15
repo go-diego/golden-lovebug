@@ -104,6 +104,14 @@ ul.social-buttons li a {
             background-color: darken(#55acee, 10%);
         }
     }
+    &.rss-btn {
+        background-color: #FF6600;
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: darken(#FF6600, 10%);
+        }
+    }
 }
 
 .blog-sidebar {
