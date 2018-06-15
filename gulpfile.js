@@ -105,5 +105,5 @@ gulp.task("copy:admin", function() {
 });
 
 gulp.task("copy:assets", function() {
-    return gulp.src(["jekyll-dist/static/**/*"], { base: "jekyll-dist" }).pipe(gulp.dest("dist"));
+    return gulp.src(["jekyll-dist/static/**/*", "jekyll-dist/feed.xml"], { base: "jekyll-dist" }).pipe(gulp.dest("dist"));
 });
