@@ -20,6 +20,7 @@ destination: jekyll-dist
 source: src/jekyll
 plugins:
   - jemoji
+  - jekyll-sitemap
 include: 
   - _pages
 exclude:
