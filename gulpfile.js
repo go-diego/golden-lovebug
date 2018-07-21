@@ -8,12 +8,24 @@ var autoprefixer = require("gulp-autoprefixer");
 var htmlmin = require("gulp-htmlmin");
 var inject = require("gulp-inject");
 var purifyCss = require("gulp-purifycss");
+var cachebust = require("gulp-buster");
 var del = require("del");
 var readYaml = require("read-yaml");
 var series = require("stream-series");
 
-gulp.task("clean", function() {
+var cacheBustingOptions = {
+    fileName: "cache-bust.json",
+    length: 5,
+    relativePath: "jekyll-dist"
+};
+
+gulp.task("clean:prebuild", function() {
     return del(["dist/**/*", "!dist"]);
+});
+
+gulp.task("clean:postbuild", function() {
+    var filesToClean = ["dist/*.min.{css,js}", "dist/*.json"];
+    return del(filesToClean);
 });
 
 gulp.task("minify:images", function() {
@@ -36,18 +48,20 @@ gulp.task("minify:images", function() {
 });
 
 gulp.task("minify:js", function() {
+    var hashes = require("./" + path.join("dist", cacheBustingOptions.fileName));
     return gulp
         .src("jekyll-dist/*.js")
         .pipe(uglify())
         .pipe(
             rename(function(path) {
-                path.basename += ".min";
+                path.basename = path.basename + ".min" + "." + hashes[path.basename + path.extname];
             })
         )
         .pipe(gulp.dest("dist"));
 });
 
 gulp.task("minify:css", function() {
+    var hashes = require("./" + path.join("dist", cacheBustingOptions.fileName));
     return gulp
         .src("jekyll-dist/*.css")
         .pipe(purifyCss(["jekyll-dist/**/*.html"], { info: true }))
@@ -60,7 +74,7 @@ gulp.task("minify:css", function() {
         .pipe(cleanCss())
         .pipe(
             rename(function(path) {
-                path.basename += ".min";
+                path.basename = path.basename + ".min" + "." + hashes[path.basename + path.extname];
             })
         )
         .pipe(gulp.dest("dist"));
@@ -105,5 +119,19 @@ gulp.task("copy:admin", function() {
 });
 
 gulp.task("copy:assets", function() {
-    return gulp.src(["jekyll-dist/static/**/*", "jekyll-dist/feed.xml"], { base: "jekyll-dist" }).pipe(gulp.dest("dist"));
+    return gulp
+        .src(["jekyll-dist/static/**/*", "jekyll-dist/feed.xml"], { base: "jekyll-dist" })
+        .pipe(gulp.dest("dist"));
+});
+
+gulp.task("copy:root-files", function() {
+    var rootFiles = ["jekyll-dist/sitemap.xml", "jekyll-dist/robots.txt"];
+    return gulp.src(rootFiles).pipe(gulp.dest("dist"));
+});
+
+gulp.task("get-hash", function() {
+    return gulp
+        .src("jekyll-dist/*.{css,js}")
+        .pipe(cachebust(cacheBustingOptions))
+        .pipe(gulp.dest("dist"));
 });
