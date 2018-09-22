@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+>
+	<channel>
+		<title>Writing Behind-The-Scenes</title>
+		<description>Hello! I'm Allyson. Poet, writer, educator.</description>		
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		<lastBuildDate>Wed, 20 Jun 2018 12:17:05 -0700</lastBuildDate>
+		
+		
+			<item>
+				<title>Notes on the Self and Helping Others</title>
+				
+				
+					<description>&lt;p&gt;When I told my brother I have a blog, he scoffed, “Ugh, you’re obsessed with yourself.” And, for a long time, this is how I felt: There is no way that I can write about myself without being or becoming a narcissist. This thought kept me from writing about my experiences before, during and after my MFA. I erased myself from my writing, which caused my words to feel detached and to lack vulnerability. Now, when I read this old work, I feel the hum of repression locked behind the words. There is so much I wanted to say but couldn’t bring myself to—I was terrified of the exposure.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 20 Jun 2018 12:17:05 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/06/20/notes-on-the-self-and-helping-others.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/06/20/notes-on-the-self-and-helping-others.html</guid>
+			</item>
+		
+			<item>
+				<title>Turbulent Relationships: Endings</title>
+				
+				
+					<description>&lt;p&gt;I’m not sure what’s changed, but I’ve grown to dread endings. I used to look forward to them in school, work, movies, books, but now I work to avoid them. I work to avoid the inevitable—a futile endeavor, like trying to hold water in your bare hands for long. Eventually, the book will end, the water will escape.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 06 Jun 2018 11:06:28 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/06/06/turbulent-relationships-endings.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/06/06/turbulent-relationships-endings.html</guid>
+			</item>
+		
+			<item>
+				<title>Anxiety: A Confession</title>
+				
+				
+					<description>&lt;p&gt;I’ve suffered from anxiety since I was a kid. My dad took me to the doctor because I experienced frequent “bad feelings” but didn’t have the words to say more. Dr. Yao, my family’s primary doctor and an insightful man, encouraged me to document each anxious episode on small calendars my dad left lying around from local hardware stores. Dr. Yao would flip through the months with days circled on the front and times listed on the back. My anxiety bled over their narrow margins. Yet, he never named it. Just had me keep track until he passed away some time after from a malignant brain tumor. I’ve never had a doctor look at me with such genuine understanding since—an understanding I imagine he would look at his own daughter with.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 29 May 2018 14:40:48 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/05/29/anxiety-a-confession.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/29/anxiety-a-confession.html</guid>
+			</item>
+		
+			<item>
+				<title>An Homage to My Hands</title>
+				
+				
+					<description>&lt;p&gt;My life is dependent on the functionality of my hands, yet I take my hands for granted daily. I use them to hold onto my pulling husky, to craft poems, to massage my partner’s shoulders, to pick up my niece, to doodle, to take notes, to grate cheese, to grade essays, to wash my body, to dress myself. It’s incredible how the small hand muscles can grasp and release and pull and push to help us gain or relinquish control. To this, I can’t help but recall Lucille Clifton’s poem, “&lt;a href=&quot;https://vimeo.com/36987057&quot;&gt;Homage to my Hips&lt;/a&gt;“—I’m constantly using this poem as a lens to help me appreciate and acknowledge my usually unconsidered body.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 21 May 2018 16:06:43 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/05/21/an-homage-to-my-hands.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/21/an-homage-to-my-hands.html</guid>
+			</item>
+		
+			<item>
+				<title>Missing: A Story, A Question, A Riddle</title>
+				
+				
+					<description>&lt;p&gt;During last year’s Dia de las Madres, a young woman, &lt;a href=&quot;https://www.desertsun.com/story/news/crime_courts/2018/05/09/missing-couple-disappeared-exactly-one-year-ago/586719002/&quot;&gt;Audrey Moran, and her boyfriend, Jonathan Reynoso, disappeared from my hometown, The Coachella Valley&lt;/a&gt;. They went missing. There’s no use for the perfect present for &lt;em&gt;disappear&lt;/em&gt;—one cannot be &lt;em&gt;disappearing&lt;/em&gt;. That’s reserved for magicians and cats. There’s only &lt;em&gt;missing&lt;/em&gt;. One can exist in a continuous state of &lt;em&gt;missing&lt;/em&gt;, but usually in the simple past when they’ve &lt;em&gt;disappeared&lt;/em&gt;. So, Audrey &lt;em&gt;disappeared&lt;/em&gt; Wednesday, May 10, 2017, but she remains &lt;em&gt;missing&lt;/em&gt;. Continuously. Either forever or ceasing. I think about her frequently.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Fri, 11 May 2018 21:26:43 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/05/11/missing-a-story-with-a-face.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/11/missing-a-story-with-a-face.html</guid>
+			</item>
+		
+			<item>
+				<title>The Modern-Day Epidemic: Loneliness</title>
+				
+				
+					<description>&lt;p&gt;Bouts of loneliness are inevitable, and I often feel &lt;a href=&quot;https://youtu.be/6EEW-9NDM5k&quot;&gt;lonely&lt;/a&gt;. In the midst of this mindset, I feel like the only person who has ever felt alone. Yet, as solitary as this struggle with loneliness can feel, we all feel it. NPR ran a story on this, “&lt;a href=&quot;https://www.npr.org/sections/health-shots/2018/05/01/606588504/americans-are-a-lonely-lot-and-young-people-bear-the-heaviest-burden&quot;&gt;Americans are a Lonely Lot, and Young People Bear the Heaviest Burden.&lt;/a&gt;” While listening to this segment stuck in late night traffic, I realized I rarely feel lonelier than sitting in the car by myself reflecting on my loneliness. To exaggerate this feeling, there are some pretty outstanding numbers from a UCLA study on loneliness in this article. The first being:&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 08 May 2018 09:55:32 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/05/08/the-modern-day-epidemic-loneliness.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/08/the-modern-day-epidemic-loneliness.html</guid>
+			</item>
+		
+			<item>
+				<title>We Must First Find the Stories</title>
+				
+				
+					<description>&lt;p&gt;For the past few years, I’ve been trying to be a “working writer.” However, it hasn’t been going so well. I’ve barely written, let alone submitted. I have journals full of poems and essays and half-formed ideas, but, when I try to write them down, I’m struck with a sense of utter revulsion—everything sucks.&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Sat, 28 Apr 2018 10:20:15 -0700</pubDate>
+				<link>http://localhost:4000/blog/2018/04/28/we-must-first-find-the-stories.html</link>
+				<guid isPermaLink="true">http://localhost:4000/blog/2018/04/28/we-must-first-find-the-stories.html</guid>
+			</item>
+		
+	</channel>
+</rss>
