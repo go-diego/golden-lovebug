@@ -9,8 +9,8 @@
 		<description>Hello! I'm Allyson. Poet, writer, educator.</description>		
 		<sy:updatePeriod>daily</sy:updatePeriod>
 		<sy:updateFrequency>1</sy:updateFrequency>
-		<link>http://localhost:4000</link>
-		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://v2--golden-lovebug.netlify.com/</link>
+		<atom:link href="https://v2--golden-lovebug.netlify.com//feed.xml" rel="self" type="application/rss+xml" />
 		<lastBuildDate>Wed, 20 Jun 2018 12:17:05 -0700</lastBuildDate>
 		
 		
@@ -23,8 +23,8 @@
 </description>
 				
 				<pubDate>Wed, 20 Jun 2018 12:17:05 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/06/20/notes-on-the-self-and-helping-others.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/06/20/notes-on-the-self-and-helping-others.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/06/20/notes-on-the-self-and-helping-others.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/06/20/notes-on-the-self-and-helping-others.html</guid>
 			</item>
 		
 			<item>
@@ -36,8 +36,8 @@
 </description>
 				
 				<pubDate>Wed, 06 Jun 2018 11:06:28 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/06/06/turbulent-relationships-endings.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/06/06/turbulent-relationships-endings.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/06/06/turbulent-relationships-endings.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/06/06/turbulent-relationships-endings.html</guid>
 			</item>
 		
 			<item>
@@ -49,8 +49,8 @@
 </description>
 				
 				<pubDate>Tue, 29 May 2018 14:40:48 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/05/29/anxiety-a-confession.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/29/anxiety-a-confession.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/05/29/anxiety-a-confession.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/05/29/anxiety-a-confession.html</guid>
 			</item>
 		
 			<item>
@@ -62,8 +62,8 @@
 </description>
 				
 				<pubDate>Mon, 21 May 2018 16:06:43 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/05/21/an-homage-to-my-hands.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/21/an-homage-to-my-hands.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/05/21/an-homage-to-my-hands.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/05/21/an-homage-to-my-hands.html</guid>
 			</item>
 		
 			<item>
@@ -75,8 +75,8 @@
 </description>
 				
 				<pubDate>Fri, 11 May 2018 21:26:43 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/05/11/missing-a-story-with-a-face.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/11/missing-a-story-with-a-face.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/05/11/missing-a-story-with-a-face.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/05/11/missing-a-story-with-a-face.html</guid>
 			</item>
 		
 			<item>
@@ -88,8 +88,8 @@
 </description>
 				
 				<pubDate>Tue, 08 May 2018 09:55:32 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/05/08/the-modern-day-epidemic-loneliness.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/05/08/the-modern-day-epidemic-loneliness.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/05/08/the-modern-day-epidemic-loneliness.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/05/08/the-modern-day-epidemic-loneliness.html</guid>
 			</item>
 		
 			<item>
@@ -101,8 +101,8 @@
 </description>
 				
 				<pubDate>Sat, 28 Apr 2018 10:20:15 -0700</pubDate>
-				<link>http://localhost:4000/blog/2018/04/28/we-must-first-find-the-stories.html</link>
-				<guid isPermaLink="true">http://localhost:4000/blog/2018/04/28/we-must-first-find-the-stories.html</guid>
+				<link>https://v2--golden-lovebug.netlify.com//blog/2018/04/28/we-must-first-find-the-stories.html</link>
+				<guid isPermaLink="true">https://v2--golden-lovebug.netlify.com//blog/2018/04/28/we-must-first-find-the-stories.html</guid>
 			</item>
 		
 	</channel>
