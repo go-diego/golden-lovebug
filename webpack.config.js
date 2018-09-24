@@ -7,7 +7,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const PurifyCSSPlugin = require("purifycss-webpack");
-const glob = require("glob");
+const glob = require("glob-all");
 
 module.exports = {
     entry: "./site.js",
@@ -46,15 +46,6 @@ module.exports = {
                     placeholder: true
                 }
             }
-            // {
-            //     test: /\.html$/,
-            //     use: {
-            //         loader: "html-loader",
-            //         options: {
-            //             interpolate: true
-            //         }
-            //     }
-            // }
         ]
     },
     plugins: [
@@ -62,9 +53,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "site.[contentHash].min.css"
         }),
-        // new PurifyCSSPlugin({
-        //     paths: glob.sync(path.join(__dirname, "root/jekyll/**/*.html"))
-        // }),
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/default-layout.tmpl.html",
@@ -92,7 +80,13 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: "./assets/images/favicon.ico", to: path.resolve(__dirname, "root/jekyll/assets/images") }
-        ])
+        ]),
+        new PurifyCSSPlugin({
+            paths: glob.sync([
+                path.join(__dirname, "root/jekyll/**/*.html"),
+                path.join(__dirname, "root/jekyll/**/*.js")
+            ])
+        })
     ],
     optimization: {
         minimizer: [
