@@ -6,16 +6,16 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const PurifyCSSPlugin = require("purifycss-webpack");
-const glob = require("glob-all");
+//const PurgecssPlugin = require("purgecss-webpack-plugin");
+//const glob = require("glob");
 
 module.exports = {
     entry: "./site.js",
     context: path.resolve(__dirname, "root/src"),
     output: {
         filename: "site.[contentHash].js",
-        path: path.resolve(__dirname, "root/jekyll"),
-        publicPath: ""
+        path: path.resolve(__dirname, "root/jekyll")
+        //publicPath: ""
     },
     mode: "production",
     devtool: "source-map",
@@ -53,6 +53,9 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "site.[contentHash].min.css"
         }),
+        // new PurgecssPlugin({
+        //     paths: glob.sync(path.resolve(__dirname, "root/jekyll/**/*.html"))
+        // }),
         new HtmlWebpackPlugin({
             inject: true,
             template: "./templates/default-layout.tmpl.html",
@@ -80,13 +83,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: "./assets/images/favicon.ico", to: path.resolve(__dirname, "root/jekyll/assets/images") }
-        ]),
-        new PurifyCSSPlugin({
-            paths: glob.sync([
-                path.join(__dirname, "root/jekyll/**/*.html"),
-                path.join(__dirname, "root/jekyll/**/*.js")
-            ])
-        })
+        ])
     ],
     optimization: {
         minimizer: [
