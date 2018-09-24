@@ -4,6 +4,8 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 const PurifyCSSPlugin = require("purifycss-webpack");
 const glob = require("glob");
 
@@ -12,7 +14,8 @@ module.exports = {
     context: path.resolve(__dirname, "root/src"),
     output: {
         filename: "site.[contentHash].js",
-        path: path.resolve(__dirname, "root/jekyll")
+        path: path.resolve(__dirname, "root/jekyll"),
+        publicPath: ""
     },
     mode: "production",
     devtool: "source-map",
@@ -86,7 +89,8 @@ module.exports = {
             inject: false,
             template: "./templates/srcset.tmpl.js",
             filename: path.resolve(__dirname, "root/jekyll/_includes/img_srcset.html")
-        })
+        }),
+        new CopyWebpackPlugin(["./assets/images/favicon.ico"])
     ],
     optimization: {
         minimizer: [
