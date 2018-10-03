@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 //const PurgecssPlugin = require("purgecss-webpack-plugin");
 //const glob = require("glob");
@@ -83,7 +84,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: "./assets/images/favicon.ico", to: path.resolve(__dirname, "root/jekyll/assets/images") }
-        ])
+        ]),
+        new HardSourceWebpackPlugin()
     ],
     optimization: {
         minimizer: [
