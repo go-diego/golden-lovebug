@@ -84,8 +84,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             { from: "./assets/images/favicon.ico", to: path.resolve(__dirname, "root/jekyll/assets/images") }
-        ]),
-        new HardSourceWebpackPlugin()
+        ])
+        //new HardSourceWebpackPlugin()
     ],
     optimization: {
         minimizer: [
