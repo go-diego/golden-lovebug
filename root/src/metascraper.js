@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const metascraper = require("metascraper")([
     //require("metascraper-author")(),
     require("metascraper-date")(),
@@ -12,12 +13,15 @@ const metascraper = require("metascraper")([
 ]);
 const got = require("got");
 
-const PATH_TO_PORTOFOLIO_DATA = "../jekyll/_data/works.json";
-let portfolioData = require(PATH_TO_PORTOFOLIO_DATA);
+const PATHS = {
+    PUBLICATIONS_METADATA_INPUT: "../jekyll/_data/works.json",
+    PUBLICATIONS_METADATA_OUTPUT: path.resolve(__dirname, "../jekyll/_data/publications-metadata.json")
+};
+let publicationsData = require(PATHS.PUBLICATIONS_METADATA_INPUT);
 
 (() => {
     const metadata = [];
-    portfolioData.forEach(datum => {
+    publicationsData.forEach(datum => {
         return got(datum.url, { timeout: 5000 })
             .then(response => {
                 return response;
@@ -27,8 +31,8 @@ let portfolioData = require(PATH_TO_PORTOFOLIO_DATA);
                 return metascraper({ html, url });
             })
             .then(response => {
-                metadata.push({ ...datum, ...response });
-                fs.writeFile("./metadata.json", JSON.stringify(metadata), "utf8");
+                metadata.push({ ...response, ...datum });
+                fs.writeFile(PATHS.PUBLICATIONS_METADATA_OUTPUT, JSON.stringify(metadata), "utf8");
 
                 return response;
             })
@@ -36,15 +40,3 @@ let portfolioData = require(PATH_TO_PORTOFOLIO_DATA);
     });
     console.log("metadata", metadata);
 })();
-
-// (async () => {
-//     const promises = portfolioMetadata.map(async datum => {
-//         const { body: html, url } = await got(datum.url, { timeout: 5000 });
-//         const metadata = await metascraper({ html, url }).catch(error => console.log("ERR", error));
-//         //console.log(metadata);
-//         return metadata;
-//         //return body;
-//     });
-//     const data = await Promise.all(promises).catch(error => console.log("ERR", error));
-//     console.log("data", data);
-// })();

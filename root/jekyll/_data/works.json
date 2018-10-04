@@ -26,6 +26,7 @@
     },
     {
         "title": "As If",
+        "image": "https://apod.nasa.gov/apod/image/1402/rocketmeteorsky_pon_2048.jpg",
         "url": "http://www.literaryorphans.org/playdb/as-if-by-allyson-jeffredo/ ",
         "type": "Poem"
     },
@@ -53,5 +54,10 @@
         "title": "A Half Tale",
         "url": "https://2leafpress.org/online/product/the-beiging-of-america/",
         "type": "Essay"
+    },
+    {
+        "title": "Art, writing workshops help bring some healing from persistent violence",
+        "url": "https://www.pe.com/2018/06/30/art-writing-workshops-help-bring-some-healing-from-persistent-violence/",
+        "type": "Article"
     }
 ]
