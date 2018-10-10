@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
+//const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 //const PurgecssPlugin = require("purgecss-webpack-plugin");
 //const glob = require("glob");

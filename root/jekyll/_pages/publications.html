@@ -9,7 +9,6 @@ card-theme: dark
 {% assign essays = site.data.publications-metadata | where: "type", "Essay" %}
 
 <section class="container work-section">
-
   <h1 class="text-center pb-4">{{page.title}}</h1>
   <div class="row">
     <div class="col-sm-12">
@@ -61,9 +60,9 @@ card-theme: dark
         <img class="card-img-top" src="{{poem.image}}" alt="{{poem.title}}" style="height: 200px">
         <div class="card-body">
           <h5 class="card-title">{{poem.title}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <small class="card-text line-clamp line-clamp-4">{{poem.description | smartify}}</small>
+          <a href="{{poem.url}}" target="_blank" class="btn btn-link btn-sm" role="button" aria-pressed="true">View
+            More</a>
         </div>
         <div class="card-footer text-white bg-dark">
           <div class="d-flex align-items-center">
@@ -87,9 +86,9 @@ card-theme: dark
         <img class="card-img-top" src="{{article.image}}" alt="{{article.title}}" style="height: 200px">
         <div class="card-body">
           <h5 class="card-title">{{article.title}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <small class="card-text line-clamp line-clamp-4">{{article.description | smartify}}</small>
+          <a href="{{article.url}}" target="_blank" class="btn btn-link btn-sm" role="button" aria-pressed="true">View
+            More</a>
         </div>
         <div class="card-footer text-white bg-dark">
           <div class="d-flex align-items-center">
@@ -113,9 +112,9 @@ card-theme: dark
         <img class="card-img-top" src="{{essay.image}}" alt="{{essay.title}}" style="height: 200px">
         <div class="card-body">
           <h5 class="card-title">{{essay.title}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <small class="card-text line-clamp line-clamp-4">{{essay.description | smartify}}</small>
+          <a href="{{essay.url}}" target="_blank" class="btn btn-link btn-sm" role="button" aria-pressed="true">View
+            More</a>
         </div>
         <div class="card-footer text-white bg-dark">
           <div class="d-flex align-items-center">

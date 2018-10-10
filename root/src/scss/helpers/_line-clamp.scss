@@ -5,14 +5,13 @@ $line-clamp-spacer: 1.5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     position: relative;
-
     line-height: 1.5;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 0 !important;
 }
 .line-clamp:after {
-    content: " ";
+    content: "...";
     text-align: right;
     bottom: 0;
     right: 0;
