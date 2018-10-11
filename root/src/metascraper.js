@@ -36,7 +36,6 @@ let publicationsData = require(PATHS.PUBLICATIONS_METADATA_INPUT);
 
                 return response;
             })
-            .catch(error => console.log("ERROR", error));
+            .catch(error => console.log("SCRAPE_ERROR", error));
     });
-    console.log("metadata", metadata);
 })();
