@@ -1,57 +1,62 @@
 backend:
-  name: github
-  repo: go-diego/golden-lovebug # Path to your Github repository
-  branch: master # Branch to update (master by default)
-
-media_folder: "src/jekyll/assets/img" # Folder where user uploaded files should go
-public_folder: "assets/img"
+    name: github
+    repo: go-diego/golden-lovebug # Path to your Github repository
+    branch: v2 # Branch to update (master by default)
+display_url: https://v2--golden-lovebug.netlify.com/
+media_folder: "root/src/assets/images" # Folder where user uploaded files should go
+public_folder: "assets/images"
 collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, e.g., "New Post"
-    folder: "src/jekyll/_posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
-    fields:  # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Permalink", name: "permalink", widget: "hidden", required: false, default: "blog/:year/:month/:day/:title:output_ext" }
-    meta:
-    - {label: "SEO Description", name: "description", widget: "text"}
-  - name: "data"
-    label: "Data"
-    files:
-      - name: "work"
-        label: "My Work"
-        description: "List of My Work"
-        file: "src/jekyll/_data/works.json"
-        fields:
-          - name: works
-            label: My Work
-            widget: list
+    - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
+      label: "Post" # Used in the UI, e.g., "New Post"
+      folder: "root/jekyll/_posts" # The path to the folder where the documents are stored
+      create: true # Allow users to create new documents in this collection
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+      fields: # The fields for each document, usually in front matter
+          - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+          - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Cover Image", name: "image", widget: "image", required: false, tagname: "" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - {
+                label: "Permalink",
+                name: "permalink",
+                widget: "hidden",
+                required: false,
+                default: "blog/:year/:month/:day/:title:output_ext",
+            }
+      meta:
+          - { label: "SEO Description", name: "description", widget: "text" }
+    - name: "data"
+      label: "Data"
+      files:
+          - name: "publications"
+            label: "My Publications"
+            description: "List of My Work"
+            file: "root/jekyll/_data/publications.json"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "markdown"}
-              - {label: "Url", name: "url", widget: "string"}
-              - {label: "Type", name: "type", widget: "select", options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"]}
-              - {label: "Include", name: "include", widget: "string", default: "N/A"}
-      - name: "events"
-        label: "Events"
-        file: "src/jekyll/_data/events.json"
-        fields:
-          - name: events
-            label: Events
-            widget: list
+                - name: works
+                  label: My Work
+                  widget: list
+                  fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "markdown" }
+                      - { label: "Url", name: "url", widget: "string" }
+                      - {
+                            label: "Type",
+                            name: "type",
+                            widget: "select",
+                            options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
+                        }
+          - name: "events"
+            label: "Events"
+            file: "root/jekyll/_data/events.json"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description", name: "description", widget: "markdown"}
-              - {label: "Date", name: "date", widget: "datetime"}
-              - {label: "Url", name: "url", widget: "string"}
-              - {label: "Image", name: "image", widget: "image", media_folder: "assets/img"}
-
-
-
- 
-
+                - name: events
+                  label: Events
+                  widget: list
+                  fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "markdown" }
+                      - { label: "Date", name: "date", widget: "datetime" }
+                      - { label: "Url", name: "url", widget: "string" }
+                      - { label: "Image", name: "image", widget: "image", media_folder: "assets/imges" }
