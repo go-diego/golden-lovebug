@@ -29,7 +29,7 @@ collections: # A list of collections the CMS should be able to edit
     - name: "data"
       label: "Data"
       files:
-          - name: "publications"
+          - name: "publication"
             label: "My Publications"
             description: "List of My Work"
             file: "root/jekyll/_data/publications.json"
@@ -47,6 +47,7 @@ collections: # A list of collections the CMS should be able to edit
                             widget: "select",
                             options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
                         }
+          # leaving events just for reference
           - name: "events"
             label: "Events"
             file: "root/jekyll/_data/events.json"
