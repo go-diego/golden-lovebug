@@ -1,11 +1,12 @@
 ---
 layout: blog
 title: We Must First Find the Stories
-image: /assets/img/fedupsnail.jpeg
+image: /assets/images/fedupsnail.jpeg
 date: 2018-04-28T17:20:15.965Z
-permalink: 'blog/:year/:month/:day/:title:output_ext'
+permalink: "blog/:year/:month/:day/:title:output_ext"
 ---
-For the past few years, I’ve been trying to be a “working writer.” However, it hasn’t been going so well. I’ve barely written, let alone submitted. I have journals full of poems and essays and half-formed ideas, but, when I try to write them down, I’m struck with a sense of utter revulsion—everything sucks. 
+
+For the past few years, I’ve been trying to be a “working writer.” However, it hasn’t been going so well. I’ve barely written, let alone submitted. I have journals full of poems and essays and half-formed ideas, but, when I try to write them down, I’m struck with a sense of utter revulsion—everything sucks.
 
 Lately, I’ve been trying to edit my M.F.A. manuscript I cobbled together into a conglomerated whole. As before, I got maybe 12 poems in before I felt repulsed by this work. I was wrought with a sense of such frustration—a state I’ve managed to guide myself away from for some time. These poems also brought me to a place of total self-hate—until these poems, another pit I’ve been able to avoid.
 
