@@ -34,8 +34,8 @@ collections: # A list of collections the CMS should be able to edit
             description: "List of My Work"
             file: "root/jekyll/_data/publications.json"
             fields:
-                - name: works
-                  label: My Work
+                - name: publication
+                  label: Publications
                   widget: list
                   fields:
                       - { label: "Title", name: "title", widget: "string" }
@@ -47,17 +47,3 @@ collections: # A list of collections the CMS should be able to edit
                             widget: "select",
                             options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
                         }
-          # leaving events just for reference
-          - name: "events"
-            label: "Events"
-            file: "root/jekyll/_data/events.json"
-            fields:
-                - name: events
-                  label: Events
-                  widget: list
-                  fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "description", widget: "markdown" }
-                      - { label: "Date", name: "date", widget: "datetime" }
-                      - { label: "Url", name: "url", widget: "string" }
-                      - { label: "Image", name: "image", widget: "image", media_folder: "assets/imges" }
