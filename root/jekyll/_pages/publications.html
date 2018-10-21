@@ -20,7 +20,8 @@ permalink: publications.html
   <div class="row m-0 p-3 shadow" style="background: #fffbd5">
     <h2 class="h2 w-100">{{site.data.publications.hero.title}}</h2>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      {% include img_srcset.html class="img-fluid" alt=site.authorName filename="songs-after-memory-fractures.jpg" %}
+      {%-capture image-%}{{site.data.publications.hero.image | split: "/" | last}}{%-endcapture-%}
+      {% include img_srcset.html class="img-fluid" alt=site.authorName filename=image %}
     </div>
     <div class="col-xs-12 col-sm-6 col-md-8">
       <p class="lead pt-4">
