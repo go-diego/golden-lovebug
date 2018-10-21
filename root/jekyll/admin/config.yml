@@ -6,44 +6,101 @@ display_url: https://v2--golden-lovebug.netlify.com/
 media_folder: "root/src/assets/images" # Folder where user uploaded files should go
 public_folder: "assets/images"
 collections: # A list of collections the CMS should be able to edit
-    - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
-      label: "Post" # Used in the UI, e.g., "New Post"
-      folder: "root/jekyll/_posts" # The path to the folder where the documents are stored
-      create: true # Allow users to create new documents in this collection
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
-      fields: # The fields for each document, usually in front matter
-          - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-          - { label: "Title", name: "title", widget: "string", tagname: "h1" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - { label: "Cover Image", name: "image", widget: "image", required: false, tagname: "" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - {
-                label: "Permalink",
-                name: "permalink",
-                widget: "hidden",
-                required: false,
-                default: "blog/:year/:month/:day/:title:output_ext",
+    
+ - name: metadata
+   label: Site Metadata
+   delete: false
+   description: Site metadata and global settings
+   extension: json
+   files:
+    - name: metadata
+      label: Site Metadata
+      file: root/jekyll/_data/metadata.json
+      editor:
+      preview: false
+      fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Favicon", name: "favicon", widget: "image", required: false}
+          - {label: "Site Type", name: "type", widget: "string", default: website}
+          - {label: "Site Description", name: "description", widget: "text"}
+          - {label: "Site Thumbnail", name: "image", widget: "image", required: false}
+          - {label: "Site Url", name: "url", widget: "string", required: false}
+          - {label: "Facebook Url", name: "facebookUrl", widget: "string", required: false}
+          - {label: "Twitter Url", name: "twitterUrl", widget: "string", required: false}
+          - {label: "Contact Email", name: "email", widget: "string", required: false}
+          - {label: "Contact Phone Number", name: "phone", widget: "string", required: false}
+          - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
+          - label: Site Keywords (for SEO)
+            name: keywords
+            widget: list
+            allow_add: true 
+ 
+ - name: "posts" # Used in routes, e.g., /admin/collections/:slug/edit  
+   label: "Blog Posts" # Used in the UI, e.g., "New Post"
+   folder: "root/jekyll/_posts" # The path to the folder where the documents are stored
+   create: true # Allow users to create new documents in this collection
+   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template i.e. YYYY-MM-DD-title.md
+   fields: # The fields for each document, usually in front matter
+    - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+    - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+    - { label: "Body", name: "body", widget: "markdown" }
+    - { label: "Cover Image", name: "image", widget: "image", required: false, tagname: "" }
+    - { label: "Publish Date", name: "date", widget: "datetime" }
+    - {
+        label: "Permalink",
+        name: "permalink",
+        widget: "hidden",
+        required: false,
+        default: "blog/:year/:month/:day/:title:output_ext",
+    }
+    - { label: "SEO Description", name: "description", widget: "text" }
+
+ - name: publications
+   label: Publications
+   description: Publications page content
+   extension: json
+   files:
+
+    - name: publications
+      label: Publications
+      description: List of my work
+      file: root/jekyll/_data/publications.json
+      fields:
+        - name: publications
+          label: Publications
+          widget: list
+          fields:
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "markdown" }
+            - { label: "Url", name: "url", widget: "string" }
+            - {
+                label: "Type",
+                name: "type",
+                widget: "select",
+                options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
             }
-      meta:
-          - { label: "SEO Description", name: "description", widget: "text" }
-    - name: "data"
-      label: "Data"
-      files:
-          - name: "publication"
-            label: "My Publications"
-            description: "List of My Work"
-            file: "root/jekyll/_data/publications.json"
-            fields:
-                - name: publication
-                  label: Publications
-                  widget: list
-                  fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "description", widget: "markdown" }
-                      - { label: "Url", name: "url", widget: "string" }
-                      - {
-                            label: "Type",
-                            name: "type",
-                            widget: "select",
-                            options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
-                        }
+        # - name: tagline
+        #   label: Tagline
+        #   description: Publications page tagline
+        #   widget: markdown
+
+    # - name: tagline
+    #   label: Tagline
+    #   description: Publications page tagline
+    #   file: root/jekyll/_data/publications.json
+    #   fields:
+    #     - name: tagline
+    #       label: Tagline
+    #       widget: markdown
+
+    # - name: hero
+    #   label: Hero
+    #   description: Publications page Hero component
+    #   file: root/jekyll/_data/publications.json
+    #   widget: object
+    #   fields:
+    #     - {label: Title, name: title, widget: text}
+    #     - {label: Image, name: image, widget: image}
+    #     - {label: Content, name: content, widget: markdown}
+    #     - {label: Link, name: link, widget: text}
