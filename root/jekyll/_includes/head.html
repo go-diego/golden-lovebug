@@ -1,14 +1,14 @@
 <title>{{page.title}} | {{site.authorName}}</title>
 <meta name="description" content="Hello, I'm Allyson Jeffredo" />
 <meta property="og:type" content="website">
-<meta property="og:description" content="{{site.description}}" />
-<meta property="og:title" content="{{site.title}}" />
+<meta property="og:description" content="{{site.data.metadata.description}}" />
+<meta property="og:title" content="{{site.data.metadata.title}}" />
 <meta property="og:url" content="{{site.url}}" />
-<meta property="og:image" content="{{site.image | absolute_url}}" />
+<meta property="og:image" content="{{site.data.metadata.image | absolute_url}}" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{site.title}}" />
-<meta name="twitter:description" content="{{site.description}}" />
-<meta name="twitter:image" content="{{site.image | absolute_url}}" />
+<meta name="twitter:title" content="{{site.data.metadata.title}}" />
+<meta name="twitter:description" content="{{site.data.metadata.description}}" />
+<meta name="twitter:image" content="{{site.data.metadata.image | absolute_url}}" />
 <meta name="twitter:url" content="{{site.url}}" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

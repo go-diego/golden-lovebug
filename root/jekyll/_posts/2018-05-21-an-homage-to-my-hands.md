@@ -10,11 +10,11 @@ My life is dependent on the functionality of my hands, yet I take my hands for g
 
 During the Cinco de Mayo reading, Nuestra Ameríca, organized by Juan Delgado as part of an art show curated by Ana Delgado at[ The Institute of Ceramics and Alliance](http://humanresourcesla.com/event/the-institute-of-ceramics-and-alliance/) in L.A., we were surrounded by the beauty hands construct. The images of pan dulce, a poet ripping the trauma from their life, ceramic hand sculptures, stations to make one’s own sculptures, videos of a woman sweeping, poets taking photos, handshaking in greeting and meeting, the building itself, a writer using a combination of English and American Sign Language to share her story provided endless examples of nuestra Ameríca, our America— the reading’s title was inspired by José Martí’s [essay](https://writing.upenn.edu/library/Marti_Jose_Our-America.html) of the same name. Undoubtedly, this event couldn’t have taken place without a collaboration of hands.
 
-![Ceramic hand basin](/assets/img/hand1.jpeg)
+![Ceramic hand basin](/assets/images/hand1.jpeg)
 
-![Juan Delgado and others reading poems](/assets/img/juan.jpeg)
+![Juan Delgado and others reading poems](/assets/images/juan.jpeg)
 
-![Ceramic hand sculpture](/assets/img/hand2.jpeg)
+![Ceramic hand sculpture](/assets/images/hand2.jpeg)
 
 I love the image of hands molding hand-shaped ceramic objects. The hands prepping them for the oven so the once soft hands can harden like our skin ages. Then, letting the angry, fired hands cool and, later, give them color in various shades of brown. Last year, 2017, “fire-baked” stone tools carved and used by our human-like ancestors, founded in Africa in the 1960s, were dated at 280,000 years old. Even though the _National Geographic_ [article](https://news.nationalgeographic.com/2017/06/morocco-early-human-fossils-anthropology-science/#close) doesn’t mention hands explicitly, it’s hard not to imagine these stone tools also placed in the fire by their once-young hands.
 

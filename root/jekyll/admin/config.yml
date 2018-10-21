@@ -30,6 +30,7 @@ collections:
             - {label: "Twitter Url", name: "twitterUrl", widget: "string", required: false}
             - {label: "Contact Email", name: "email", widget: "string", required: false}
             - {label: "Contact Phone Number", name: "phone", widget: "string", required: false}
+            - {label: "Facebook App ID", name: "facebookAppId", widget: "string", required: false}
             - {label: "Google Analytics ID", name: "googleAnalyticsId", widget: "string", required: false}
             - label: Site Keywords (for SEO)
               name: keywords
