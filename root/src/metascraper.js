@@ -17,11 +17,11 @@ const PATHS = {
     PUBLICATIONS_METADATA_INPUT: "../jekyll/_data/publications.json",
     PUBLICATIONS_METADATA_OUTPUT: path.resolve(__dirname, "../jekyll/_data/publications-metadata.json")
 };
-let publicationsData = require(PATHS.PUBLICATIONS_METADATA_INPUT);
+const { publications } = require(PATHS.PUBLICATIONS_METADATA_INPUT);
 
 (() => {
     const metadata = [];
-    publicationsData.forEach(datum => {
+    publications.forEach(datum => {
         return got(datum.url, { timeout: 5000 })
             .then(response => {
                 return response;
