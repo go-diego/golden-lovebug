@@ -1,4 +1,5 @@
 {
+    "tagline": "Depending on the original published format, one can find samples of my published work, both digitized and in print, below.",
     "publications": [
         {
             "title": "Only We Can Pull",
@@ -70,5 +71,14 @@
             "type": "Article",
             "description": "With the support of a California Humanities grant, Inlandia Literary Laureate Nikia Chaney, initiated a Voices Against Violence project, which uses the arts to address the violence experienced in Inland Empire communities."
         }
-    ]
+    ],
+    "hero": {
+        "title": "Songs After Memory",
+        "image": "",
+        "content": "In this chapbook collection of poetry, the speaker elegizes fading and forgotten memories. Often, we are at the whim of our memories by what it decides to recall or remember at any given moment. So, who are we if and when our memory leaves us? What kind of version of ourselves do we become when all that we were is no longer privy to us? These are questions I was thinking when writing these poems. You can also [check out this interview](http://labloga.blogspot.com/2017/06/songs-after-memory-fractures-interview.html ) by the wonderful Olga Garc&iacutea Echeverr&iacutea for more on _Songs_.",
+        "callToAction": {
+            "url": "https://www.finishinglinepress.com/product/songs-after-memory-fractures-by-allyson-jeffredo/",
+            "text": "Buy it here!"
+        }
+    }
 }

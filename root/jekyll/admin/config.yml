@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
             widget: list
             allow_add: true 
  
- - name: "posts" # Used in routes, e.g., /admin/collections/:slug/edit  
+ - name: posts # Used in routes, e.g., /admin/collections/:slug/edit  
    label: "Blog Posts" # Used in the UI, e.g., "New Post"
    folder: "root/jekyll/_posts" # The path to the folder where the documents are stored
    create: true # Allow users to create new documents in this collection
@@ -56,19 +56,40 @@ collections: # A list of collections the CMS should be able to edit
     }
     - { label: "SEO Description", name: "description", widget: "text" }
 
- - name: publications
-   label: Publications
-   description: Publications page content
+ - name: content
+   label: Site Content
+   delete: false
+   description: Content for site
    extension: json
    files:
 
     - name: publications
       label: Publications
-      description: List of my work
+      description: Publications page content
+      widget: object
       file: root/jekyll/_data/publications.json
       fields:
+        - name: tagline
+          label: Tagline
+          description: Publications page tagline
+          widget: markdown
+        - name: hero
+          label: Hero
+          description: Publications page Hero component
+          widget: object
+          fields:
+            - {label: Title, name: title, widget: text}
+            - {label: Image, name: image, widget: image}
+            - {label: Content, name: content, widget: markdown}
+            - name: callToAction
+              label: Call To Action
+              widget: object
+              fields:
+                - {name: url, label: Link }
+                - {name: text label: Text  }
         - name: publications
           label: Publications
+          description: List of my publications
           widget: list
           fields:
             - { label: "Title", name: "title", widget: "string" }
@@ -80,10 +101,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: "select",
                 options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
             }
-        # - name: tagline
-        #   label: Tagline
-        #   description: Publications page tagline
-        #   widget: markdown
+
 
     # - name: tagline
     #   label: Tagline
