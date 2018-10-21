@@ -1,0 +1,68 @@
+$line-clamp-spacer: 1.5;
+
+.line-clamp {
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 !important;
+}
+.line-clamp:after {
+    content: "...";
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    width: 25%;
+    display: block;
+    position: absolute;
+    height: calc(1em * 1.2);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+}
+@supports (-webkit-line-clamp: 1) {
+    .line-clamp:after {
+        display: none !important;
+    }
+}
+.line-clamp-1 {
+    -webkit-line-clamp: 1;
+    height: calc(1em * #{$line-clamp-spacer} * 1);
+}
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    height: calc(1em * #{$line-clamp-spacer} * 2);
+}
+.line-clamp-3 {
+    -webkit-line-clamp: 3;
+    height: calc(1em * #{$line-clamp-spacer} * 3);
+}
+.line-clamp-4 {
+    -webkit-line-clamp: 4;
+    height: calc(1em * #{$line-clamp-spacer} * 4);
+}
+.line-clamp-5 {
+    -webkit-line-clamp: 5;
+    height: calc(1em * #{$line-clamp-spacer} * 5);
+}
+.line-clamp-6 {
+    -webkit-line-clamp: 6;
+    height: calc(1em * #{$line-clamp-spacer} * 6);
+}
+.line-clamp-7 {
+    -webkit-line-clamp: 7;
+    height: calc(1em * #{$line-clamp-spacer} * 7);
+}
+.line-clamp-8 {
+    -webkit-line-clamp: 8;
+    height: calc(1em * #{$line-clamp-spacer} * 8);
+}
+.line-clamp-9 {
+    -webkit-line-clamp: 9;
+    height: calc(1em * #{$line-clamp-spacer} * 9);
+}
+.line-clamp-10 {
+    -webkit-line-clamp: 10;
+    height: calc(1em * #{$line-clamp-spacer} * 10);
+}

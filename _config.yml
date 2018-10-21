@@ -1,6 +1,7 @@
 authorName: Allyson Jeffredo
-url: https://www.allysonjeffredo.com
-favicon: assets/img/favicon.ico
+#url: https://www.allysonjeffredo.com
+url: https://v2--golden-lovebug.netlify.com/
+favicon: assets/images/favicon.ico
 title: Allyson Jeffredo
 email: a.jeffredo2@gmail.com
 type: website
@@ -8,7 +9,7 @@ description: Hello! I'm Allyson. Poet, writer, educator.
 feed_items: 10
 feed_update_period: daily
 feed_update_frequency: 1
-image: assets/img/preview.png
+image: assets/images/preview-3f86b4dabb84405e31c11360eb2ed772-750.png
 facebookAppId: 397283870738655
 twitterUrl: https://twitter.com/allyj0_0
 twitterUsername: allyj0_0
@@ -16,18 +17,11 @@ facebookUrl: https://www.facebook.com/allyson.jeffredo
 instagramUrl: https://www.instagram.com/allyj0_0
 googleAnalyticsId: UA-116050053-1
 markdown: kramdown
-destination: jekyll-dist
-source: src/jekyll
+destination: dist
+source: root/jekyll
 plugins:
-  - jemoji
-  - jekyll-sitemap
-include: 
-  - _pages
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - package.json
-  - node_modules
-  - package-lock.json
-  - src/vendors
+    - jemoji
+    - jekyll-sitemap
+include:
+    - _pages
 timezone: America/Los_Angeles

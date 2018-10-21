@@ -1,0 +1,23 @@
+.blog-sidebar {
+    .post.active a {
+        color: $theme-primary !important;
+    }
+}
+
+.blog-content {
+    blockquote {
+        padding: 1.5rem 1rem;
+        margin: 0 0 1.5rem;
+        font-size: 1rem;
+        border-left: 5px solid #f2f2f2;
+        p {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

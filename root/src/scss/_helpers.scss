@@ -1,0 +1,17 @@
+@import "./helpers/line-clamp";
+
+.h-image-fill {
+    //background: url(../assets/images/img.gif) center no-repeat;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    overflow: hidden;
+    background-size: cover !important;
+}
+
+.h-image-contain {
+    //background: url(../assets/images/img.gif) center no-repeat;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    overflow: hidden;
+    background-size: contain !important;
+}
