@@ -82,9 +82,7 @@ module.exports = {
             template: "./templates/srcset.tmpl.js",
             filename: path.resolve(__dirname, "root/jekyll/_includes/img_srcset.html")
         }),
-        new CopyWebpackPlugin([
-            { from: "./assets/images/favicon.ico", to: path.resolve(__dirname, "root/jekyll/assets/images") }
-        ])
+        new CopyWebpackPlugin([{ from: "./assets/images/**/*", to: path.resolve(__dirname, "root/jekyll") }])
         //new HardSourceWebpackPlugin()
     ],
     optimization: {
