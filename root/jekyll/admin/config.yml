@@ -1,8 +1,10 @@
 backend:
     name: github
     repo: go-diego/golden-lovebug
-    branch: master
-display_url: https://www.allysonjeffredo.com
+    #branch: master
+    branch: cms
+#display_url: https://www.allysonjeffredo.com
+display_url: https://cms--golden-lovebug.netlify.com/
 media_folder: root/src/assets/images
 public_folder: assets/images
 collections: 
