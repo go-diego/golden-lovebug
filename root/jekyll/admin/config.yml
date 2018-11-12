@@ -5,8 +5,8 @@ backend:
     #branch: master
     branch: cms
     accepted_roles:
-        - admin
-        - editor
+        - Administrator
+        - Editor
 #display_url: https://www.allysonjeffredo.com
 display_url: https://cms--golden-lovebug.netlify.com/
 media_folder: root/src/assets/images
