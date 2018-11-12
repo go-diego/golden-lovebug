@@ -1,8 +1,12 @@
 backend:
-    name: github
+    #name: github
+    name: git-gateway
     repo: go-diego/golden-lovebug
     #branch: master
     branch: cms
+    accepted_roles:
+        - admin
+        - editor
 #display_url: https://www.allysonjeffredo.com
 display_url: https://cms--golden-lovebug.netlify.com/
 media_folder: root/src/assets/images
