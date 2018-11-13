@@ -1,7 +1,10 @@
 backend:
-    name: github
+    name: git-gateway
     repo: go-diego/golden-lovebug
     branch: master
+    accepted_roles:
+        - Administrator
+        - Editor
 display_url: https://www.allysonjeffredo.com
 media_folder: root/src/assets/images
 public_folder: assets/images
@@ -36,7 +39,7 @@ collections:
               name: keywords
               widget: list
               allow_add: true 
- 
+
     - name: posts # Used in routes, e.g., /admin/collections/:slug/edit  
       label: "Blog Posts" # Used in the UI, e.g., "New Post"
       folder: "root/jekyll/_posts" # The path to the folder where the documents are stored
@@ -102,3 +105,45 @@ collections:
                         widget: "select",
                         options: ["-Select Type-", "Poem", "Essay", "Article", "Interview", "Book", "Other"],
                        }
+        
+        - name: home
+          label: Home
+          description: Home page content
+          widget: object
+          file: root/jekyll/_data/home-page.json
+          fields:
+                - name: aboutMe
+                  label: About Me
+                  description: About Me text
+                  widget: markdown
+                - name: hero
+                  label: Hero
+                  description: Home page Hero component
+                  widget: object
+                  fields:
+                    - {label: Tagline, name: tagline, widget: markdown}
+                    - {label: Description, name: description, widget: markdown}
+                    - {label: Display Image, name: displayImage, widget: image}
+                    - {label: Background Image, name: backgroundImage, widget: image}
+                    - name: callToAction
+                      label: Call To Action
+                      widget: object
+                      fields:
+                        - {name: url, label: Link }
+                        - {name: text, label: Text  }
+                - name: jumbotron
+                  label: Jumbotron
+                  description: Use this to advertise things like upcomign events, a new project, etc.
+                  widget: object
+                  fields:
+                    - { label: "Show Jumbotron on page?", name: "enable", widget: "boolean", default: true}
+                    - { label: "Tagline", name: "tagline", widget: "string" }
+                    - { label: "Description", name: "description", widget: "markdown" }
+                    - { label: "Url", name: "url", widget: "string" }
+                    - name: callToAction
+                      label: Call To Action
+                      widget: object
+                      fields:
+                        - {name: url, label: Link }
+                        - {name: text, label: Text  }
+                        - {name: description, label: Text}
