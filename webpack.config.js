@@ -50,7 +50,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(["root/jekyll/*.js", "root/jekyll/*.css", "root/jekyll/*.map"], {}),
+        new CleanWebpackPlugin(
+            ["root/jekyll/*.js", "root/jekyll/*.css", "root/jekyll/*.map", "root/jekyll/assets/images/*"],
+            {}
+        ),
         new MiniCssExtractPlugin({
             filename: "site.[contentHash].min.css"
         }),
