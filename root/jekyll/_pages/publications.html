@@ -46,8 +46,8 @@ permalink: publications.html
   <div class="row d-flex flex-wrap">
     {% for poem in poems %}
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
-      <div class="card h-100">
-        <img class="card-img-top" src="{{poem.image}}" alt="{{poem.title}}" style="height: 200px">
+      <div class="card h-100 shadow">
+        <img class="card-img-top" src="{{poem.image}}" alt="{{poem.title}}" height="300">
         <div class="card-body">
           <h5 class="card-title">{{poem.title}}</h5>
           <small class="card-text line-clamp line-clamp-4">{{poem.description | smartify}}</small>
@@ -72,8 +72,8 @@ permalink: publications.html
   <div class="row d-flex flex-wrap">
     {% for article in articles %}
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
-      <div class="card h-100">
-        <img class="card-img-top" src="{{article.image}}" alt="{{article.title}}" style="height: 200px">
+      <div class="card h-100 shadow">
+        <img class="card-img-top" src="{{article.image}}" alt="{{article.title}}" height="300">
         <div class="card-body">
           <h5 class="card-title">{{article.title}}</h5>
           <small class="card-text line-clamp line-clamp-4">{{article.description | smartify}}</small>
@@ -98,8 +98,8 @@ permalink: publications.html
   <div class="row d-flex flex-wrap">
     {% for essay in essays %}
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 py-2">
-      <div class="card h-100">
-        <img class="card-img-top" src="{{essay.image}}" alt="{{essay.title}}" style="height: 200px">
+      <div class="card h-100 shadow">
+        <img class="card-img-top" src="{{essay.image}}" alt="{{essay.title}}" height="300">
         <div class="card-body">
           <h5 class="card-title">{{essay.title}}</h5>
           <small class="card-text line-clamp line-clamp-4">{{essay.description | smartify}}</small>
