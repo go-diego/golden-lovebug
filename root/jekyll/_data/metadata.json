@@ -1,19 +1,22 @@
 {
-  "googleAnalyticsId": "UA-116050053-1",
+  "title": "Allyson Jeffredo",
+  "author": "Allyson Jeffredo",
+  "favicon": "assets/images/favicon.ico",
+  "type": "website",
+  "description": "Hello! I'm Allyson. Poet, writer, educator.",
+  "image": "assets/images/preview.png",
+  "instagramUrl": "https://www.instagram.com/allyj0_0",
   "facebookUrl": "https://www.facebook.com/allyson.jeffredo",
+  "twitterUrl": "https://twitter.com/allyj0_0",
+  "twitterUsername": "allyj0_0",
+  "email": "hello@allysonjeffredo.com",
+  "phone": "",
+  "facebookAppId": "397283870738655",
+  "googleAnalyticsId": "UA-116050053-1",
   "keywords": [
     "Writing",
     "literature",
     "editing",
     "life"
   ],
-  "author": "Allyson Jeffredo",
-  "favicon": "assets/images/favicon.ico",
-  "facebookAppId": "397283870738655",
-  "title": "Allyson Jeffredo",
-  "type": "website",
-  "image": "assets/images/preview.png",
-  "twitterUrl": "https://twitter.com/allyj0_0",
-  "email": "hello@allysonjeffredo.com",
-  "description": "Hello! I'm Allyson. Poet, writer, educator."
 }
