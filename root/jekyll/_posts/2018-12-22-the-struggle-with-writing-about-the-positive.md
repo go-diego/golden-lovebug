@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: The Struggle with Writing About the Positive
+title: 'A Struggle: Writing About the Positive'
 image: /assets/images/bp11image.jpg
 date: 2018-12-23T05:00:41.879Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
