@@ -8,6 +8,9 @@ permalink: index.html
   <h1>{{page.title}}</h1>
   <div class="h-vertical-padding">
     <div class="about-me">{{site.data.home-page.aboutMe | markdownify | smartify}}</div>
+    <div class="d-flex justify-content-center">
+        <a class="btn btn-primary mt-5" href="{{site.data.home-page.hero.callToAction.url}}">{{site.data.home-page.hero.callToAction.text}}</a>
+    </div>
     {% if site.data.home-page.jumbotron.enable %}
         <div class="jumbotron py-3 mt-5 mx-4">
             <h1 class="h4">{{site.data.home-page.jumbotron.tagline}}</h1>
