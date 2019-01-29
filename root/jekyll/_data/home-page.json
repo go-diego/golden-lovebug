@@ -11,7 +11,7 @@
     }
   },
   "jumbotron": {
-    "enable": true,
+    "enable": false,
     "tagline": "Submit Your Work Here!",
     "description": "Currently, my friend, Isabel Quintero, and I are putting together a political zine.  We are looking for a variety of work, both written and visual, relating or in response to our current political climate.  If you feel you have something related to this theme, please submit your work to <a href=\"mailto:submissionsubmissions@gmail.com\" target=\"_blank\">submissionsubmissions@gmail.com</a> and/or visit <a href=\"https://largaboca.wordpress.com/\" target=\"_blank\">https://largaboca.wordpress.com/</a>",
     "callToAction": {
