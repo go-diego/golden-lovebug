@@ -60,17 +60,19 @@
                 <ul class="list-unstyled mb-0">
                     {% for post in recentPostsArr %}
                     <li class="post{% if page.url contains post.url %} active {% endif %}">
-                        {% if forloop.first %} :boom: {% endif %}
+                        {% if forloop.first %} <i class="fas fa-star text-primary"></i> {% endif %}
                         <a class="text-muted" href="{{ post.url }}">{{ post.title }}</a>
                     </li>
                     {% endfor %}
                 </ul>
 
                 {% if archivedPostsArr.size > 0 %}
-                <h3 class="h4 text-capitalize mt-5">Archive</h3>
-                {% endif %} {% for post in archivedPostsArr %} {% assign currentdate = post.date | date: "%b %Y" %} {%
-                if currentdate !=
-                date %} {% unless forloop.first %}</ul>{% endunless %}
+                    <h3 class="h4 text-capitalize mt-5">Archive</h3>
+                {% endif %} 
+                {% for post in archivedPostsArr %} 
+                {% assign currentdate = post.date | date: "%b %Y" %} 
+                {%if currentdate != date %} 
+                {% unless forloop.first %}</ul>{% endunless %}
                 <h5 class="text-capitalize h6 mt-1 mb-0" id="y{{post.date | date: " %b%Y "}}">{{ currentdate }}</h5>
                 <ul class="list-unstyled">
                     {% assign date = currentdate %} {% endif %}
