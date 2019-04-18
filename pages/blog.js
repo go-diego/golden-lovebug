@@ -116,7 +116,7 @@ BlogHomePage.getInitialProps = async () => {
     const data = await asyncData;
 
     return {
-        posts: posts.default,
+        posts: posts.default.posts,
         metadata: metadata.default,
         data: data.default
     };

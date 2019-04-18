@@ -68,7 +68,7 @@ collections:
       extension: json
       files:
           - file: _data/_posts.json
-            label: Post
+            label: Posts
             name: posts
             fields:
                 - label: Title

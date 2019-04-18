@@ -62,7 +62,7 @@ BlogPost.getInitialProps = async ({query: {slug}}) => {
 
     const metadata = await asyncMetadata;
     const posts = await asyncPosts;
-    const post = posts.default.filter(post => post.slug === slug)[0] || {};
+    const post = posts.default.posts.filter(post => post.slug === slug)[0] || {};
 
     return {post, metadata: metadata.default};
 };
