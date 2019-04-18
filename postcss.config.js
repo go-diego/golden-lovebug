@@ -1,3 +1,15 @@
 module.exports = {
-    plugins: [require("autoprefixer")({ remove: false })]
+    plugins: [
+        require("autoprefixer"),
+        require("cssnano")({
+            preset: [
+                "default",
+                {
+                    discardComments: {
+                        removeAll: true
+                    }
+                }
+            ]
+        })
+    ]
 };

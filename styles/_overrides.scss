@@ -1,0 +1,28 @@
+.root {
+    &.has-navbar-fixed-top {
+        padding-top: $navbar-height;
+    }
+    &.has-navbar-fixed-bottom {
+        padding-bottom: $navbar-height;
+    }
+}
+
+.animated.delay-half-s {
+    animation-delay: 0.5s;
+}
+
+.animated.delay-1-half-s {
+    animation-delay: 1.5s;
+}
+
+html {
+    font-family: $family-secondary;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: $family-secondary;
+}
