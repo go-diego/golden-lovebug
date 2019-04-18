@@ -69,6 +69,7 @@ collections:
       files:
           - file: _data/_posts.json
             label: Post
+            name: posts
             fields:
                 - label: Title
                   name: title
@@ -78,7 +79,7 @@ collections:
                   widget: datetime
                 - label: Slug
                   name: slug
-                  default: {{slug}}
+                  default: null
                   widget: hidden
                 - label: Cover Image
                   name: image
