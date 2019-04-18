@@ -79,7 +79,7 @@ collections:
                   widget: datetime
                 - label: Slug
                   name: slug
-                  default: null
+                  default: {{slug}}
                   widget: hidden
                 - label: Cover Image
                   name: image
