@@ -73,6 +73,7 @@ collections:
             fields:
                 - label: Posts
                   name: posts
+                  widget: list
                   fields:
                       - label: Title
                         name: title
