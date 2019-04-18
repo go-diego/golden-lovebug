@@ -31,7 +31,7 @@ const nextConfig = {
         }
 
         const postsList = await require("./_data/_posts.json");
-        const posts = postsList.reduce(
+        const posts = postsList.posts.reduce(
             (pages, post) => ({
                 ...pages,
                 [`/writing-behind-the-scenes/${post.slug}`]: {
