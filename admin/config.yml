@@ -62,31 +62,36 @@ collections:
 
     - name: posts
       label: Blog Posts
-      folder: pages/blog
+      delete: false
       create: true
-      slug: "{{slug}}"
-      fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Body
-            name: body
-            widget: markdown
-          - label: Cover Image
-            name: image
-            widget: image
-            required: false
-          - label: Publish Date
-            name: publish_date
-            widget: datetime
-          - label: SEO Description
-            name: description
-            widget: text
-            required: true
-          - label: Tags
-            name: tags
-            widget: list
-            hint: List of topic tags
+      description: Settings that are used throughout the entire site
+      extension: json
+      files:
+          - file: _data/_posts.json
+            label: Post
+            fields:
+                - label: Title
+                  name: title
+                  widget: string
+                - label: Publish Date
+                  name: publish_date
+                  widget: datetime
+                - label: Slug
+                  name: slug
+                  default: {{slug}}
+                  widget: hidden
+                - label: Cover Image
+                  name: image
+                  widget: image
+                  required: false
+                - label: SEO Description
+                  name: description
+                  widget: text
+                  required: true
+                - label: Tags
+                  name: tags
+                  widget: list
+                  hint: List of topic tags
 
     - name: pages
       label: Pages
