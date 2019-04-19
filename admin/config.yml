@@ -93,6 +93,10 @@ collections:
                         name: description
                         widget: text
                         required: true
+                      - label: Body
+                        name: body
+                        widget: markdown
+                        required: true
                       - label: Tags
                         name: tags
                         widget: list
