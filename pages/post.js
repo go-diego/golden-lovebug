@@ -4,6 +4,7 @@ import BlogLayout from "../containers/BlogLayout";
 import MarkedContent from "../components/MarkedContent";
 import SocialSharingButtons from "../components/SocialSharingButtons";
 import format from "date-fns/format";
+import slugify from "../utils/slugify";
 import styled from "styled-components";
 
 const Body = styled.section`
@@ -62,7 +63,7 @@ BlogPost.getInitialProps = async ({query: {slug}}) => {
 
     const metadata = await asyncMetadata;
     const posts = await asyncPosts;
-    const post = posts.default.posts.filter(post => post.slug === slug)[0] || {};
+    const post = posts.default.posts.filter(post => slugify(post.title) === slug)[0] || {};
 
     return {post, metadata: metadata.default};
 };

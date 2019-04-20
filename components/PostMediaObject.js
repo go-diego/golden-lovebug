@@ -2,12 +2,14 @@ import {Link} from "../server/routes";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import format from "date-fns/format";
+import slugify from "../utils/slugify";
 
 const Article = styled.article`
     position: relative;
 `;
 
-export default function PostMediaObject({title, image, description, publish_date, slug}) {
+export default function PostMediaObject({title, image, description, publish_date}) {
+    const slug = slugify(title);
     return (
         <Article className="media">
             <div className="media-left">

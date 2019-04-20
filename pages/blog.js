@@ -9,6 +9,7 @@ import PostMediaObject from "../components/PostMediaObject";
 import styled from "styled-components";
 import format from "date-fns/format";
 import isThisMonth from "date-fns/is_this_month";
+import slugify from "../utils/slugify";
 
 const Row = styled.div`
     display: flex;
@@ -25,6 +26,7 @@ export default function BlogHomePage({posts, metadata, data}) {
     const tags = {description, title, keywords};
     const orderedPosts = posts.sort((a, b) => new Date(b.publish_date) - new Date(a.publish_date));
     const featuredPost = orderedPosts[0];
+    const featuredPostSlug = slugify(featuredPost.title);
     const postsThisMonth = orderedPosts
         .slice(1, orderedPosts.length)
         .filter(post => isThisMonth(new Date(post.publish_date)));
@@ -66,9 +68,9 @@ export default function BlogHomePage({posts, metadata, data}) {
                                         prefetch
                                         href={{
                                             pathname: "/writing-behind-the-scenes",
-                                            query: {slug: featuredPost.slug}
+                                            query: {slug: featuredPostSlug}
                                         }}
-                                        as={`/writing-behind-the-scenes/${featuredPost.slug}`}>
+                                        as={`/writing-behind-the-scenes/${featuredPostSlug}`}>
                                         <a className="is-stretched-link">{featuredPost.title}</a>
                                     </Link>
                                 </p>
