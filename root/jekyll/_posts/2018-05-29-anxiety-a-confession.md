@@ -1,9 +1,10 @@
 ---
 layout: blog
-title: "Anxiety: A Confession"
-image: /assets/images/anxiety.jpg
+title: 'Anxiety: A Confession'
+image: assets/images/hailey-kean-zt8PJ6LT9Uw-unsplash.jpg
 date: 2018-05-29T21:40:48.123Z
-permalink: "blog/:year/:month/:day/:title:output_ext"
+permalink: 'blog/:year/:month/:day/:title:output_ext'
+description: One of the least discussed barriers to writing is anxiety.
 ---
 
 I’ve suffered from anxiety since I was a kid. My dad took me to the doctor because I experienced frequent “bad feelings” but didn’t have the words to say more. Dr. Yao, my family’s primary doctor and an insightful man, encouraged me to document each anxious episode on small calendars my dad left lying around from local hardware stores. Dr. Yao would flip through the months with days circled on the front and times listed on the back. My anxiety bled over their narrow margins. Yet, he never named it. Just had me keep track until he passed away some time after from a malignant brain tumor. I’ve never had a doctor look at me with such genuine understanding since—an understanding I imagine he would look at his own daughter with.
