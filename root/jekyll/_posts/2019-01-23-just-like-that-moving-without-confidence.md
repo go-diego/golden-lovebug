@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 'Just Like That: Moving Without Confidence'
-image: /assets/images/justlikethat.jpg
+image: assets/images/30daysreplay-pr-marketing-gAajYgoEci8-unsplash.jpg
 date: 2019-01-23T19:17:17.034Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 description: >-
