@@ -1,9 +1,10 @@
 ---
 layout: blog
 title: Finding Magic
-image: /assets/images/hubble.jpg
+image: assets/images/cristian-escobar-abkEAOjnY0s-unsplash.jpg
 date: 2018-10-02T21:54:38.196Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
+description: To write is an act of revealing one's self to the world and themself.
 ---
 I am no expert on magic. Yet, I know it can be easily lost—especially under the pressure of drastic change. 
 
