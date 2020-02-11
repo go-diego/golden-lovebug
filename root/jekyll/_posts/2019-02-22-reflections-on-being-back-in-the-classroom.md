@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Reflections on Being Back in the Classroom
-image: /assets/images/apple.jpg
+image: assets/images/nikolai-chernichenko-hFBsF-CX5eQ-unsplash.jpg
 date: 2019-02-22T18:54:35.853Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 description: >-
