@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 'Writing is Overwhelming, But It Doesn’t Have to Be'
-image: /assets/images/stressed.jpg
+image: assets/images/adult-blur-books-close-up-261909.jpg
 date: 2019-01-07T06:04:29.313Z
 permalink: 'blog/:year/:month/:day/:title:output_ext'
 description: >-
