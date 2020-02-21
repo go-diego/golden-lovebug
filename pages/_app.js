@@ -3,6 +3,8 @@ import Router from "next/router";
 import withGoogleAnalytics from "next-ga";
 import site_metadata from "../_data/_metadata.json";
 import "@fortawesome/fontawesome-free/js/all.min.js";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 import css from "../styles/site.scss";
 
 class Site extends App {
