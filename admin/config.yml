@@ -7,8 +7,8 @@ backend:
         - Editor
 display_url: https://www.allysonjeffredo.com
 # logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
-media_folder: static/uploads
-public_folder: static/uploads
+media_folder: public/uploads
+public_folder: public/uploads
 collections:
     - name: global
       label: Site Settings
@@ -52,7 +52,7 @@ collections:
                 - label: Open Graph Image
                   name: open_graph_image
                   widget: image
-                  default: static/uploads/preview.jpg
+                  default: public/uploads/preview.jpg
                   required: false
                   hint: This is the thumbnail that shows up when you share your site on Facebook or via an iMessage
                 - label: Google Analytics ID

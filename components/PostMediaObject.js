@@ -1,20 +1,29 @@
-import {Link} from "../server/routes";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import format from "date-fns/format";
-import slugify from "../utils/slugify";
+import { slugit } from "../utils/slugit";
 
 const Article = styled.article`
     position: relative;
 `;
 
-export default function PostMediaObject({title, image, description, publish_date}) {
-    const slug = slugify(title);
+export default function PostMediaObject({
+    title,
+    image,
+    description,
+    publish_date
+}) {
+    const slug = slugit(title);
     return (
         <Article className="media">
             <div className="media-left">
                 <figure className="image is-64x64">
-                    <img className="is-object-fit-cover" src={image} alt={title} />
+                    <img
+                        className="is-object-fit-cover"
+                        src={image || "./uploads/default-blog.jpg"}
+                        alt={title}
+                    />
                 </figure>
             </div>
             <div className="media-content">
@@ -30,8 +39,8 @@ export default function PostMediaObject({title, image, description, publish_date
             </div>
             <div className="media-right">
                 <Link
-                    prefetch
-                    href={{pathname: "/writing-behind-the-scenes", query: {slug}}}
+                    passHref
+                    href={`/writing-behind-the-scenes/${slug}`}
                     as={`/writing-behind-the-scenes/${slug}`}>
                     <a className="is-stretched-link">
                         <span className="icon is-small">

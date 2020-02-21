@@ -30,7 +30,8 @@
         {
             "title": "No Matter",
             "url": "http://www.hermeneuticchaosjournal.com/no-matter-by-allyson-jeffredo.html",
-            "type": "Poem"
+            "type": "Poem",
+            "isInactive": true
         },
         {
             "title": "As If",
@@ -52,7 +53,8 @@
         },
         {
             "title": "Songs After Memory Fractures",
-            "url": "https://www.finishinglinepress.com/product/songs-after-memory-fractures-by-allyson-jeffredo/ ",
+            "image": "https://www.finishinglinepress.com/wp-content/uploads/2016/06/Jeffredo-Allyson.jpg",
+            "url": "https://www.finishinglinepress.com/product/songs-after-memory-fractures-by-allyson-jeffredo/",
             "type": "Book"
         },
         {

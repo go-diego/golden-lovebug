@@ -1,17 +1,18 @@
+// TODO: add images loader from previous project
+// TODO: add default description to publications with no description
+// TODO: add default image
+// TODO: make the media item clickable
+
 import MarkedContent from "./MarkedContent";
 import SocialSharingButtons from "./SocialSharingButtons";
 import styled from "styled-components";
+import ky from "ky/umd";
+import { to } from "await-to-js";
 
 const Figure = styled.figure`
     overflow: hidden;
     -moz-border-radius: 8px;
     border-radius: 8px;
-`;
-
-const FigCaption = styled.figcaption`
-    position: relative;
-    display: flex;
-    align-items: center;
 `;
 
 const Img = styled.img`
@@ -33,39 +34,70 @@ const Row = styled.div`
     }
 `;
 
-export default function PublicationMedia(props) {
-    //console.log("PROPS", props);
-    const {title, image = null, url, description, publisher = null} = props;
+function setPublicationDefaults(publication) {
+    //if (!publication.description) publication.description = "Read it here!";
+    if (!publication.image)
+        publication.image = "/uploads/default-publication.jpg";
+    return publication;
+}
+
+export default function PublicationMedia(publication) {
+    const [data, setData] = React.useState(publication);
+    const [error, setError] = React.useState(null);
+    const [isLoading, setIsLoading] = React.useState(true);
+
+    React.useEffect(() => {
+        async function getData() {
+            if (publication.url && !publication.isInactive) {
+                const [error, response] = await to(
+                    ky(
+                        `/.netlify/functions/metascraper?uri=${publication.url}`,
+                        { timeout: false }
+                    ).json()
+                );
+                if (error) setError(error);
+                const mergedPublication = { ...response, ...publication };
+                setData(mergedPublication);
+                setPublicationDefaults(mergedPublication);
+                setIsLoading(false);
+            }
+        }
+        getData();
+    }, [publication.url]);
+
+    const { title, image = null, url, description, publisher = null } = data;
+
     return (
-        <Row className="columns">
-            <div className="column is-one-quarter">
-                <Figure className="image is-4by5 shadow">
-                    <Img src={image} />
-                    {/* <FigCaption className="has-background-light">
-                        <figure className="image is-32x32">
-                            <Img className="is-rounded p-1" src={publisher.logo} />
-                        </figure>
-                        <small className="has-text-centered">{publisher.name}</small>
-                    </FigCaption> */}
-                </Figure>
-            </div>
-            <Content className="column">
-                <div>
-                    <h2 className="title is-4">{title}</h2>
-                    <MarkedContent source={description} />
-                    {/* <Blockquote context="is-primary" citation={blurb.source}>
-                        <MarkedContent source={blurb.content} />
-                    </Blockquote> */}
+        !isLoading &&
+        !error && (
+            <Row className="columns">
+                <div className="column is-one-quarter">
+                    <Figure className="image is-4by5 shadow">
+                        <Img src={image} />
+                    </Figure>
                 </div>
-                {url && (
-                    <div className="pt-3">
+                <Content className="column">
+                    <div>
+                        <h2 className="title is-4">{title}</h2>
+                        <MarkedContent source={description} />
+                        <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener"
+                            className="button is-primary is-uppercase">
+                            Read It
+                        </a>
+                    </div>
+                    {url && (
                         <div>
-                            <p className="heading has-text-link has-text-weight-semibold">Share</p>
+                            <p className="heading has-text-link has-text-weight-semibold">
+                                Share
+                            </p>
                             <SocialSharingButtons label={title} link={url} />
                         </div>
-                    </div>
-                )}
-            </Content>
-        </Row>
+                    )}
+                </Content>
+            </Row>
+        )
     );
 }

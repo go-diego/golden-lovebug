@@ -5,10 +5,16 @@ import PageTitleHeading from "../components/PageTitleHeading";
 import BlogLayout from "../containers/BlogLayout";
 import PostMediaObject from "../components/PostMediaObject";
 
-export default function BlogArchivePage({posts, metadata, data}) {
-    const {description, title, content, keywords} = data;
-    const orderedPosts = posts.sort((a, b) => new Date(b.publish_date) - new Date(a.publish_date));
-    const tags = {description, title: `${title} | Writing Behind the Scenes`, keywords};
+export default function BlogArchivePage({ posts, metadata, data }) {
+    const { description, title, content, keywords } = data;
+    const orderedPosts = posts.sort(
+        (a, b) => new Date(b.publish_date) - new Date(a.publish_date)
+    );
+    const tags = {
+        description,
+        title: `${title} | Writing Behind the Scenes`,
+        keywords
+    };
     return (
         <BlogLayout metadata={metadata}>
             <Head tags={tags} />
@@ -29,17 +35,19 @@ export default function BlogArchivePage({posts, metadata, data}) {
 }
 
 BlogArchivePage.getInitialProps = async () => {
-    const asyncPosts = import("../_data/_posts.json");
+    const asyncData = import("../_data/_pages/_blog.json");
     const asyncMetadata = import("../_data/_metadata.json");
-    const asyncData = import("../_data/_pages/_archive.json");
+    const asyncPosts = import("../_data/_posts.json");
 
-    const posts = await asyncPosts;
-    const metadata = await asyncMetadata;
-    const data = await asyncData;
+    const promises = [asyncData, asyncMetadata, asyncPosts].map(p =>
+        p.then(res => res.default)
+    );
+
+    const [data, metadata, posts] = await Promise.all(promises);
 
     return {
-        posts: posts.default.posts,
-        metadata: metadata.default,
-        data: data.default
+        posts: posts.data,
+        metadata,
+        data
     };
 };
