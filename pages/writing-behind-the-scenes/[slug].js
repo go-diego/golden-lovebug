@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 import Head from "../../components/Head";
 import BlogLayout from "../../containers/BlogLayout";
 import MarkedContent from "../../components/MarkedContent";
@@ -13,7 +14,17 @@ const Body = styled.section`
   padding-top: 4rem;
 `;
 
-export default function BlogPost({ post, metadata }) {
+const MorePostsNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Figure = styled.figure`
+  width: 100% !important;
+  overflow: hidden;
+`;
+
+export default function BlogPost({ post, prevPost, nextPost, metadata }) {
   const [postUrl, setPostUrl] = React.useState(null);
 
   React.useEffect(() => {
@@ -33,7 +44,22 @@ export default function BlogPost({ post, metadata }) {
       <Head tags={tags} />
       <article className="section">
         <div className="container">
-          <p className="is-size-6 has-text-link">Writing Behind the Scenes</p>
+          <Link passHref href="/writing-behind-the-scenes">
+            <a
+              style={{
+                display: "inline-block !important",
+                marginBottom: "1rem"
+              }}
+              className="is-size-7 is-flex button is-link heading has-text-weight-bold">
+              <span className="icon is-small">
+                <i className="fas fa-arrow-left" />
+              </span>
+              &nbsp; Back
+            </a>
+          </Link>
+          <p className="is-size-6 has-text-link heading">
+            Writing Behind the Scenes
+          </p>
           <h1 className="title is-family-primary is-display-4 is-size-4-mobile">
             {title}
           </h1>
@@ -51,6 +77,56 @@ export default function BlogPost({ post, metadata }) {
           </Body>
         </div>
       </article>
+      <div className="container">
+        <MorePostsNav className="columns is-marginless">
+          {prevPost && (
+            <div className="column is-narrow">
+              <Link
+                href={`/writing-behind-the-scenes/${slugit(prevPost.title)}`}>
+                <a className="has-text-dark">
+                  <small className="heading">
+                    <span className="icon is-small">
+                      <i className="fas fa-arrow-left" />
+                    </span>
+                    Previous Post
+                  </small>
+                  <Figure className="image is-128x128 has-background-dark">
+                    {/* <Image src={item.url} loaderColor="#33f1ed" /> */}
+                    <img
+                      style={{ objectFit: "cover", height: "100%" }}
+                      src={prevPost.image}
+                    />
+                  </Figure>
+                  <small>{prevPost.title}</small>
+                </a>
+              </Link>
+            </div>
+          )}
+          {nextPost && (
+            <div className="column is-narrow">
+              <Link
+                href={`/writing-behind-the-scenes/${slugit(nextPost.title)}`}>
+                <a className="has-text-dark">
+                  <small className="heading">
+                    Next Post
+                    <span className="icon is-small">
+                      <i className="fas fa-arrow-right" />
+                    </span>
+                  </small>
+                  <Figure className="image is-128x128 has-background-dark">
+                    {/* <Image src={item.url} loaderColor="#33f1ed" /> */}
+                    <img
+                      style={{ objectFit: "cover", height: "100%" }}
+                      src={nextPost.image}
+                    />
+                  </Figure>
+                  <small>{nextPost.title}</small>
+                </a>
+              </Link>
+            </div>
+          )}
+        </MorePostsNav>
+      </div>
     </BlogLayout>
   );
 }
@@ -65,7 +141,18 @@ BlogPost.getInitialProps = async ({ query: { slug } }) => {
 
   const [posts, metadata] = await Promise.all(promises);
 
-  const post = posts.data.filter(post => slugit(post.title) === slug)[0] || {};
+  const orderedPosts = posts.data.sort(
+    (a, b) => new Date(b.publish_date) - new Date(a.publish_date)
+  );
 
-  return { post, metadata };
+  const post = posts.data.filter(post => slugit(post.title) === slug)[0] || {};
+  const currentPostIndex = orderedPosts.findIndex(p => p.title === post.title);
+  const prevPost =
+    currentPostIndex > 0 ? orderedPosts[currentPostIndex - 1] : null;
+  const nextPost =
+    currentPostIndex !== orderedPosts.length + 1
+      ? posts.data[currentPostIndex + 1]
+      : null;
+
+  return { post, prevPost, nextPost, metadata };
 };

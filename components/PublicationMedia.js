@@ -52,8 +52,6 @@ export default function PublicationMedia(publication) {
         const [error, response] = await to(
           ky(`/.netlify/functions/metascraper?uri=${publication.url}`).json()
         );
-        console.log("RESPONSE", publication.url);
-        console.log("ERROR", error);
         if (error) setError(error);
         const mergedPublication = { ...response, ...publication };
         setData(mergedPublication);
