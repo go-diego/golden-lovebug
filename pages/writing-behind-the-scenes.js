@@ -94,7 +94,10 @@ export default function BlogHomePage({ posts, metadata, data }) {
                 ))}
               </RecentPosts>
               <div className="is-flex is-justify-content-center">
-                <Link passHref href="/writing-behind-the-scenes/archive">
+                <Link
+                  passHref
+                  as="/writing-behind-the-scenes/archive"
+                  href="/archive">
                   <a className="is-size-6 is-flex button is-link heading has-text-weight-bold">
                     View All &nbsp;
                     <span className="icon is-small">

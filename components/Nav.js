@@ -28,7 +28,7 @@ class Nav extends React.Component {
   };
 
   render() {
-    const { email, facebook_url, twitter_url, instagram_url } = this.props;
+    const { email, facebook_url, twitter_url, linkedin_url } = this.props;
     const { isNavbarOpen } = this.state;
     return (
       <Navbar
@@ -65,7 +65,7 @@ class Nav extends React.Component {
           <a
             rel="noopener"
             target="_blank"
-            href={`${instagram_url}`}
+            href={`${linkedin_url}`}
             className="navbar-item animated bounceIn delay-1s">
             <i className="fab fa-linkedin-in" />
           </a>

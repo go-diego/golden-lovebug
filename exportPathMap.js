@@ -19,6 +19,9 @@ async function exportPathMap(defaultPathMap, { dev, dir, outDir }) {
       [`/writing-behind-the-scenes/${slug}`]: {
         page: "/writing-behind-the-scenes/[slug]",
         query: { slug }
+      },
+      [`/writing-behind-the-scenes/archive`]: {
+        page: "/archive"
       }
     };
   }, {});

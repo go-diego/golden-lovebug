@@ -47,10 +47,9 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
           <Link passHref href="/writing-behind-the-scenes">
             <a
               style={{
-                display: "inline-block !important",
                 marginBottom: "1rem"
               }}
-              className="is-size-7 is-flex button is-link heading has-text-weight-bold">
+              className="is-size-7 button is-link heading has-text-weight-bold is-inline-block">
               <span className="icon is-small">
                 <i className="fas fa-arrow-left" />
               </span>
@@ -79,8 +78,8 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
       </article>
       <div className="container">
         <MorePostsNav className="columns is-marginless">
-          {prevPost && (
-            <div className="column is-narrow">
+          <div className="column is-narrow">
+            {prevPost && (
               <Link
                 href={`/writing-behind-the-scenes/${slugit(prevPost.title)}`}>
                 <a className="has-text-dark">
@@ -100,10 +99,10 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
                   <small>{prevPost.title}</small>
                 </a>
               </Link>
-            </div>
-          )}
-          {nextPost && (
-            <div className="column is-narrow">
+            )}
+          </div>
+          <div className="column is-narrow">
+            {nextPost && (
               <Link
                 href={`/writing-behind-the-scenes/${slugit(nextPost.title)}`}>
                 <a className="has-text-dark">
@@ -123,8 +122,8 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
                   <small>{nextPost.title}</small>
                 </a>
               </Link>
-            </div>
-          )}
+            )}
+          </div>
         </MorePostsNav>
       </div>
     </BlogLayout>
@@ -147,9 +146,9 @@ BlogPost.getInitialProps = async ({ query: { slug } }) => {
 
   const post = posts.data.filter(post => slugit(post.title) === slug)[0] || {};
   const currentPostIndex = orderedPosts.findIndex(p => p.title === post.title);
-  const prevPost =
-    currentPostIndex > 0 ? orderedPosts[currentPostIndex - 1] : null;
   const nextPost =
+    currentPostIndex > 0 ? orderedPosts[currentPostIndex - 1] : null;
+  const prevPost =
     currentPostIndex !== orderedPosts.length + 1
       ? posts.data[currentPostIndex + 1]
       : null;

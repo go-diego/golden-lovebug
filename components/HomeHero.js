@@ -37,9 +37,6 @@ export default function HomeHero({ data, metadata }) {
   const { email, facebook_url, twitter_url, linkedin_url } = metadata;
   return (
     <Hero className="hero home-hero is-medium">
-      {/* <div className="hero-head">
-                <HeroNavbar />
-            </div> */}
       <div className="hero-body has-text-centered-mobile">
         <div className="container">
           <div className="columns">
