@@ -4,9 +4,7 @@ import { string } from "prop-types";
 
 const defaultDescription = "";
 const defaultOGURL = "";
-const defaultOGImage = "";
-const favicon =
-  "data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANR3PACoUbQA1SDcAPG1BAEUq/wAoH0kAKTMcAFunawBJf08AfHf/ACcQigAAAAAAAAAAAAAAAAAAAAAARAAEAAAAAABIMDkyuyAAADiXMrqqUgAAOTdhUREVYAAHZiuysiJgAAalUSsVqqYAalG2sbuxGmAqGyIiZisVICq7axUbYitSJRa6sbsbIasLa6sapbUlsAC6EqG7GmsAALpbWxWhsAAAAqGhu7sAAAAAtRpbAAAAAAACu7AAAAA7/wAAEB8AAAAPAAAABwAAgAcAAIADAAAAAQAAAAEAAAAAAAAAAAAAgAEAAMADAADABwAA4A8AAPA/AAD4fwAA";
+const defaultOGImage = "/uploads/thumbnail.png";
 
 export default function Head({ tags = {}, children }) {
   return (
@@ -31,20 +29,24 @@ export default function Head({ tags = {}, children }) {
         content="width=device-width, initial-scale=1"
       />
 
-      {/* <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1" /> */}
-      <link key="icon" rel="icon" sizes="192x192" href="/touch-icon.png" />
       <link
-        key="apple_touch_icon"
         rel="apple-touch-icon"
-        href="/touch-icon.png"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
       />
       <link
-        key="mask_icon"
-        rel="mask-icon"
-        href="/favicon-mask.svg"
-        color="#49B882"
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
       />
-      <link key="favicon" href={favicon} rel="icon" type="image/x-icon" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
       <meta key="og_url" property="og:url" content={tags.url || defaultOGURL} />
       <meta key="og_title" property="og:title" content={tags.title || ""} />
       <meta
