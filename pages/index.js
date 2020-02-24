@@ -1,6 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import HomeHero from "../components/HomeHero";
-import HomeLayout from "../containers/HomeLayout";
+import MainLayout from "../containers/MainLayout";
 import Head from "../components/Head";
 import Section from "../components/Section";
 
@@ -8,8 +8,8 @@ export default function HomePage({ data, metadata }) {
   const { description, title, content, keywords } = data;
   const tags = { description, title, keywords };
   return (
-    <HomeLayout>
-      <Head tags={tags}>
+    <MainLayout>
+      <Head metadata={metadata} tags={tags}>
         <script
           type="text/javascript"
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
@@ -22,7 +22,7 @@ export default function HomePage({ data, metadata }) {
           <ReactMarkdown source={content} />
         </div>
       </Section>
-    </HomeLayout>
+    </MainLayout>
   );
 }
 

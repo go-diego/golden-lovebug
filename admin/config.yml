@@ -52,7 +52,7 @@ collections:
           - label: Open Graph Image
             name: open_graph_image
             widget: image
-            default: public/uploads/thumbnail.jpg
+            default: public/uploads/thumbnail.png
             required: false
             hint: This is the thumbnail that shows up when you share your site on Facebook or via an iMessage
           - label: Google Analytics ID
@@ -72,7 +72,7 @@ collections:
         name: data
         fields:
           - label: Posts
-            name: posts
+            name: data
             widget: list
             fields:
               - label: Title
