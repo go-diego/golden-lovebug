@@ -65,7 +65,7 @@ export default function PublicationMedia(publication) {
   const { title, image = null, url, description, publisher = null } = data;
 
   return (
-    !publication.isInactive &&
+    publication.isActive &&
     !error && (
       <Row className="columns">
         <div className="column is-one-quarter">

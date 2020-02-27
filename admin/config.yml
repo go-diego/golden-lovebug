@@ -164,6 +164,10 @@ collections:
                 widget: markdown
                 required: false
                 hint: Adding your own description will override the description scraped from the site
+              - label: Active?
+                name: isActive
+                widget: boolean
+                default: true
               - label: Link
                 name: url
                 widget: string
