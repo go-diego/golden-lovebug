@@ -119,6 +119,9 @@ collections:
             name: description
             widget: text
             hint: Used for SEO
+          - label: Content
+            name: content
+            widget: markdown
           - label: Greeting
             name: greeting
             widget: markdown
