@@ -8,8 +8,8 @@ export default function HomePage({ data, metadata }) {
   const { description, title, content, keywords } = data;
   const tags = { description, title, keywords };
   return (
-    <MainLayout>
-      <Head metadata={metadata} tags={tags}>
+    <MainLayout metadata={metadata}>
+      <Head tags={tags}>
         <script
           type="text/javascript"
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
