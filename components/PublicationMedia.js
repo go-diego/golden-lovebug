@@ -71,7 +71,7 @@ export default function PublicationMedia(publication) {
         <div className="column is-one-quarter">
           {!isLoading && (
             <Figure className="image is-4by5 shadow">
-              <Img src={image} />
+              <Img alt={publication.title} src={image} />
             </Figure>
           )}
           {isLoading && <Skeleton height={250} />}

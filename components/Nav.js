@@ -38,9 +38,10 @@ class Nav extends React.Component {
         <div className="navbar-brand">
           {this.props.router.pathname !== "/" && (
             <Link href="/">
-              <a className="navbar-item">
+              <a className="navbar-item" aria-label="home-link">
                 <figure className="image is-32x32">
                   <Img
+                    alt="AJ"
                     className="is-rounded is-object-fit-cover"
                     src="/uploads/profile.jpg"
                   />
@@ -49,6 +50,7 @@ class Nav extends React.Component {
             </Link>
           )}
           <a
+            aria-label="social-media-link"
             rel="noopener"
             target="_blank"
             href={`${facebook_url}`}
@@ -63,6 +65,7 @@ class Nav extends React.Component {
             <i className="fab fa-twitter" />
           </a>
           <a
+            aria-label="social-media-link"
             rel="noopener"
             target="_blank"
             href={`${linkedin_url}`}
@@ -70,6 +73,7 @@ class Nav extends React.Component {
             <i className="fab fa-linkedin-in" />
           </a>
           <a
+            aria-label="email-link"
             href={`mailto:${email}`}
             className="navbar-item animated bounceIn delay-1-half-s">
             <i className="fas fa-envelope" />
@@ -94,6 +98,7 @@ class Nav extends React.Component {
           <div className="navbar-start" />
           <div className="navbar-end">
             <a
+              aria-label="navbar-link"
               href="/publications"
               className={`is-family-primary navbar-item${
                 this.isLinkActive("/publications") ? " is-active" : ""
@@ -102,6 +107,7 @@ class Nav extends React.Component {
             </a>
             <Link href="/writing-behind-the-scenes">
               <a
+                aria-label="navbar-link"
                 className={`is-family-primary navbar-item${
                   this.isLinkActive("/writing-behind-the-scenes")
                     ? " is-active"

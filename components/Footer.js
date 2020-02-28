@@ -18,7 +18,8 @@ export default function Footer() {
         <a
           className="has-text-weight-bold has-text-white"
           href="https://www.godiego.me"
-          target="_blank">
+          target="_blank"
+          rel="noopener">
           Diego Bernal
         </a>
       </small>
