@@ -33,7 +33,6 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
 
   // TODO: add topics to post entries
   const { title, description, publish_date, image, body, topics = [] } = post;
-
   const tags = {
     description,
     title: `${title} | Writing Behind the Scenes`,
@@ -67,6 +66,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
           <SocialSharingButtons label={title} link={postUrl} />
           <figure className="image is-5by3">
             <img
+              alt={title}
               className="is-object-fit-cover"
               src={image || "./uploads/default-blog.jpg"}
             />
@@ -92,6 +92,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
                   <Figure className="image is-128x128 has-background-dark">
                     {/* <Image src={item.url} loaderColor="#33f1ed" /> */}
                     <img
+                      alt={prevPost.title}
                       style={{ objectFit: "cover", height: "100%" }}
                       src={prevPost.image}
                     />
@@ -115,6 +116,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
                   <Figure className="image is-128x128 has-background-dark">
                     {/* <Image src={item.url} loaderColor="#33f1ed" /> */}
                     <img
+                      alt={nextPost.title}
                       style={{ objectFit: "cover", height: "100%" }}
                       src={nextPost.image}
                     />

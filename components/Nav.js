@@ -58,6 +58,7 @@ class Nav extends React.Component {
             <i className="fab fa-facebook-f" />
           </a>
           <a
+            aria-label="social-media-link"
             rel="noopener"
             target="_blank"
             href={`${twitter_url}`}
