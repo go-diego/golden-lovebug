@@ -1,0 +1,207 @@
+backend:
+  name: git-gateway
+  repo: go-diego/golden-lovebug
+  branch: next
+  accepted_roles:
+    - Administrator
+    - Editor
+display_url: https://www.allysonjeffredo.com
+# logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
+media_folder: public/uploads
+public_folder: public/uploads
+collections:
+  - name: global
+    label: Site Settings
+    delete: false
+    description: Settings that are used throughout the entire site
+    extension: json
+    files:
+      - file: _data/_metadata.json
+        label: Metadata
+        name: site
+        editor:
+          preview: false
+        fields:
+          - label: Site Title
+            name: site_title
+            widget: string
+            hint: Used for SEO
+          - label: Default Site Description
+            name: default_site_description
+            widget: text
+            hint: Used for SEO
+            required: false
+          - label: Email
+            name: email
+            widget: string
+          - label: Twitter Url
+            name: twitter_url
+            widget: string
+          - label: Twitter Username
+            name: twitter_username
+            widget: string
+          - label: Facebook Url
+            name: facebook_url
+            widget: string
+          - label: Instagram Url
+            name: instagram_url
+            widget: string
+          - label: LinkedIn Url
+            name: linkedin_url
+            widget: string
+          - label: Open Graph Image
+            name: open_graph_image
+            widget: image
+            default: public/uploads/thumbnail.png
+            required: false
+            hint: This is the thumbnail that shows up when you share your site on Facebook or via an iMessage
+          - label: Google Analytics ID
+            name: ga
+            required: false
+            widget: string
+
+  - name: posts
+    label: Blog Posts
+    delete: false
+    create: true
+    description: Settings that are used throughout the entire site
+    extension: json
+    files:
+      - file: _data/_posts.json
+        label: Posts
+        name: data
+        fields:
+          - label: Posts
+            name: data
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Publish Date
+                name: publish_date
+                widget: datetime
+              - label: Cover Image
+                name: image
+                widget: image
+                required: false
+              - label: SEO Description
+                name: description
+                widget: text
+                required: false
+              - label: Body
+                name: body
+                widget: markdown
+                required: true
+              - label: Tags
+                name: tags
+                widget: list
+                required: false
+                hint: List of topic tags
+
+  - name: pages
+    label: Pages
+    delete: false
+    create: false
+    description: Manage site's page content
+    extension: json
+    files:
+      - file: _data/_pages/_home.json
+        label: Home
+        name: home
+        editor:
+          preview: false
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+          - label: Page Description
+            name: description
+            widget: text
+            hint: Used for SEO
+          - label: Content
+            name: content
+            widget: markdown
+          - label: Greeting
+            name: greeting
+            widget: markdown
+          - label: Tagline
+            name: tagline
+            widget: markdown
+          - label: Picture
+            name: profile_image
+            widget: image
+          - label: Keywords
+            name: keywords
+            widget: list
+            hint: SEO keywords
+
+      - file: _data/_pages/_publications.json
+        label: My Work
+        name: work
+        editor:
+          preview: false
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+          - label: Page Description
+            name: description
+            widget: text
+            hint: Used for SEO
+          - label: Content
+            name: content
+            widget: markdown
+          - label: List of Publications
+            name: publications
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: markdown
+                required: false
+                hint: Adding your own description will override the description scraped from the site
+              - label: Active?
+                name: isActive
+                widget: boolean
+                default: true
+              - label: Link
+                name: url
+                widget: string
+                hint: Link to more information about your work, where to buy, etc.
+              - label: Picture
+                name: image
+                widget: image
+                required: false
+                default: null
+                hint: Only add an image if you wish to override the image that was scraped from the site.
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options:
+                  [
+                    "-Select Type-",
+                    "Poem",
+                    "Essay",
+                    "Article",
+                    "Interview",
+                    "Book",
+                    "Other",
+                  ]
+              - label: Publisher
+                name: publisher
+                default: null
+                required: false
+                hint: Adding a publisher name will override details scraped by site
+              - label: Publisher Logo
+                name: logo
+                default: null
+                required: false
+                hint: Add a link to the publishers logo. Doing so will override the logo retrieved through the scraping process.
+          - label: Keywords
+            name: keywords
+            widget: list
+            hint: SEO keywords
