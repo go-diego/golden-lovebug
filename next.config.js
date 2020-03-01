@@ -1,5 +1,5 @@
 const withSass = require("@zeit/next-sass");
-const exportPathMap = require("./exportPathMap");
+const exportPathMap = require("./scripts/exportPathMap");
 
 module.exports = withSass({
   exportPathMap

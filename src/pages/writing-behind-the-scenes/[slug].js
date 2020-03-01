@@ -6,7 +6,7 @@ import BlogLayout from "../../containers/BlogLayout";
 import MarkedContent from "../../components/MarkedContent";
 import SocialSharingButtons from "../../components/SocialSharingButtons";
 import format from "date-fns/format";
-import { slugit } from "../../utils/slugit";
+import { slugit } from "../../../scripts/slugit";
 
 const Body = styled.section`
   line-height: 1.75;

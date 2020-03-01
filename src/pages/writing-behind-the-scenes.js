@@ -9,7 +9,7 @@ import PostMediaObject from "../components/PostMediaObject";
 import styled from "styled-components";
 import format from "date-fns/format";
 import isThisMonth from "date-fns/is_this_month";
-import { slugit } from "../utils/slugit";
+import { slugit } from "../../scripts/slugit";
 
 const Row = styled.div`
   display: flex;

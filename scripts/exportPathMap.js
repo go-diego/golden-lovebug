@@ -1,5 +1,5 @@
 const fse = require("fs-extra");
-const { join } = require("path");
+const { join, resolve } = require("path");
 const slugify = require("slugify");
 
 async function exportPathMap(defaultPathMap, { dev, dir, outDir }) {
@@ -7,7 +7,7 @@ async function exportPathMap(defaultPathMap, { dev, dir, outDir }) {
     return defaultPathMap;
   }
 
-  const postsList = await require("./_data/_posts.json");
+  const postsList = await require("../src/_data/_posts.json");
   const posts = postsList.data.reduce((pages, post) => {
     const slug = slugify(post.title, {
       replacement: "-", // replace spaces with replacement
@@ -26,7 +26,8 @@ async function exportPathMap(defaultPathMap, { dev, dir, outDir }) {
     };
   }, {});
 
-  if (dir && outDir) await fse.copy(join(dir, "admin"), join(outDir, "admin"));
+  if (dir && outDir)
+    await fse.copy(resolve(__dirname, "../src/admin"), join(outDir, "admin"));
 
   // filter our dynamic paths from defaulPathMap
   const {

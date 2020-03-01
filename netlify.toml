@@ -6,12 +6,12 @@
   command = "npm run dev"
 [context.development]
   environment = { NODE_ENV = "development",  GA_ID = "0" }
+#[[redirects]]
+#  from = "/api/*"
+#  to = "/.netlify/functions/:splat"
+#  status = 200
+#  force = true
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-  force = true
-# [[redirects]]
-#  from = "https://allysonjeffredo.netlify.com/*"
-#  to = "https://allysonjeffredo.com/:splat"
-#  status = 301
+  from = "https://allysonjeffredo.netlify.com/*"
+  to = "https://allysonjeffredo.com/:splat"
+  status = 301

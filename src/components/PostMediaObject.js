@@ -2,7 +2,7 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import format from "date-fns/format";
-import { slugit } from "../utils/slugit";
+import { slugit } from "../../scripts/slugit";
 
 const Article = styled.article`
   position: relative;

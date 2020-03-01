@@ -1,9 +1,10 @@
 const sitemap = require("nextjs-sitemap-generator");
+const path = require("path");
 
 sitemap({
   baseUrl: "https://allysonjeffredo.com",
-  pagesDirectory: `${__dirname}\\pages`,
+  pagesDirectory: path.resolve(__dirname, "../src/pages"),
   targetDirectory: "public/",
-  nextConfigPath: `${__dirname}\\next.config.js`,
+  nextConfigPath: path.resolve(__dirname, "../next.config.js"),
   ignoredExtensions: ["png", "jpg"]
 });

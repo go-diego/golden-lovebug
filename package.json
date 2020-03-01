@@ -2,6 +2,7 @@
   "name": "golden-lovebug",
   "scripts": {
     "dev": "next",
+    "prebuild": "node scripts/generateSiteMap",
     "build": "next build",
     "preexport": "npm run build",
     "export": "next export",
