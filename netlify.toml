@@ -1,7 +1,7 @@
 [build]
   publish = "out"
   command = "npm run export"
-  functions = "functions"
+  functions = "src/functions"
 [dev]
   command = "npm run dev"
 [context.development]
