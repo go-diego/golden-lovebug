@@ -42,6 +42,19 @@ export default function BlogHomePage({ posts, metadata, data }) {
         {/* <MarkedContent source={content} /> */}
       </AttentionBanner>
       <Section>
+        <div style={{ margin: "1rem 0" }}>
+          <a
+            aria-label="rss-link"
+            href="https://allysonjeffredo.com/feed.xml"
+            target="_blank"
+            rel="noopener"
+            className="button is-dark is-narrow animated bounceIn delay-half-s is-size-7 is-uppercase">
+            <span>Subscribe to feed</span> &nbsp;
+            <span className="icon is-size-6">
+              <i className="fas fa-rss" />
+            </span>
+          </a>
+        </div>
         <div className="columns is-variable is-5">
           <div className="column is-two-thirds">
             <div className="card has-background-light">

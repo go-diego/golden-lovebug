@@ -62,6 +62,19 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
             {title}
           </h1>
           <h2 className="subtitle is-size-6-mobile">{description}</h2>
+          <div style={{ marginBottom: "1rem" }}>
+            <a
+              aria-label="rss-link"
+              href="https://allysonjeffredo.com/feed.xml"
+              target="_blank"
+              rel="noopener"
+              className="button is-dark is-narrow animated bounceIn delay-half-s is-size-7 is-uppercase">
+              Subscribe to feed &nbsp;
+              <span className="icon is-size-6">
+                <i className="fas fa-rss" />
+              </span>
+            </a>
+          </div>
           <small>{format(new Date(publish_date), "MMM M, YYYY")}</small>
           <SocialSharingButtons label={title} link={postUrl} />
           <figure className="image is-5by3">

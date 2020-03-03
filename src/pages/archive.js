@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "../components/Head";
 import AttentionBanner from "../components/AttentionBanner";
 import Section from "../components/Section";
@@ -18,6 +19,20 @@ export default function BlogArchivePage({ posts, metadata, data }) {
   return (
     <BlogLayout metadata={metadata}>
       <Head tags={tags} />
+      <Link passHref href="/writing-behind-the-scenes">
+        <a
+          style={{
+            marginTop: "0.5rem",
+            marginLeft: "0.5rem",
+            position: "absolute"
+          }}
+          className="is-size-7 button is-link heading has-text-weight-bold is-inline-block">
+          <span className="icon is-small">
+            <i className="fas fa-arrow-left" />
+          </span>
+          &nbsp; Back
+        </a>
+      </Link>
       <AttentionBanner>
         <p className="is-size-6 has-text-link has-text-centered">
           Writing Behind the Scenes
@@ -26,6 +41,19 @@ export default function BlogArchivePage({ posts, metadata, data }) {
         {/* <MarkedContent source={content} /> */}
       </AttentionBanner>
       <Section>
+        <div style={{ margin: "1rem 0" }}>
+          <a
+            aria-label="rss-link"
+            href="https://allysonjeffredo.com/feed.xml"
+            target="_blank"
+            rel="noopener"
+            className="button is-dark is-narrow animated bounceIn delay-half-s is-size-7 is-uppercase">
+            Subscribe to feed &nbsp;
+            <span className="icon is-size-6">
+              <i className="fas fa-rss" />
+            </span>
+          </a>
+        </div>
         {orderedPosts.map((post, i) => (
           <PostMediaObject key={i} {...post} />
         ))}
