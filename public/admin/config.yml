@@ -5,6 +5,7 @@ backend:
   accepted_roles:
     - Administrator
     - Editor
+site_url: https://www.allysonjeffredo.com
 display_url: https://www.allysonjeffredo.com
 # logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: public/uploads
@@ -16,7 +17,7 @@ collections:
     description: Settings that are used throughout the entire site
     extension: json
     files:
-      - file: _data/_metadata.json
+      - file: src/_data/_metadata.json
         label: Metadata
         name: site
         editor:
@@ -67,7 +68,7 @@ collections:
     description: Settings that are used throughout the entire site
     extension: json
     files:
-      - file: _data/_posts.json
+      - file: src/_data/_posts.json
         label: Posts
         name: data
         fields:
@@ -106,7 +107,7 @@ collections:
     description: Manage site's page content
     extension: json
     files:
-      - file: _data/_pages/_home.json
+      - file: src/_data/_pages/_home.json
         label: Home
         name: home
         editor:
@@ -136,7 +137,7 @@ collections:
             widget: list
             hint: SEO keywords
 
-      - file: _data/_pages/_publications.json
+      - file: src/_data/_pages/_publications.json
         label: My Work
         name: work
         editor:
