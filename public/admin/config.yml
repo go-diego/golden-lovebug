@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: go-diego/golden-lovebug
-  branch: next
+  branch: master
   accepted_roles:
     - Administrator
     - Editor

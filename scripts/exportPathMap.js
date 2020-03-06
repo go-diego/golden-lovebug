@@ -1,8 +1,6 @@
-const fse = require("fs-extra");
-const { join, resolve } = require("path");
 const getSlugifiedPosts = require("./getSlugifiedPosts");
 
-async function exportPathMap(defaultPathMap, { dev, dir, outDir }) {
+async function exportPathMap(defaultPathMap, { dev }) {
   if (dev) {
     return defaultPathMap;
   }
@@ -20,9 +18,6 @@ async function exportPathMap(defaultPathMap, { dev, dir, outDir }) {
       }
     };
   }, {});
-
-  if (dir && outDir)
-    await fse.copy(resolve(__dirname, "../src/admin"), join(outDir, "admin"));
 
   // filter our dynamic paths from defaulPathMap
   const {
