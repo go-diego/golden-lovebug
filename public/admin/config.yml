@@ -9,7 +9,7 @@ site_url: https://www.allysonjeffredo.com
 display_url: https://www.allysonjeffredo.com
 # logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: public/uploads
-public_folder: public/uploads
+public_folder: public/uploads #TODO: should this be uploads?
 collections:
   - name: global
     label: Site Settings
