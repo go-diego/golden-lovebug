@@ -39,7 +39,7 @@ export default function BlogHomePage({ posts, metadata, data }) {
       <Head tags={tags} />
       <AttentionBanner>
         <PageTitleHeading title={title} />
-        {/* <MarkedContent source={content} /> */}
+        <MarkedContent source={content} />
       </AttentionBanner>
       <Section>
         <div style={{ margin: "1rem 0" }}>

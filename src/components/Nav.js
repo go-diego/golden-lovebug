@@ -114,7 +114,18 @@ class Nav extends React.Component {
                     ? " is-active"
                     : ""
                 }`}>
-                Writing Behind the Scenes
+                Writing Behind-the-Scenes
+              </a>
+            </Link>
+            <Link href="/the-beloveds-book-club">
+              <a
+                aria-label="navbar-link"
+                className={`is-family-primary navbar-item${
+                  this.isLinkActive("/the-beloveds-book-club")
+                    ? " is-active"
+                    : ""
+                }`}>
+                The Beloveds Book Club
               </a>
             </Link>
           </div>
