@@ -292,6 +292,7 @@ collections:
           - label: Poll Embed Link
             name: poll_link
             widget: string
+            required: false
           - label: Page Description
             name: description
             widget: text

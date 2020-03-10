@@ -21,18 +21,40 @@ const RecentPosts = styled.div`
   padding: 1.5rem 0;
 `;
 
+const Embed = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  &:before {
+    padding-top: 125%;
+    display: block;
+    content: "";
+  }
+  & iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+`;
+
 export default function TheBelovedBookClubHomePage({
   entries,
   metadata,
   data
 }) {
-  const { description, title, keywords, content } = data;
+  const { description, title, keywords, content, poll_link } = data;
   const tags = { description, title, keywords };
   const orderedEntries = entries.sort(
     (a, b) => new Date(b.month) - new Date(a.month)
   );
   const featuredEntry = orderedEntries[0];
-  const featuredEntrySlug = slugit(featuredEntry.title);
+  // const featuredEntrySlug = slugit(featuredEntry.title);
   const entriesThisYear = orderedEntries
     .slice(1, orderedEntries.length)
     .filter(post => isThisYear(new Date(post.publish_date)));
@@ -128,6 +150,23 @@ export default function TheBelovedBookClubHomePage({
           )}
         </div>
       </Section>
+      {poll_link && (
+        <Section>
+          <div className="columns">
+            <div className="column is-6 is-offset-3">
+              <div class="notification is-warning">
+                <p className="heading is-size-5 has-text-centered">Vote Now</p>
+                Take a second to{" "}
+                <a target="_blank" rel="noopener" href={poll_link}>
+                  vote
+                </a>{" "}
+                for the next month's book selection and leave a suggestion or
+                two for the future!
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
     </BlogLayout>
   );
 }
