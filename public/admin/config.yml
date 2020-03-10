@@ -1,15 +1,14 @@
 backend:
   name: git-gateway
   repo: go-diego/golden-lovebug
-  branch: master
+  branch: dev
   accepted_roles:
     - Administrator
     - Editor
 site_url: https://www.allysonjeffredo.com
 display_url: https://www.allysonjeffredo.com
-# logo_url: https://bgcofcv.netlify.com/assets/images/hero-logo.png
 media_folder: public/uploads
-public_folder: public/uploads #TODO: should this be uploads?
+public_folder: uploads
 collections:
   - name: global
     label: Site Settings
@@ -64,8 +63,8 @@ collections:
   - name: posts
     label: Blog Posts
     delete: false
-    create: true
-    description: Settings that are used throughout the entire site
+    create: false
+    description: Add, Update, Delete Blog Posts
     extension: json
     files:
       - file: src/_data/_posts.json
@@ -99,6 +98,80 @@ collections:
                 widget: list
                 required: false
                 hint: List of topic tags
+
+  - name: book_entries
+    label: Book Club Entries
+    delete: false
+    create: false
+    description: Add, Update, Delete Book club Entries
+    extension: json
+    files:
+      - file: src/_data/_book-club-entries.json
+        label: Book Club Entries
+        name: data
+        fields:
+          - label: Book Club Entries
+            name: data
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Author
+                name: author
+                widget: object
+                required: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: true
+                  - label: Website
+                    name: website
+                    widget: string
+                    required: false
+                  - label: Email
+                    name: email
+                    widget: string
+                    required: false
+                  - label: Twitter Handle
+                    name: twitter_handle
+                    widget: string
+                    required: false
+                  - label: Facebook
+                    name: facebook_url
+                    widget: string
+                    required: false
+                  - label: Instagram
+                    name: instagram_url
+                    widget: string
+                    required: false
+              - label: Publish Date
+                name: publish_date
+                widget: datetime
+                hint: When book was published
+                required: false
+                default: ""
+                dateFormat: "MMM YYYY"
+                timeFormat: false
+              - label: Cover Image
+                name: image
+                widget: image
+                required: true
+              - label: Description
+                name: description
+                widget: markdown
+                required: true
+              - label: Month
+                name: month
+                widget: datetime
+                required: true
+                dateFormat: "MMM YYYY"
+                timeFormat: false
+              - label: Tags
+                name: tags
+                widget: list
+                hint: Topics, genres, etc
 
   - name: pages
     label: Pages
@@ -138,7 +211,7 @@ collections:
             hint: SEO keywords
 
       - file: src/_data/_pages/_publications.json
-        label: My Work
+        label: Publications
         name: work
         editor:
           preview: false
@@ -202,6 +275,52 @@ collections:
                 default: null
                 required: false
                 hint: Add a link to the publishers logo. Doing so will override the logo retrieved through the scraping process.
+          - label: Keywords
+            name: keywords
+            widget: list
+            hint: SEO keywords
+
+      - file: src/_data/_pages/_the-beloveds.json
+        label: "The Beloveds: An Online Book Club"
+        name: book-club
+        editor:
+          preview: false
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+          - label: Poll Embed Link
+            name: poll_link
+            widget: string
+            required: false
+          - label: Page Description
+            name: description
+            widget: text
+            hint: Used for SEO
+          - label: Content
+            name: content
+            widget: markdown
+          - label: Keywords
+            name: keywords
+            widget: list
+            hint: SEO keywords
+
+      - file: src/_data/_pages/_blog.json
+        label: "Writing Behind-the-Scenes"
+        name: blog
+        editor:
+          preview: false
+        fields:
+          - label: Page Title
+            name: title
+            widget: string
+          - label: Page Description
+            name: description
+            widget: text
+            hint: Used for SEO
+          - label: Content
+            name: content
+            widget: markdown
           - label: Keywords
             name: keywords
             widget: list
