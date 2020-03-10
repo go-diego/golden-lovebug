@@ -1,15 +1,15 @@
 {
   "data": [
     {
-      "title": "The Catcher in the Rye",
+      "publish_date": "",
+      "month": "April 9, 2020 7:27 PM",
+      "title": "On Earth We're Briefly Gorgeous",
       "author": {
-        "name": "J.D. Salinger"
+        "name": "Ocean Vuong",
+        "website": "https://www.oceanvuong.com"
       },
-      "publish_date": "1951",
-      "image": "https://pictures.abebooks.com/isbn/9780316769174-us.jpg",
-      "description": "",
-      "date": "2018-04-28T17:20:15.965Z",
-      "link": ""
+      "description": "Book of the Month for April 2020: Ocean Vuong's *On Earth We're Briefly Gorgeous: A Novel*. This novel is a letter from a son to his mother that explores the complicated truths of their love. Our first book discussion will be on Monday, April 6th at 7:00 pm, but we can talk all month long using Microsoft Teams. Send an email to hello@allysonjeffredo.com with an introduction to be added to the group!",
+      "image": "uploads/oewbg_vuong.jpg"
     }
   ]
 }
