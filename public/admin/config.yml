@@ -99,25 +99,6 @@ collections:
                 required: false
                 hint: List of topic tags
 
-  - name: book_tags
-    label: Book Tags
-    delete: false
-    create: false
-    description: Add, Update, Delete Book Tags for Book Club Entries
-    extension: json
-    files:
-      - file: src/_data/_book-tags.json
-        label: Book Tags
-        name: data
-        fields:
-          - label: Book Tags
-            name: data
-            widget: list
-            fields:
-              - label: Label
-                name: label
-                widget: string
-
   - name: book_entries
     label: Book Club Entries
     delete: false
@@ -187,16 +168,10 @@ collections:
                 required: true
                 dateFormat: "MMM YYYY"
                 timeFormat: false
-                format: "LLL"
-              # - label: "Book Tag"
-              #   name: "tag"
-              #   widget: "relation"
-              #   collection: "book_tags"
-              #   searchFields: ["label"]
-              #   valueField: "label"
-              #   displayFields: ["label"]
-              #   multiple: true
-              #   required: false
+              - label: Tags
+                name: tags
+                widget: list
+                hint: Topics, genres, etc
 
   - name: pages
     label: Pages
@@ -313,6 +288,9 @@ collections:
         fields:
           - label: Page Title
             name: title
+            widget: string
+          - label: Poll Embed Link
+            name: poll_link
             widget: string
           - label: Page Description
             name: description

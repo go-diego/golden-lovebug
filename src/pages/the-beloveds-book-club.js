@@ -76,14 +76,21 @@ export default function TheBelovedBookClubHomePage({
                 </figure>
               </div>
               <div className="card-content">
-                <p className="heading is-size-6">Upcoming</p>
+                <div className="is-flex">
+                  <p className="heading is-size-6 is-italic">Upcoming</p>
+                  &nbsp; &ndash; &nbsp;
+                  <p className="heading is-size-6">
+                    {format(featuredEntry.month, "MMM YYYY")}
+                  </p>
+                </div>
                 <p className="title is-4">
-                  <Link
+                  {/* <Link
                     passHref
                     href="/the-beloveds-book-club/[slug]"
                     as={`/the-beloveds-book-club/${featuredEntrySlug}`}>
                     <a className="is-stretched-link">{featuredEntry.title}</a>
-                  </Link>
+                  </Link> */}
+                  {featuredEntry.title}
                 </p>
                 <p className="subtitle heading">{featuredEntry.author.name}</p>
                 <div className="content">
