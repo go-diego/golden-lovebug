@@ -1,7 +1,7 @@
 {
   "title": "Publications",
   "description": "A list of links for poems, essays and collections available at various places online.",
-  "content": "Below is a collection of poetry, essays and connections available online. Support small presses and other publishers by checking out the work and exploring the websites after.",
+  "content": "Below is a collection of poetry, essays and collections available online. Support small presses and other publishers by checking out the work and exploring the websites after!",
   "publications": [
     {
       "title": "Only We Can Pull",
@@ -93,5 +93,10 @@
       "isActive": true
     }
   ],
-  "keywords": ["Writing", "literature", "editing", "life"]
+  "keywords": [
+    "Writing",
+    "literature",
+    "editing",
+    "life"
+  ]
 }
