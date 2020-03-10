@@ -139,6 +139,7 @@ collections:
               - label: Author
                 name: author
                 widget: object
+                required: true
                 fields:
                   - label: Name
                     name: name
@@ -170,6 +171,8 @@ collections:
                 hint: When book was published
                 required: false
                 default: ""
+                dateFormat: "MMM YYYY"
+                timeFormat: false
               - label: Cover Image
                 name: image
                 widget: image
@@ -185,15 +188,15 @@ collections:
                 dateFormat: "MMM YYYY"
                 timeFormat: false
                 format: "LLL"
-              - label: "Book Tag"
-                name: "tag"
-                widget: "relation"
-                collection: "book_tags"
-                searchFields: ["label"]
-                valueField: "label"
-                displayFields: ["label"]
-                multiple: true
-                required: false
+              # - label: "Book Tag"
+              #   name: "tag"
+              #   widget: "relation"
+              #   collection: "book_tags"
+              #   searchFields: ["label"]
+              #   valueField: "label"
+              #   displayFields: ["label"]
+              #   multiple: true
+              #   required: false
 
   - name: pages
     label: Pages
