@@ -193,6 +193,7 @@ collections:
                 valueField: "label"
                 displayFields: ["label"]
                 multiple: true
+                required: false
 
   - name: pages
     label: Pages
