@@ -1,3 +1,7 @@
+// TODO: add UI support for author's website and social media links
+// TODO: add UI support for tags for book entries
+// TODO: decide on layout for multiple book entries - upcoming + previous
+
 import ReactMarkdown from "react-markdown";
 import HomeHero from "../components/HomeHero";
 import MainLayout from "../containers/MainLayout";
