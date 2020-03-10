@@ -63,7 +63,7 @@ collections:
   - name: posts
     label: Blog Posts
     delete: false
-    create: true
+    create: false
     description: Add, Update, Delete Blog Posts
     extension: json
     files:
@@ -101,8 +101,8 @@ collections:
 
   - name: book_tags
     label: Book Tags
-    delete: true
-    create: true
+    delete: false
+    create: false
     description: Add, Update, Delete Book Tags for Book Club Entries
     extension: json
     files:
@@ -121,7 +121,7 @@ collections:
   - name: book_entries
     label: Book Club Entries
     delete: false
-    create: true
+    create: false
     description: Add, Update, Delete Book club Entries
     extension: json
     files:
@@ -322,7 +322,7 @@ collections:
             widget: list
             hint: SEO keywords
 
-      - file: src/_data/_pages/_the-beloveds.json
+      - file: src/_data/_pages/_blog.json
         label: "Writing Behind-the-Scenes"
         name: blog
         editor:
