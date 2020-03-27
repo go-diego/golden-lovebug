@@ -20,7 +20,7 @@ const MorePostsNav = styled.div`
 `;
 
 const Figure = styled.figure`
-  width: 100% !important;
+  /* width: 100% !important; */
   overflow: hidden;
 `;
 
@@ -36,7 +36,8 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
   const tags = {
     description,
     title: `${title} | Writing Behind the Scenes`,
-    keywords: [].concat(topics)
+    keywords: [].concat(topics),
+    ogImage: image
   };
   return (
     <BlogLayout metadata={metadata}>
@@ -91,11 +92,17 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
       </article>
       <div className="container">
         <MorePostsNav className="columns is-marginless">
-          <div className="column is-narrow">
+          <div className="column">
             {prevPost && (
               <Link
                 href={`/writing-behind-the-scenes/${slugit(prevPost.title)}`}>
-                <a className="has-text-dark">
+                <a
+                  className="has-text-dark"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start"
+                  }}>
                   <small className="heading">
                     <span className="icon is-small">
                       <i className="fas fa-arrow-left" />
@@ -115,11 +122,17 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
               </Link>
             )}
           </div>
-          <div className="column is-narrow">
+          <div className="column">
             {nextPost && (
               <Link
                 href={`/writing-behind-the-scenes/${slugit(nextPost.title)}`}>
-                <a className="has-text-dark">
+                <a
+                  className="has-text-dark"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-end"
+                  }}>
                   <small className="heading">
                     Next Post
                     <span className="icon is-small">
@@ -127,14 +140,13 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
                     </span>
                   </small>
                   <Figure className="image is-128x128 has-background-dark">
-                    {/* <Image src={item.url} loaderColor="#33f1ed" /> */}
                     <img
                       alt={nextPost.title}
                       style={{ objectFit: "cover", height: "100%" }}
                       src={nextPost.image}
                     />
                   </Figure>
-                  <small>{nextPost.title}</small>
+                  <small className="has-text-right">{nextPost.title}</small>
                 </a>
               </Link>
             )}
