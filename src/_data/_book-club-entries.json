@@ -8,8 +8,11 @@
         "name": "Ocean Vuong",
         "website": "https://www.oceanvuong.com"
       },
-      "description": "Book of the Month for April 2020: Ocean Vuong's *On Earth We're Briefly Gorgeous: A Novel*. This novel is a letter from a son to his mother that explores the complicated truths of their love. Our first book discussion will be on Monday, April 6th at 7:00 pm, but we can talk all month long using Microsoft Teams. Send an email to [hello@allysonjeffredo.com ](mailto:hello@allysonjeffredo.com) with an introduction to be added to the group!",
-      "image": "uploads/oewbg_vuong.jpg"
+      "description": "Book of the Month for April 2020: Ocean Vuong's *On Earth We're Briefly Gorgeous: A Novel*. This novel is a letter from a son to his mother that explores the complicated truths of their love. Our first book discussion will be on Monday, April 13th at 7:00 pm, but we can talk all month long using Zoom. Send an email to [hello@allysonjeffredo.com ](mailto:hello@allysonjeffredo.com) with an introduction to be added to the group!",
+      "image": "uploads/oewbg_vuong.jpg",
+      "tags": [
+        "fiction"
+      ]
     }
   ]
 }
