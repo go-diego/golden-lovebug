@@ -161,8 +161,8 @@ BlogPost.getInitialProps = async ({ query: { slug } }) => {
   const asyncPosts = import("../../_data/_posts.json");
   const asyncMetadata = import("../../_data/_metadata.json");
 
-  const promises = [asyncPosts, asyncMetadata].map(p =>
-    p.then(res => res.default)
+  const promises = [asyncPosts, asyncMetadata].map((p) =>
+    p.then((res) => res.default)
   );
 
   const [posts, metadata] = await Promise.all(promises);
@@ -171,8 +171,11 @@ BlogPost.getInitialProps = async ({ query: { slug } }) => {
     (a, b) => new Date(b.publish_date) - new Date(a.publish_date)
   );
 
-  const post = posts.data.filter(post => slugit(post.title) === slug)[0] || {};
-  const currentPostIndex = orderedPosts.findIndex(p => p.title === post.title);
+  const post =
+    posts.data.filter((post) => slugit(post.title) === slug)[0] || {};
+  const currentPostIndex = orderedPosts.findIndex(
+    (p) => p.title === post.title
+  );
   const nextPost =
     currentPostIndex > 0 ? orderedPosts[currentPostIndex - 1] : null;
   const prevPost =

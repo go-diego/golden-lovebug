@@ -68,7 +68,11 @@ export default function Head({ tags = {}, children }) {
       <meta
         key="twitter_image"
         name="twitter:image"
-        content={tags.ogImage || defaultOGImage}
+        content={
+          ogImage && ogImage[0] !== "/"
+            ? `/${image}`
+            : ogImage || defaultOGImage
+        }
       />
       <meta
         key="og_image"
