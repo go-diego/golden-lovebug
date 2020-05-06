@@ -8,6 +8,8 @@ const defaultOGURL = "";
 const defaultOGImage = "/uploads/thumbnail.png";
 
 export default function Head({ tags = {}, children }) {
+  const image =
+    tags.ogImage && tags.ogImage[0] !== "/" ? `/${tags.ogImage}` : tags.ogImage;
   return (
     <NextHead>
       <meta charSet="UTF-8" />
@@ -68,16 +70,12 @@ export default function Head({ tags = {}, children }) {
       <meta
         key="twitter_image"
         name="twitter:image"
-        content={
-          ogImage && ogImage[0] !== "/"
-            ? `/${image}`
-            : ogImage || defaultOGImage
-        }
+        content={image || defaultOGImage}
       />
       <meta
         key="og_image"
         property="og:image"
-        content={tags.ogImage || defaultOGImage}
+        content={image || defaultOGImage}
       />
       <meta key="og_image_width" property="og:image:width" content="1200" />
       <meta key="og_image_height" property="og:image:height" content="630" />

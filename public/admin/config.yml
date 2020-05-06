@@ -8,7 +8,7 @@ backend:
 site_url: https://www.allysonjeffredo.com
 display_url: https://www.allysonjeffredo.com
 media_folder: public/uploads
-public_folder: uploads
+public_folder: "/uploads"
 collections:
   - name: global
     label: Site Settings
