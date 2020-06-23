@@ -42,6 +42,21 @@
         "non-fiction",
         "self-love"
       ]
+    },
+    {
+      "publish_date": "",
+      "month": "2020-07-23T17:36:30.289Z",
+      "title": "How to Be an Antiracist",
+      "author": {
+        "name": "Ibram X. Kendi",
+        "website": "https://www.ibramxkendi.com/how-to-be-an-antiracist-1"
+      },
+      "image": "/uploads/kendi_htbaa.jpg",
+      "description": "Book of the Month for July 2020: Ibram X. Kendi's bestseller, *How to be an Antiracist.* This text explores the importance of moving beyond the passive stance of being \"not racist\" to proactively become an \"antiracist.\" Our book discussion will take place on Monday, July 20th at 7:00 pm via Zoom. Send an email to [hello@allysonjeffredo.com](mailto:hello@allysonjeffredo.com) with an introduction to be added to the group!",
+      "tags": [
+        "nonfiction",
+        "racism"
+      ]
     }
   ]
 }
