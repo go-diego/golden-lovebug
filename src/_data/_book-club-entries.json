@@ -57,6 +57,22 @@
         "nonfiction",
         "racism"
       ]
+    },
+    {
+      "publish_date": "",
+      "month": "2020-08-31T17:51:08.629Z",
+      "title": "The Poet X",
+      "author": {
+        "name": "Elizabeth Acevedo",
+        "website": "http://www.acevedowrites.com"
+      },
+      "image": "/uploads/acevedo_tpx.jpg",
+      "description": "Book of the Month for August 2020: Elizabeth Acevedo's young adult novel, *The Poet X*. A novel written in verse, the reader watches the protagonist, Xiomara, work through the challenges of growing up and family life through poetry. Our book discussion will be Monday, August 24th at 7:00 pm. Send an email to [hello@allysonjeffredo.com](mailto:hello@allysonjeffredo.com) with an introduction to be added to the group!",
+      "tags": [
+        "young adult",
+        "fiction",
+        "verse"
+      ]
     }
   ]
 }
