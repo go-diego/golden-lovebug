@@ -32,7 +32,7 @@
     "autoprefixer": "^9.3.1",
     "babel-plugin-styled-components": "^1.10.0",
     "cssnano": "^4.1.10",
-    "got": "^10.2.1",
+    "got": "^11.8.5",
     "metascraper": "^5.9.0",
     "metascraper-author": "^5.0.0",
     "metascraper-clearbit-logo": "^5.0.0",
