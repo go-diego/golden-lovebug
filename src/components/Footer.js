@@ -9,7 +9,7 @@ const StyledFooter = styled.footer`
 
 export default function Footer() {
   return (
-    <StyledFooter className="footer has-text-light has-background-dark">
+    <StyledFooter className="footer is-size-7 has-text-light has-background-dark">
       <p>
         Made with <span>❤️</span> in the Coachella Valley
       </p>

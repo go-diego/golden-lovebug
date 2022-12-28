@@ -80,48 +80,50 @@ export default function TheBelovedBookClubHomePage({
             </span>
           </a>
         </div> */}
-        <div className="columns is-variable is-5">
+        {/* <div className="columns is-variable is-5">
           <div
             className={`column${
               entriesThisYear.length > 0
                 ? " is-two-thirds"
                 : " is-6 is-offset-3"
-            }`}>
-            <div className="card has-background-light">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img
-                    style={{ objectFit: "contain" }}
-                    src={featuredEntry.image}
-                    alt={featuredEntry.title}
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <div className="is-flex">
-                  <p className="heading is-size-6 is-italic">Upcoming</p>
-                  &nbsp; &ndash; &nbsp;
-                  <p className="heading is-size-6">
-                    {format(featuredEntry.month, "MMM YYYY")}
-                  </p>
-                </div>
-                <p className="title is-4">
-                  {/* <Link
+            }`}> */}
+        <div className="card has-background-light">
+          <div
+            className="card-image"
+            style={{
+              paddingTop: "2rem"
+            }}>
+            <figure className="image is-4by3">
+              <img
+                style={{ objectFit: "contain" }}
+                src={featuredEntry.image}
+                alt={featuredEntry.title}
+              />
+            </figure>
+          </div>
+          <div className="card-content">
+            <div className="is-flex">
+              <p className="heading is-size-6">
+                {format(featuredEntry.month, "MMM DD, YYYY")}
+              </p>
+            </div>
+            <p className="title is-4">
+              {/* <Link
                     passHref
                     href="/the-bookest/[slug]"
                     as={`/the-bookest/${featuredEntrySlug}`}>
                     <a className="is-stretched-link">{featuredEntry.title}</a>
                   </Link> */}
-                  {featuredEntry.title}
-                </p>
-                <p className="subtitle heading">{featuredEntry.author.name}</p>
-                <div className="content">
-                  <MarkedContent source={featuredEntry.description} />
-                </div>
-              </div>
+              {featuredEntry.title}
+            </p>
+            <p className="subtitle heading">{featuredEntry.author.name}</p>
+            <div className="content">
+              <MarkedContent source={featuredEntry.description} />
             </div>
           </div>
-          {entriesThisYear.length > 0 && (
+        </div>
+        {/* </div> */}
+        {/* {entriesThisYear.length > 0 && (
             <div className="column">
               <aside className="box has-background-light">
                 <p className="heading is-size-6 has-text-centered has-text-link has-text-weight-bold">
@@ -144,8 +146,8 @@ export default function TheBelovedBookClubHomePage({
                 </div>
               </aside>
             </div>
-          )}
-        </div>
+          )} */}
+        {/* </div> */}
       </Section>
       {poll_link && (
         <Section>
