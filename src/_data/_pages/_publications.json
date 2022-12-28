@@ -1,7 +1,7 @@
 {
   "title": "Publications",
   "description": "A list of links for poems, essays and collections available at various places online.",
-  "content": "Below is a collection of poetry, essays and collections available online. Support small presses and other publishers by checking out the work and exploring the websites after!",
+  "content": "Below is a collection of poetry, essays, and collections available for view and purchase online. Support small presses and other publishers by checking out the work and exploring the websites after.",
   "publications": [
     {
       "title": "Only We Can Pull",
@@ -148,6 +148,13 @@
       "description": "Stories belong to us, and every person involved simultaneously shares a piece of that story, Allyson Jeffredo writes.",
       "url": "https://www.pressenterprise.com/2022/08/23/reflecting-on-writing-about-those-you-love-and-sharing-your-own-story/",
       "type": "Article"
+    },
+    {
+      "isActive": true,
+      "title": "Even Gods",
+      "url": "https://www.amazon.com/Even-Gods-Allyson-Jeffredo/dp/1733241590/ref=sr_1_1?crid=6ULNTT6JK0MF&keywords=allyson+jeffredo&qid=1672186585&sprefix=allyson+jeffredo%2Caps%2C154&sr=8-1",
+      "type": "Book",
+      "image": "/uploads/1733241590.01._sclzzzzzzz_sx500_.jpg"
     }
   ],
   "keywords": [
