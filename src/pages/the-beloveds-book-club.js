@@ -57,7 +57,7 @@ export default function TheBelovedBookClubHomePage({
   // const featuredEntrySlug = slugit(featuredEntry.title);
   const entriesThisYear = orderedEntries
     .slice(1, orderedEntries.length)
-    .filter(post => isThisYear(new Date(post.publish_date)));
+    .filter((post) => isThisYear(new Date(post.publish_date)));
 
   return (
     <BlogLayout metadata={metadata}>
@@ -108,8 +108,8 @@ export default function TheBelovedBookClubHomePage({
                 <p className="title is-4">
                   {/* <Link
                     passHref
-                    href="/the-beloveds-book-club/[slug]"
-                    as={`/the-beloveds-book-club/${featuredEntrySlug}`}>
+                    href="/the-bookest/[slug]"
+                    as={`/the-bookest/${featuredEntrySlug}`}>
                     <a className="is-stretched-link">{featuredEntry.title}</a>
                   </Link> */}
                   {featuredEntry.title}
@@ -133,10 +133,7 @@ export default function TheBelovedBookClubHomePage({
                   ))}
                 </RecentPosts>
                 <div className="is-flex is-justify-content-center">
-                  <Link
-                    passHref
-                    as="/the-beloveds-book-club/archive"
-                    href="/archive">
+                  <Link passHref as="/the-bookest/archive" href="/archive">
                     <a className="is-size-6 is-flex button is-link heading has-text-weight-bold">
                       View All &nbsp;
                       <span className="icon is-small">
@@ -176,8 +173,8 @@ TheBelovedBookClubHomePage.getInitialProps = async () => {
   const asyncMetadata = import("../_data/_metadata.json");
   const asyncEntries = import("../_data/_book-club-entries.json");
 
-  const promises = [asyncData, asyncMetadata, asyncEntries].map(p =>
-    p.then(res => res.default)
+  const promises = [asyncData, asyncMetadata, asyncEntries].map((p) =>
+    p.then((res) => res.default)
   );
 
   const [data, metadata, entries] = await Promise.all(promises);

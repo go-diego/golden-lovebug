@@ -9,21 +9,19 @@ async function exportPathMap(defaultPathMap, { dev }) {
   const posts = postsList.reduce((pages, post) => {
     return {
       ...pages,
-      [`/writing-behind-the-scenes/${post.slug}`]: {
-        page: "/writing-behind-the-scenes/[slug]",
+      [`/overthink-a-blog/${post.slug}`]: {
+        page: "/overthink-a-blog/[slug]",
         query: { slug: post.slug }
       },
-      [`/writing-behind-the-scenes/archive`]: {
+      [`/overthink-a-blog/archive`]: {
         page: "/archive"
       }
     };
   }, {});
 
   // filter our dynamic paths from defaulPathMap
-  const {
-    ["/writing-behind-the-scenes/[slug]"]: blogDynamicPath,
-    ...staticPaths
-  } = defaultPathMap;
+  const { ["/overthink-a-blog/[slug]"]: blogDynamicPath, ...staticPaths } =
+    defaultPathMap;
 
   const paths = Object.assign({}, staticPaths, posts);
   return paths;

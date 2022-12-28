@@ -14,7 +14,7 @@ function dateSortDesc(a, b) {
 
 async function generate() {
   const feed = new RSS({
-    title: "Writing Behind the Scenes",
+    title: "Overthink",
     site_url: "https://allysonjeffredo.com",
     feed_url: "https://allysonjeffredo/feed.xml",
     image_url: `https://allysonjeffredo.com/uploads/thumbnail.png`,
@@ -25,11 +25,11 @@ async function generate() {
 
   const posts = await getSlugifiedPosts();
 
-  posts.sort(dateSortDesc).map(post => {
+  posts.sort(dateSortDesc).map((post) => {
     feed.item({
       title: post.title,
       guid: post.slug,
-      url: `https://allysonjeffredo.com/writing-behind-the-scenes/${post.slug}`,
+      url: `https://allysonjeffredo.com/overthink-a-blog/${post.slug}`,
       date: post.publish_date,
       description: post.description,
       categories: post.tags,

@@ -1,23 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[Writing Behind the Scenes]]></title>
-        <description><![CDATA[Writing Behind the Scenes]]></description>
+        <title><![CDATA[Overthink]]></title>
+        <description><![CDATA[Overthink]]></description>
         <link>https://allysonjeffredo.com</link>
         <image>
             <url>https://allysonjeffredo.com/uploads/thumbnail.png</url>
-            <title>Writing Behind the Scenes</title>
+            <title>Overthink</title>
             <link>https://allysonjeffredo.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 06 Mar 2020 05:46:56 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Dec 2022 23:55:49 GMT</lastBuildDate>
         <atom:link href="https://allysonjeffredo/feed.xml" rel="self" type="application/rss+xml"/>
-        <copyright><![CDATA[Allyson Jeffredo 2020]]></copyright>
+        <copyright><![CDATA[Allyson Jeffredo 2022]]></copyright>
         <managingEditor><![CDATA[Allyson Jeffredo]]></managingEditor>
         <webMaster><![CDATA[Diego Bernal]]></webMaster>
         <item>
+            <title><![CDATA[Storytelling: A Lesson Learned from Family]]></title>
+            <description><![CDATA[Storytelling helps keep the past alive and keep the future from being distorted.]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/storytelling-a-lesson-learned-from-family</link>
+            <guid isPermaLink="false">storytelling-a-lesson-learned-from-family</guid>
+            <pubDate>Tue, 26 May 2020 01:59:52 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/two-red-and-white-labeled-books-762686.jpg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
+            <title><![CDATA[Loss and Uncertainty: A Meditation Under Quarantine]]></title>
+            <description><![CDATA[A meditation on loss and uncertainty during quarantine.]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/loss-and-uncertainty-a-meditation-under-quarantine</link>
+            <guid isPermaLink="false">loss-and-uncertainty-a-meditation-under-quarantine</guid>
+            <pubDate>Wed, 06 May 2020 01:23:02 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/k-mitch-hodge-iqsag9zv2e0-unsplash.jpg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
+            <title><![CDATA[With Our Heads in the Clouds: Creating a New Dream for the World]]></title>
+            <description><![CDATA[We live in a world that’s been constructed by those who came before us...]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/with-our-heads-in-the-clouds-creating-a-new-dream-for-the-world</link>
+            <guid isPermaLink="false">with-our-heads-in-the-clouds-creating-a-new-dream-for-the-world</guid>
+            <category><![CDATA[dreams]]></category>
+            <category><![CDATA[society]]></category>
+            <pubDate>Thu, 16 Apr 2020 03:23:59 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/henrik-donnestad-dcd0_mzlcsg-unsplash.jpg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
+            <title><![CDATA[Choice and Creating a Better World]]></title>
+            <description><![CDATA[We make the choice to be who we want and create the world we want to see.]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/choice-and-creating-a-better-world</link>
+            <guid isPermaLink="false">choice-and-creating-a-better-world</guid>
+            <pubDate>Fri, 27 Mar 2020 02:35:14 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/choiceimage.jpg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
+            <title><![CDATA[The Law of Imitation ]]></title>
+            <description><![CDATA[Imitation is a powerful tool to help a writer find their voice when used appropriately.]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/the-law-of-imitation</link>
+            <guid isPermaLink="false">the-law-of-imitation</guid>
+            <pubDate>Fri, 06 Mar 2020 06:00:15 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/grayscale-photo-of-woman-taking-photo-of-round-mirror-3739059.jpg" length="0" type="image/jpeg"/>
+        </item>
+        <item>
             <title><![CDATA[Privilege Isn’t a Bad Word]]></title>
             <description><![CDATA[We all have privileges we must acknowledge to make social progress this world desperately needs--even if it is hurtful and angering to do so.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/privilege-isnt-a-bad-word</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/privilege-isnt-a-bad-word</link>
             <guid isPermaLink="false">privilege-isnt-a-bad-word</guid>
             <category><![CDATA[test]]></category>
             <pubDate>Sat, 30 Mar 2019 03:06:35 GMT</pubDate>
@@ -26,7 +68,7 @@
         <item>
             <title><![CDATA[Acknowledge the Womxn in Your Life]]></title>
             <description><![CDATA[Acknowledge the worth and power and holiness that is the womxn your life, and remember every day is Womxn’s Day.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/acknowledge-the-womxn-in-your-life</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/acknowledge-the-womxn-in-your-life</link>
             <guid isPermaLink="false">acknowledge-the-womxn-in-your-life</guid>
             <pubDate>Sat, 09 Mar 2019 02:29:38 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/womxn.jpg" length="0" type="image/jpeg"/>
@@ -34,7 +76,7 @@
         <item>
             <title><![CDATA[Reflections on Being Back in the Classroom]]></title>
             <description><![CDATA[Even with all the systematic issues surrounding the classroom, teaching is worth it.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/reflections-on-being-back-in-the-classroom</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/reflections-on-being-back-in-the-classroom</link>
             <guid isPermaLink="false">reflections-on-being-back-in-the-classroom</guid>
             <pubDate>Fri, 22 Feb 2019 18:54:35 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/nikolai-chernichenko-hFBsF-CX5eQ-unsplash.jpg" length="0" type="image/jpeg"/>
@@ -42,7 +84,7 @@
         <item>
             <title><![CDATA[Find a Perspective that Helps You Ask More Questions]]></title>
             <description><![CDATA[Asking questions is the way to finding and developing our perspective of the world.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/find-a-perspective-that-helps-you-ask-more-questions</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/find-a-perspective-that-helps-you-ask-more-questions</link>
             <guid isPermaLink="false">find-a-perspective-that-helps-you-ask-more-questions</guid>
             <pubDate>Fri, 08 Feb 2019 04:43:54 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/cup.jpg" length="0" type="image/jpeg"/>
@@ -50,7 +92,7 @@
         <item>
             <title><![CDATA[Just Like That: Moving Without Confidence]]></title>
             <description><![CDATA[Confidence is not a necessary ingredient to getting things done. Actually, we get most things done without it.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/just-like-that-moving-without-confidence</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/just-like-that-moving-without-confidence</link>
             <guid isPermaLink="false">just-like-that-moving-without-confidence</guid>
             <pubDate>Wed, 23 Jan 2019 19:17:17 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/30daysreplay-pr-marketing-gAajYgoEci8-unsplash.jpg" length="0" type="image/jpeg"/>
@@ -58,7 +100,7 @@
         <item>
             <title><![CDATA[Writing is Overwhelming, But It Doesn’t Have to Be]]></title>
             <description><![CDATA[Writing is overwhelming, but it doesn't have to be if learn how to effectively learn how to break a project down, know what questions to ask and realize you don't have to write ​about everything.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/writing-is-overwhelming-but-it-doesnt-have-to-be</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/writing-is-overwhelming-but-it-doesnt-have-to-be</link>
             <guid isPermaLink="false">writing-is-overwhelming-but-it-doesnt-have-to-be</guid>
             <pubDate>Mon, 07 Jan 2019 06:04:29 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/adult-blur-books-close-up-261909.jpg" length="0" type="image/jpeg"/>
@@ -66,7 +108,7 @@
         <item>
             <title><![CDATA[A Struggle: Writing About the Positive]]></title>
             <description><![CDATA[It is tempting to write about the painful aspects of life, but we must not forget the need to also write about the positive aspects no matter how self-indulgent they may feel.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/a-struggle-writing-about-the-positive</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/a-struggle-writing-about-the-positive</link>
             <guid isPermaLink="false">a-struggle-writing-about-the-positive</guid>
             <pubDate>Sun, 23 Dec 2018 05:00:41 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/bp11image.jpg" length="0" type="image/jpeg"/>
@@ -74,7 +116,7 @@
         <item>
             <title><![CDATA[On Listening: The Role of Paying Attention When Writing]]></title>
             <description><![CDATA[There is a misconception that writing is "...an art of speaking." In actuality, writing, poetry specifically, "is an art of listening," which makes listening to the world around us especially crucial.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/on-listening-the-role-of-paying-attention-when-writing</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/on-listening-the-role-of-paying-attention-when-writing</link>
             <guid isPermaLink="false">on-listening-the-role-of-paying-attention-when-writing</guid>
             <pubDate>Sun, 11 Nov 2018 22:45:40 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/earimage.jpg" length="0" type="image/jpeg"/>
@@ -82,28 +124,28 @@
         <item>
             <title><![CDATA[Finding Magic]]></title>
             <description><![CDATA[To write is an act of revealing one's self to the world and themself.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/finding-magic</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/finding-magic</link>
             <guid isPermaLink="false">finding-magic</guid>
             <pubDate>Tue, 02 Oct 2018 21:54:38 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/cristian-escobar-abkEAOjnY0s-unsplash.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[The Myth of Solitude: A Writer and Her Communities]]></title>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/the-myth-of-solitude-a-writer-and-her-communities</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/the-myth-of-solitude-a-writer-and-her-communities</link>
             <guid isPermaLink="false">the-myth-of-solitude-a-writer-and-her-communities</guid>
             <pubDate>Tue, 24 Jul 2018 02:34:11 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/community-image.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Notes on the Self and Helping Others]]></title>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/notes-on-the-self-and-helping-others</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/notes-on-the-self-and-helping-others</link>
             <guid isPermaLink="false">notes-on-the-self-and-helping-others</guid>
             <pubDate>Wed, 20 Jun 2018 19:17:05 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/self.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Turbulent Relationships: Endings]]></title>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/turbulent-relationships-endings</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/turbulent-relationships-endings</link>
             <guid isPermaLink="false">turbulent-relationships-endings</guid>
             <pubDate>Wed, 06 Jun 2018 18:06:28 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/clapperboard.jpg" length="0" type="image/jpeg"/>
@@ -111,28 +153,28 @@
         <item>
             <title><![CDATA[Anxiety: A Confession]]></title>
             <description><![CDATA[One of the least discussed barriers to writing is anxiety.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/anxiety-a-confession</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/anxiety-a-confession</link>
             <guid isPermaLink="false">anxiety-a-confession</guid>
             <pubDate>Tue, 29 May 2018 21:40:48 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/hailey-kean-zt8PJ6LT9Uw-unsplash.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[An Homage to My Hands]]></title>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/an-homage-to-my-hands</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/an-homage-to-my-hands</link>
             <guid isPermaLink="false">an-homage-to-my-hands</guid>
             <pubDate>Mon, 21 May 2018 23:06:43 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/hand2.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[Missing: A Story, A Question, A Riddle]]></title>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/missing-a-story-a-question-a-riddle</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/missing-a-story-a-question-a-riddle</link>
             <guid isPermaLink="false">missing-a-story-a-question-a-riddle</guid>
             <pubDate>Sat, 12 May 2018 04:26:43 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/questionmark.jpg" length="0" type="image/jpeg"/>
         </item>
         <item>
             <title><![CDATA[The Modern-Day Epidemic: Loneliness]]></title>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/the-modern-day-epidemic-loneliness</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/the-modern-day-epidemic-loneliness</link>
             <guid isPermaLink="false">the-modern-day-epidemic-loneliness</guid>
             <pubDate>Tue, 08 May 2018 16:55:32 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/hellomynameis.jpg" length="0" type="image/jpeg"/>
@@ -140,7 +182,7 @@
         <item>
             <title><![CDATA[We Must First Find the Stories]]></title>
             <description><![CDATA[Writing is a revolving practice of patience and forgiveness.]]></description>
-            <link>https://allysonjeffredo.com/writing-behind-the-scenes/we-must-first-find-the-stories</link>
+            <link>https://allysonjeffredo.com/overthink-a-blog/we-must-first-find-the-stories</link>
             <guid isPermaLink="false">we-must-first-find-the-stories</guid>
             <pubDate>Sat, 28 Apr 2018 17:20:15 GMT</pubDate>
             <enclosure url="https://allysonjeffredo.com/uploads/aaron-burden-2bg1jPty490-unsplash.jpg" length="0" type="image/jpeg"/>

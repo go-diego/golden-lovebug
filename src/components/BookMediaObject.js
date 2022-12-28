@@ -40,8 +40,8 @@ export default function BookMediaObject({
       <div className="media-right">
         <Link
           passHref
-          href={`/the-beloveds-book-club/${slug}`}
-          as={`/the-beloveds-book-club/${slug}`}>
+          href={`/the-bookest/${slug}`}
+          as={`/the-bookest/${slug}`}>
           <a className="is-stretched-link">
             <span className="icon is-small">
               <i className="fas fa-arrow-right" />

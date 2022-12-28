@@ -263,7 +263,7 @@ collections:
                     "Article",
                     "Interview",
                     "Book",
-                    "Other",
+                    "Other"
                   ]
               - label: Publisher
                 name: publisher
@@ -281,7 +281,7 @@ collections:
             hint: SEO keywords
 
       - file: src/_data/_pages/_the-beloveds.json
-        label: "The Beloveds: An Online Book Club"
+        label: "The Bookest"
         name: book-club
         editor:
           preview: false
@@ -306,7 +306,7 @@ collections:
             hint: SEO keywords
 
       - file: src/_data/_pages/_blog.json
-        label: "Writing Behind-the-Scenes"
+        label: "Overthink"
         name: blog
         editor:
           preview: false

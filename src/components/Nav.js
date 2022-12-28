@@ -21,7 +21,7 @@ class Nav extends React.Component {
     this.setState({ isNavbarOpen: !isNavbarOpen });
   };
 
-  isLinkActive = href => {
+  isLinkActive = (href) => {
     const { router } = this.props;
     if (router.asPath === "/" && href === "/") return true;
     return router.asPath.includes(href);
@@ -106,26 +106,22 @@ class Nav extends React.Component {
               }`}>
               Publications
             </a>
-            <Link href="/writing-behind-the-scenes">
+            <Link href="/overthink-a-blog">
               <a
                 aria-label="navbar-link"
                 className={`is-family-primary navbar-item${
-                  this.isLinkActive("/writing-behind-the-scenes")
-                    ? " is-active"
-                    : ""
+                  this.isLinkActive("/overthink-a-blog") ? " is-active" : ""
                 }`}>
-                Writing Behind-the-Scenes
+                Overthink: A Blog
               </a>
             </Link>
-            <Link href="/the-beloveds-book-club">
+            <Link href="/the-bookest">
               <a
                 aria-label="navbar-link"
                 className={`is-family-primary navbar-item${
-                  this.isLinkActive("/the-beloveds-book-club")
-                    ? " is-active"
-                    : ""
+                  this.isLinkActive("/the-bookest") ? " is-active" : ""
                 }`}>
-                The Beloveds Book Club
+                The Bookest
               </a>
             </Link>
           </div>

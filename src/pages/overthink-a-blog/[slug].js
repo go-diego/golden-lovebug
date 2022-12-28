@@ -35,7 +35,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
   const { title, description, publish_date, image, body, topics = [] } = post;
   const tags = {
     description,
-    title: `${title} | Writing Behind the Scenes`,
+    title: `${title} | Overthink`,
     keywords: [].concat(topics),
     ogImage: image
   };
@@ -44,7 +44,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
       <Head tags={tags} />
       <article className="section">
         <div className="container">
-          <Link passHref href="/writing-behind-the-scenes">
+          <Link passHref href="/overthink-a-blog">
             <a
               style={{
                 marginBottom: "1rem"
@@ -56,9 +56,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
               &nbsp; Back
             </a>
           </Link>
-          <p className="is-size-6 has-text-link heading">
-            Writing Behind the Scenes
-          </p>
+          <p className="is-size-6 has-text-link heading">Overthink</p>
           <h1 className="title is-family-primary is-display-4 is-size-4-mobile">
             {title}
           </h1>
@@ -94,8 +92,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
         <MorePostsNav className="columns is-marginless">
           <div className="column">
             {prevPost && (
-              <Link
-                href={`/writing-behind-the-scenes/${slugit(prevPost.title)}`}>
+              <Link href={`/overthink-a-blog/${slugit(prevPost.title)}`}>
                 <a
                   className="has-text-dark"
                   style={{
@@ -124,8 +121,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
           </div>
           <div className="column">
             {nextPost && (
-              <Link
-                href={`/writing-behind-the-scenes/${slugit(nextPost.title)}`}>
+              <Link href={`/overthink-a-blog/${slugit(nextPost.title)}`}>
                 <a
                   className="has-text-dark"
                   style={{

@@ -40,8 +40,8 @@ export default function PostMediaObject({
       <div className="media-right">
         <Link
           passHref
-          href={`/writing-behind-the-scenes/${slug}`}
-          as={`/writing-behind-the-scenes/${slug}`}>
+          href={`/overthink-a-blog/${slug}`}
+          as={`/overthink-a-blog/${slug}`}>
           <a className="is-stretched-link">
             <span className="icon is-small">
               <i className="fas fa-arrow-right" />

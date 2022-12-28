@@ -31,7 +31,7 @@ export default function BlogHomePage({ posts, metadata, data }) {
   const featuredPostSlug = slugit(featuredPost.title);
   const postsThisMonth = orderedPosts
     .slice(1, orderedPosts.length)
-    .filter(post => isThisMonth(new Date(post.publish_date)));
+    .filter((post) => isThisMonth(new Date(post.publish_date)));
   const recentPosts =
     postsThisMonth.length > 0 ? postsThisMonth : orderedPosts.slice(1, 6);
   return (
@@ -85,8 +85,8 @@ export default function BlogHomePage({ posts, metadata, data }) {
                 <p className="title is-4">
                   <Link
                     passHref
-                    href="/writing-behind-the-scenes/[slug]"
-                    as={`/writing-behind-the-scenes/${featuredPostSlug}`}>
+                    href="/overthink-a-blog/[slug]"
+                    as={`/overthink-a-blog/${featuredPostSlug}`}>
                     <a className="is-stretched-link">{featuredPost.title}</a>
                   </Link>
                 </p>
@@ -107,10 +107,7 @@ export default function BlogHomePage({ posts, metadata, data }) {
                 ))}
               </RecentPosts>
               <div className="is-flex is-justify-content-center">
-                <Link
-                  passHref
-                  as="/writing-behind-the-scenes/archive"
-                  href="/archive">
+                <Link passHref as="/overthink-a-blog/archive" href="/archive">
                   <a className="is-size-6 is-flex button is-link heading has-text-weight-bold">
                     View All &nbsp;
                     <span className="icon is-small">
@@ -132,8 +129,8 @@ BlogHomePage.getInitialProps = async () => {
   const asyncMetadata = import("../_data/_metadata.json");
   const asyncPosts = import("../_data/_posts.json");
 
-  const promises = [asyncData, asyncMetadata, asyncPosts].map(p =>
-    p.then(res => res.default)
+  const promises = [asyncData, asyncMetadata, asyncPosts].map((p) =>
+    p.then((res) => res.default)
   );
 
   const [data, metadata, posts] = await Promise.all(promises);

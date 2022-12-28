@@ -13,13 +13,13 @@ export default function BlogArchivePage({ posts, metadata, data }) {
   );
   const tags = {
     description,
-    title: `${title} | Writing Behind the Scenes`,
+    title: `${title} | Overthink`,
     keywords
   };
   return (
     <BlogLayout metadata={metadata}>
       <Head tags={tags} />
-      <Link passHref href="/writing-behind-the-scenes">
+      <Link passHref href="/overthink-a-blog">
         <a
           style={{
             marginTop: "0.5rem",
@@ -34,9 +34,7 @@ export default function BlogArchivePage({ posts, metadata, data }) {
         </a>
       </Link>
       <AttentionBanner>
-        <p className="is-size-6 has-text-link has-text-centered">
-          Writing Behind the Scenes
-        </p>
+        <p className="is-size-6 has-text-link has-text-centered">Overthink</p>
         <PageTitleHeading title={title} />
         {/* <MarkedContent source={content} /> */}
       </AttentionBanner>
@@ -67,8 +65,8 @@ BlogArchivePage.getInitialProps = async () => {
   const asyncMetadata = import("../_data/_metadata.json");
   const asyncPosts = import("../_data/_posts.json");
 
-  const promises = [asyncData, asyncMetadata, asyncPosts].map(p =>
-    p.then(res => res.default)
+  const promises = [asyncData, asyncMetadata, asyncPosts].map((p) =>
+    p.then((res) => res.default)
   );
 
   const [data, metadata, posts] = await Promise.all(promises);
