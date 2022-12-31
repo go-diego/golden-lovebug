@@ -1,15 +1,15 @@
-import Head from "../components/Head";
 import Link from "next/link";
-import AttentionBanner from "../components/AttentionBanner";
-import Section from "../components/Section";
-import PageTitleHeading from "../components/PageTitleHeading";
-import BlogLayout from "../containers/BlogLayout";
-import MarkedContent from "../components/MarkedContent";
-import PostMediaObject from "../components/PostMediaObject";
 import styled from "styled-components";
 import format from "date-fns/format";
-import isThisMonth from "date-fns/is_this_month";
-import { slugit } from "../../scripts/slugit";
+import isThisMonth from "date-fns/isThisMonth";
+import Head from "../../components/Head";
+import AttentionBanner from "../../components/AttentionBanner";
+import Section from "../../components/Section";
+import PageTitleHeading from "../../components/PageTitleHeading";
+import BlogLayout from "../../containers/BlogLayout";
+import MarkedContent from "../../components/MarkedContent";
+import PostMediaObject from "../../components/PostMediaObject";
+import { slugit } from "../../lib/slugit";
 
 const Row = styled.div`
   display: flex;
@@ -72,21 +72,24 @@ export default function BlogHomePage({ posts, metadata, data }) {
                   <span className="is-size-6">
                     {format(
                       new Date(featuredPost.publish_date),
-                      "MMM DD, YYYY"
+                      "MMM dd, yyyy"
                     )}
                   </span>
-                  <div className="heading is-size-6">
-                    <span className="icon is-small">
-                      <i className="fas fa-fire-alt" />
-                    </span>
-                    New
-                  </div>
+                  <span
+                    className="tag"
+                    style={{
+                      backgroundColor: "#fffaeb",
+                      color: " #946c00",
+                      border: "1px solid #946c00"
+                    }}>
+                    New 🔥
+                  </span>
                 </Row>
                 <p className="title is-4">
                   <Link
+                    legacyBehavior
                     passHref
-                    href="/overthink-a-blog/[slug]"
-                    as={`/overthink-a-blog/${featuredPostSlug}`}>
+                    href={`/overthink-a-blog/${featuredPostSlug}`}>
                     <a className="is-stretched-link">{featuredPost.title}</a>
                   </Link>
                 </p>
@@ -107,7 +110,7 @@ export default function BlogHomePage({ posts, metadata, data }) {
                 ))}
               </RecentPosts>
               <div className="is-flex is-justify-content-center">
-                <Link passHref as="/overthink-a-blog/archive" href="/archive">
+                <Link legacyBehavior passHref href="/overthink-a-blog/archive">
                   <a className="is-size-6 is-flex button is-link heading has-text-weight-bold">
                     View All &nbsp;
                     <span className="icon is-small">
@@ -124,10 +127,10 @@ export default function BlogHomePage({ posts, metadata, data }) {
   );
 }
 
-BlogHomePage.getInitialProps = async () => {
-  const asyncData = import("../_data/_pages/_blog.json");
-  const asyncMetadata = import("../_data/_metadata.json");
-  const asyncPosts = import("../_data/_posts.json");
+export async function getStaticProps() {
+  const asyncData = import("../../_data/_pages/_blog.json");
+  const asyncMetadata = import("../../_data/_metadata.json");
+  const asyncPosts = import("../../_data/_posts.json");
 
   const promises = [asyncData, asyncMetadata, asyncPosts].map((p) =>
     p.then((res) => res.default)
@@ -136,8 +139,10 @@ BlogHomePage.getInitialProps = async () => {
   const [data, metadata, posts] = await Promise.all(promises);
 
   return {
-    posts: posts.data,
-    metadata,
-    data
+    props: {
+      posts: posts.data,
+      metadata,
+      data
+    }
   };
-};
+}

@@ -99,14 +99,14 @@ collections:
                 required: false
                 hint: List of topic tags
 
-  - name: book_entries
-    label: Book Club Entries
+  - name: book_reviews
+    label: Book Reviews
     delete: false
     create: false
-    description: Add, Update, Delete Book club Entries
+    description: Add, Update, Delete Book review Entries
     extension: json
     files:
-      - file: src/_data/_book-club-entries.json
+      - file: src/_data/_book-reviews.json
         label: Book Club Entries
         name: data
         fields:

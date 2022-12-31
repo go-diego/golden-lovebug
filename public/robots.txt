@@ -1,4 +1,9 @@
-User-Agent: *
-Disallow: 
+# *
+User-agent: *
+Allow: /
 
-Sitemap: http://www.allysonjeffredo.com/sitemap.xml
+# Host
+Host: https://allysonjeffredo.com
+
+# Sitemaps
+Sitemap: https://allysonjeffredo.com/sitemap.xml

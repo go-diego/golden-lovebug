@@ -6,7 +6,7 @@ import BlogLayout from "../../containers/BlogLayout";
 import MarkedContent from "../../components/MarkedContent";
 import SocialSharingButtons from "../../components/SocialSharingButtons";
 import format from "date-fns/format";
-import { slugit } from "../../../scripts/slugit";
+import { slugit } from "../../lib/slugit";
 
 const Body = styled.section`
   line-height: 1.75;
@@ -39,12 +39,13 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
     keywords: [].concat(topics),
     ogImage: image
   };
+
   return (
     <BlogLayout metadata={metadata}>
       <Head tags={tags} />
       <article className="section">
         <div className="container">
-          <Link passHref href="/overthink-a-blog">
+          <Link legacyBehavior passHref href="/overthink-a-blog">
             <a
               style={{
                 marginBottom: "1rem"
@@ -74,7 +75,13 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
               </span>
             </a>
           </div>
-          <small>{format(new Date(publish_date), "MMM M, YYYY")}</small>
+          <p
+            className="is-size-7"
+            style={{
+              paddingBottom: "0.25rem"
+            }}>
+            {format(new Date(publish_date), "MMM M, yyyy")}
+          </p>
           <SocialSharingButtons label={title} link={postUrl} />
           <figure className="image is-5by3">
             <img
@@ -92,7 +99,9 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
         <MorePostsNav className="columns is-marginless">
           <div className="column">
             {prevPost && (
-              <Link href={`/overthink-a-blog/${slugit(prevPost.title)}`}>
+              <Link
+                legacyBehavior
+                href={`/overthink-a-blog/${slugit(prevPost.title || "")}`}>
                 <a
                   className="has-text-dark"
                   style={{
@@ -121,7 +130,9 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
           </div>
           <div className="column">
             {nextPost && (
-              <Link href={`/overthink-a-blog/${slugit(nextPost.title)}`}>
+              <Link
+                legacyBehavior
+                href={`/overthink-a-blog/${slugit(nextPost.title || "")}`}>
                 <a
                   className="has-text-dark"
                   style={{
@@ -153,7 +164,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
   );
 }
 
-BlogPost.getInitialProps = async ({ query: { slug } }) => {
+export async function getStaticProps({ params: { slug } }) {
   const asyncPosts = import("../../_data/_posts.json");
   const asyncMetadata = import("../../_data/_metadata.json");
 
@@ -168,16 +179,27 @@ BlogPost.getInitialProps = async ({ query: { slug } }) => {
   );
 
   const post =
-    posts.data.filter((post) => slugit(post.title) === slug)[0] || {};
-  const currentPostIndex = orderedPosts.findIndex(
-    (p) => p.title === post.title
-  );
+    posts.data.filter((post) => slugit(post.title) === slug)[0] || null;
+
+  const currentPostIndex = post
+    ? orderedPosts.findIndex((p) => p.title === post.title)
+    : null;
+
   const nextPost =
     currentPostIndex > 0 ? orderedPosts[currentPostIndex - 1] : null;
   const prevPost =
     currentPostIndex !== orderedPosts.length + 1
-      ? posts.data[currentPostIndex + 1]
+      ? posts.data[currentPostIndex + 1] || null
       : null;
 
-  return { post, prevPost, nextPost, metadata };
-};
+  return { props: { post, prevPost, nextPost, metadata } };
+}
+
+export async function getStaticPaths() {
+  const posts = await import("../../_data/_posts.json");
+  const paths = posts.default.data.map((post) => ({
+    params: { slug: slugit(post.title) }
+  }));
+
+  return { paths, fallback: false };
+}

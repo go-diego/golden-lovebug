@@ -2,5 +2,6 @@ $palette-primary: #964c6f;
 $palette-link: #b77843;
 $palette-dark: #22231d;
 $palette-lighter: #ffe6d2;
-$font-secondary: "Merriweather", serif;
-$sans-serif: "Lato", sans-serif;
+$font-secondary: var(--font-merriweather);
+$sans-serif: var(--font-lato);
+$navbar-height: 3.5rem;

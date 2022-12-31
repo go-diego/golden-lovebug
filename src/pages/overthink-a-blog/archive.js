@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Head from "../components/Head";
-import AttentionBanner from "../components/AttentionBanner";
-import Section from "../components/Section";
-import PageTitleHeading from "../components/PageTitleHeading";
-import BlogLayout from "../containers/BlogLayout";
-import PostMediaObject from "../components/PostMediaObject";
+import Head from "../../components/Head";
+import AttentionBanner from "../../components/AttentionBanner";
+import Section from "../../components/Section";
+import PageTitleHeading from "../../components/PageTitleHeading";
+import BlogLayout from "../../containers/BlogLayout";
+import PostMediaObject from "../../components/PostMediaObject";
 
 export default function BlogArchivePage({ posts, metadata, data }) {
   const { description, title, content, keywords } = data;
@@ -19,7 +19,7 @@ export default function BlogArchivePage({ posts, metadata, data }) {
   return (
     <BlogLayout metadata={metadata}>
       <Head tags={tags} />
-      <Link passHref href="/overthink-a-blog">
+      <Link legacyBehavior passHref href="/overthink-a-blog">
         <a
           style={{
             marginTop: "0.5rem",
@@ -61,9 +61,9 @@ export default function BlogArchivePage({ posts, metadata, data }) {
 }
 
 BlogArchivePage.getInitialProps = async () => {
-  const asyncData = import("../_data/_pages/_blog.json");
-  const asyncMetadata = import("../_data/_metadata.json");
-  const asyncPosts = import("../_data/_posts.json");
+  const asyncData = import("../../_data/_pages/_blog.json");
+  const asyncMetadata = import("../../_data/_metadata.json");
+  const asyncPosts = import("../../_data/_posts.json");
 
   const promises = [asyncData, asyncMetadata, asyncPosts].map((p) =>
     p.then((res) => res.default)

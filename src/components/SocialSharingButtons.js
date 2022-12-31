@@ -1,23 +1,36 @@
+import React from "react";
 import styled from "styled-components";
-import {Twitter, Facebook, Linkedin, Mail} from "react-social-sharing";
+import {
+  EmailShareButton,
+  EmailIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  FacebookShareButton,
+  FacebookIcon
+} from "react-share";
 
 const Row = styled.div`
-    display: flex;
-    a {
-        margin-left: 0;
-    }
+  display: flex;
+  gap: 0.5rem;
 `;
 
-export default function SocialSharingButtons({link, label}) {
-    const styles = {
-        padding: "0.25rem 0.5rem"
-    };
-    return (
-        <Row>
-            <Twitter style={styles} solid small message={label} link={link} />
-            <Facebook style={styles} solid small link={link} />
-            <Linkedin style={styles} solid small message={label} link={link} />
-            <Mail style={styles} solid small subject={label} link={link} />
-        </Row>
-    );
+export default function SocialSharingButtons({ link, label }) {
+  return (
+    <Row>
+      <TwitterShareButton title={label} url={link}>
+        <TwitterIcon size={32} round />
+      </TwitterShareButton>
+      <FacebookShareButton quote={label} url={link}>
+        <FacebookIcon size={32} round />
+      </FacebookShareButton>
+      <LinkedinShareButton title={label} url={link}>
+        <LinkedinIcon size={32} round />
+      </LinkedinShareButton>
+      <EmailShareButton url={link} subject={label}>
+        <EmailIcon size={32} round />
+      </EmailShareButton>
+    </Row>
+  );
 }

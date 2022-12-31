@@ -15,14 +15,18 @@
   animation-delay: 1.5s;
 }
 
-html {
-  font-family: $family-secondary;
+.animated.delay-2s {
+  animation-delay: 1.5s;
 }
 
-body,
-button,
-input,
-select,
-textarea {
-  font-family: $family-secondary;
-}
+// html {
+//   font-family: $family-secondary;
+// }
+
+// body,
+// button,
+// input,
+// select,
+// textarea {
+//   font-family: $family-secondary;
+// }

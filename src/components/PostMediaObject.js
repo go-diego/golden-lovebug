@@ -1,8 +1,9 @@
+import React from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 import format from "date-fns/format";
-import { slugit } from "../../scripts/slugit";
+import { slugit } from "../lib/slugit";
 
 const Article = styled.article`
   position: relative;
@@ -31,14 +32,15 @@ export default function PostMediaObject({
           <strong>{title}</strong>
           <br />
           <small className="is-size-7">
-            {format(new Date(publish_date), "MMM DD, YYYY")}
+            {format(new Date(publish_date), "MMM dd, yyyy")}
           </small>
           <br />
-          <ReactMarkdown source={description} />
+          <ReactMarkdown children={description} />
         </div>
       </div>
       <div className="media-right">
         <Link
+          legacyBehavior
           passHref
           href={`/overthink-a-blog/${slug}`}
           as={`/overthink-a-blog/${slug}`}>

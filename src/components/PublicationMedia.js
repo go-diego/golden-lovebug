@@ -1,13 +1,10 @@
-// TODO: add default description to publications with no description
-// TODO: add default image
-// TODO: make the media item clickable
-
+import React from "react";
+import styled from "styled-components";
+import Skeleton from "react-loading-skeleton";
+import useSWR from "swr";
+import { fetcher } from "lib/fetcher";
 import MarkedContent from "./MarkedContent";
 import SocialSharingButtons from "./SocialSharingButtons";
-import styled from "styled-components";
-import ky from "ky/umd";
-import { to } from "await-to-js";
-import Skeleton from "react-loading-skeleton";
 
 const Figure = styled.figure`
   overflow: hidden;
@@ -34,35 +31,27 @@ const Row = styled.div`
   }
 `;
 
-function setPublicationDefaults(publication) {
-  //if (!publication.description) publication.description = "Read it here!";
-  if (!publication.image)
-    publication.image = "/uploads/default-publication.jpg";
-  return publication;
-}
-
 export default function PublicationMedia(publication) {
   const [data, setData] = React.useState(publication);
-  const [error, setError] = React.useState(null);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const {
+    data: scrapedData,
+    error,
+    isLoading
+  } = useSWR(`/api/scrape?url=${publication.url}`, fetcher, {
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    dedupingInterval: 100_000,
+    focusThrottleInterval: 100_000
+  });
 
   React.useEffect(() => {
-    async function getData() {
-      if (publication.url && !publication.isInactive) {
-        const [error, response] = await to(
-          ky(`/.netlify/functions/metascraper?uri=${publication.url}`).json()
-        );
-        if (error) setError(error);
-        const mergedPublication = { ...response, ...publication };
-        setData(mergedPublication);
-        setPublicationDefaults(mergedPublication);
-        setIsLoading(false);
-      }
-    }
-    getData();
-  }, [publication.url]);
+    const mergedPublication = { ...(scrapedData || {}), ...publication };
+    if (!mergedPublication.image)
+      mergedPublication.image = "/uploads/default-publication.jpg";
+    setData(mergedPublication);
+  }, [scrapedData]);
 
-  const { title, image = null, url, description, publisher = null } = data;
+  const { title, image = null, url, description } = data;
 
   return (
     publication.isActive &&
@@ -84,7 +73,7 @@ export default function PublicationMedia(publication) {
             ) : (
               <MarkedContent source={description} />
             )}
-            {(!isLoading && (
+            {!isLoading ? (
               <a
                 href={url}
                 target="_blank"
@@ -93,16 +82,20 @@ export default function PublicationMedia(publication) {
                 style={{ margin: "0.5rem 0" }}>
                 Read It
               </a>
-            )) || <Skeleton height={36} width={92} />}
+            ) : (
+              <Skeleton height={36} width={92} />
+            )}
           </div>
-          {(!isLoading && (
+          {!isLoading ? (
             <div style={{ paddingTop: "1rem" }}>
               <p className="heading has-text-link has-text-weight-semibold is-marginless">
                 Share
               </p>
               <SocialSharingButtons label={title} link={url} />
             </div>
-          )) || <Skeleton count={2} />}
+          ) : (
+            <Skeleton count={2} />
+          )}
         </Content>
       </Row>
     )

@@ -1,6 +1,5 @@
 import React from "react";
 import NextHead from "next/head";
-import { string } from "prop-types";
 
 const defaultDescription =
   "Allyson Jeffredo is a poet, writer and educator from the Coachella Valley. She currently runs the reading, writing and language programs for county libraries throughout Riverside County. Her work can be found in publications &ndash; both print and online.";
@@ -83,10 +82,3 @@ export default function Head({ tags = {}, children }) {
     </NextHead>
   );
 }
-
-Head.propTypes = {
-  title: string,
-  description: string,
-  url: string,
-  ogImage: string
-};

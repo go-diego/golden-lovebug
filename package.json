@@ -2,37 +2,16 @@
   "name": "golden-lovebug",
   "scripts": {
     "dev": "next",
-    "prebuild": "node scripts/generateSiteMap && node scripts/generateRSS",
     "build": "next build",
-    "preexport": "npm run build",
-    "export": "next export",
-    "prestart": "npm run export",
-    "start": "serve out"
+    "postbuild": "next-sitemap && node src/lib/generateRSS"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@zeit/next-sass": "^1.0.1",
-    "animate.css": "^3.7.0",
-    "await-to-js": "^2.1.1",
+    "@next/font": "^13.1.1",
+    "animate.css": "^3.7.2",
+    "await-to-js": "^3.0.0",
     "bulma": "^0.7.4",
-    "date-fns": "^1.30.1",
-    "helmet": "^3.21.2",
-    "ky": "^0.16.1",
-    "next": "9.1.2",
-    "next-ga": "^2.3.4",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
-    "react-loading-skeleton": "^2.0.1",
-    "react-markdown": "^4.2.2",
-    "react-social-sharing": "^3.0.1",
-    "styled-components": "^4.1.3"
-  },
-  "devDependencies": {
-    "autoprefixer": "^9.3.1",
-    "babel-plugin-styled-components": "^1.10.0",
-    "cssnano": "^4.1.10",
-    "got": "^10.2.1",
+    "date-fns": "^2.29.3",
+    "got": "^12.5.3",
     "metascraper": "^5.9.0",
     "metascraper-author": "^5.0.0",
     "metascraper-clearbit-logo": "^5.0.0",
@@ -43,10 +22,19 @@
     "metascraper-publisher": "^5.0.0",
     "metascraper-title": "^5.0.0",
     "metascraper-url": "^5.0.0",
-    "nextjs-sitemap-generator": "^0.5.0",
-    "node-sass": "^4.13.1",
+    "next": "^13.1.1",
+    "next-sitemap": "^3.1.43",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-loading-skeleton": "^3.1.0",
+    "react-markdown": "^8.0.4",
+    "react-share": "^4.4.1",
     "rss": "^1.2.2",
-    "serve": "^11.2.0",
-    "slugify": "^1.3.6"
+    "slugify": "^1.6.5",
+    "styled-components": "^5.3.6",
+    "swr": "^2.0.0"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
   }
 }

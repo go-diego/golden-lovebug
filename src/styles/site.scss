@@ -1,5 +1,21 @@
+@charset "utf-8";
+
 @import "./variables";
-@import "./vendors";
+
+$family-sans-serif: $sans-serif;
+$family-primary: $sans-serif;
+$family-secondary: $font-secondary;
+$primary: $palette-primary;
+$link: $palette-link;
+$dark: $palette-dark;
+
+
 @import "./base";
-@import "./helpers";
 @import "./overrides";
+
+
+$dimensions: 16 24 32 48 64 96 128 192 256 384;
+
+@import "~bulma/bulma.sass";
+@import url("https://use.fontawesome.com/releases/v5.10.1/css/all.css");
+@import "./helpers";

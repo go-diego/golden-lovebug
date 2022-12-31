@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 export default class HeroNavbar extends React.Component {
   state = {
@@ -15,7 +16,7 @@ export default class HeroNavbar extends React.Component {
       <header className="navbar">
         <div className="container">
           <div className="navbar-brand">
-            <Link href="/" passHref>
+            <Link legacyBehavior href="/" passHref>
               <a className="navbar-item has-text-weight-bold">Logo</a>
             </Link>
             <a
@@ -38,11 +39,11 @@ export default class HeroNavbar extends React.Component {
             className={`navbar-menu ${isNavbarOpen ? "is-active" : ""}`}>
             {/* <div className="navbar-start" /> */}
             <div className="navbar-end">
-              <Link href="/publications" passHref>
+              <Link legacyBehavior href="/publications" passHref>
                 <a className="is-family-primary navbar-item">Publications</a>
               </Link>
 
-              <Link href="/overthink-a-blog" passHref>
+              <Link legacyBehavior href="/overthink-a-blog" passHref>
                 <a className={"is-family-primary navbar-item"}>
                   Overthink: A Blog
                 </a>

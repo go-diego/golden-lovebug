@@ -20,7 +20,7 @@ async function generate() {
     image_url: `https://allysonjeffredo.com/uploads/thumbnail.png`,
     managingEditor: "Allyson Jeffredo",
     webMaster: "Diego Bernal",
-    copyright: `Allyson Jeffredo ${format(new Date(), "YYYY")}`
+    copyright: `Allyson Jeffredo ${format(new Date(), "yyyy")}`
   });
 
   const posts = await getSlugifiedPosts();
@@ -41,7 +41,7 @@ async function generate() {
 
   const rss = feed.xml({ indent: true });
 
-  fs.writeFileSync(resolve(__dirname, "../public/feed.xml"), rss);
+  fs.writeFileSync(resolve(__dirname, "../../public/feed.xml"), rss);
 }
 
 generate();

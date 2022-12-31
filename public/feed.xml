@@ -9,11 +9,25 @@
             <link>https://allysonjeffredo.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 27 Dec 2022 23:55:49 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 31 Dec 2022 01:35:55 GMT</lastBuildDate>
         <atom:link href="https://allysonjeffredo/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Allyson Jeffredo 2022]]></copyright>
         <managingEditor><![CDATA[Allyson Jeffredo]]></managingEditor>
         <webMaster><![CDATA[Diego Bernal]]></webMaster>
+        <item>
+            <title><![CDATA[An Overthinkers Journey to Resilient Thinking]]></title>
+            <description><![CDATA[The difficult part about overthinking is learning how to turn one’s mind off, but it is possible by learning how to be in the moment and reframing intrusive thoughts.]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/an-overthinkers-journey-to-resilient-thinking</link>
+            <guid isPermaLink="false">an-overthinkers-journey-to-resilient-thinking</guid>
+            <category><![CDATA[thinking]]></category>
+            <category><![CDATA[reflection]]></category>
+            <category><![CDATA[learning]]></category>
+            <category><![CDATA[nostalgia]]></category>
+            <category><![CDATA[meditation]]></category>
+            <category><![CDATA[journey]]></category>
+            <pubDate>Wed, 28 Dec 2022 00:10:39 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/kenny-eliason-2rrq1bhpq4e-unsplash.jpg" length="0" type="image/jpeg"/>
+        </item>
         <item>
             <title><![CDATA[Storytelling: A Lesson Learned from Family]]></title>
             <description><![CDATA[Storytelling helps keep the past alive and keep the future from being distorted.]]></description>

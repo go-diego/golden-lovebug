@@ -1,3 +1,4 @@
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
 
@@ -58,7 +59,7 @@ export default function HomeHero({ data, metadata }) {
               </h1>
               <hr className="has-background-warning" />
               <Description className="content animated fadeInUp is-text-justified-mobile">
-                <ReactMarkdown source={description} />
+                <ReactMarkdown children={description} />
               </Description>
               <div className="is-flex is-align-items-center">
                 <a

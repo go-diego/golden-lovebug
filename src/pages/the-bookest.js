@@ -8,8 +8,8 @@ import MarkedContent from "../components/MarkedContent";
 import BookMediaObject from "../components/BookMediaObject";
 import styled from "styled-components";
 import format from "date-fns/format";
-import isThisYear from "date-fns/is_this_year";
-import { slugit } from "../../scripts/slugit";
+// import isThisYear from "date-fns/is_this_year";
+import { slugit } from "../lib/slugit";
 
 const Row = styled.div`
   display: flex;
@@ -43,21 +43,19 @@ const Embed = styled.div`
   }
 `;
 
-export default function TheBelovedBookClubHomePage({
-  entries,
-  metadata,
-  data
-}) {
+export default function TheBookest({ entries, metadata, data }) {
   const { description, title, keywords, content, poll_link } = data;
   const tags = { description, title, keywords };
-  const orderedEntries = entries.sort(
-    (a, b) => new Date(b.month) - new Date(a.month)
-  );
+  const orderedEntries =
+    entries.length > 0
+      ? entries.sort((a, b) => new Date(b.month) - new Date(a.month))
+      : entries;
+
   const featuredEntry = orderedEntries[0];
   // const featuredEntrySlug = slugit(featuredEntry.title);
-  const entriesThisYear = orderedEntries
-    .slice(1, orderedEntries.length)
-    .filter((post) => isThisYear(new Date(post.publish_date)));
+  // const entriesThisYear = orderedEntries
+  //   .slice(1, orderedEntries.length)
+  //   .filter((post) => isThisYear(new Date(post.publish_date)));
 
   return (
     <BlogLayout metadata={metadata}>
@@ -103,8 +101,8 @@ export default function TheBelovedBookClubHomePage({
           </div>
           <div className="card-content">
             <div className="is-flex">
-              <p className="heading is-size-6">
-                {format(featuredEntry.month, "MMM DD, YYYY")}
+              <p className="heading is-size-7">
+                {format(new Date(featuredEntry.month), "MMM dd, yyyy")}
               </p>
             </div>
             <p className="title is-4">
@@ -170,10 +168,10 @@ export default function TheBelovedBookClubHomePage({
   );
 }
 
-TheBelovedBookClubHomePage.getInitialProps = async () => {
+export async function getStaticProps() {
   const asyncData = import("../_data/_pages/_the-beloveds.json");
   const asyncMetadata = import("../_data/_metadata.json");
-  const asyncEntries = import("../_data/_book-club-entries.json");
+  const asyncEntries = import("../_data/_book-reviews.json");
 
   const promises = [asyncData, asyncMetadata, asyncEntries].map((p) =>
     p.then((res) => res.default)
@@ -182,8 +180,10 @@ TheBelovedBookClubHomePage.getInitialProps = async () => {
   const [data, metadata, entries] = await Promise.all(promises);
 
   return {
-    entries: entries.data,
-    metadata,
-    data
+    props: {
+      entries: entries.data,
+      metadata,
+      data
+    }
   };
-};
+}
