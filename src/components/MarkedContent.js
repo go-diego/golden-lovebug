@@ -5,7 +5,7 @@ export default function MarkedContent(props) {
   const { source, options } = props;
   return (
     <div className="content">
-      <ReactMarkdown children={source} />
+      <ReactMarkdown linkTarget="_blank" children={source} />
     </div>
   );
 }

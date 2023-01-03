@@ -59,7 +59,7 @@ export default function HomeHero({ data, metadata }) {
               </h1>
               <hr className="has-background-warning" />
               <Description className="content animated fadeInUp is-text-justified-mobile">
-                <ReactMarkdown children={description} />
+                <ReactMarkdown linkTarget="_blank" children={description} />
               </Description>
               <div className="is-flex is-align-items-center">
                 <a

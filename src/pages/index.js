@@ -15,7 +15,7 @@ export default function HomePage({ data, metadata }) {
       <Section>
         <h1 className="title">About</h1>
         <div className="content">
-          <ReactMarkdown children={content} />
+          <ReactMarkdown linkTarget="_blank" children={content} />
         </div>
       </Section>
     </MainLayout>

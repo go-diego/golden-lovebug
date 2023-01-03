@@ -35,7 +35,7 @@ export default function BookMediaObject({
             {format(new Date(publish_date), "MMM dd, yyyy")}
           </small>
           <br />
-          <ReactMarkdown children={description} />
+          <ReactMarkdown linkTarget="_blank" children={description} />
         </div>
       </div>
       <div className="media-right">
