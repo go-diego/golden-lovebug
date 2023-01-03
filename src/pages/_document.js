@@ -5,7 +5,17 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" className="has-navbar-fixed-top">
-        <Head></Head>
+        <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `
+            }}
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />
