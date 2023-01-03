@@ -1,6 +1,0 @@
-[context.development]
-  environment = { NODE_ENV = "development",  GA_ID = "0" }
-[[redirects]]
-  from = "https://allysonjeffredo.netlify.com/*"
-  to = "https://allysonjeffredo.com/:splat"
-  status = 301
