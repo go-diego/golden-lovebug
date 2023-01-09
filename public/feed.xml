@@ -9,11 +9,24 @@
             <link>https://allysonjeffredo.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 03 Jan 2023 03:52:29 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Jan 2023 03:19:32 GMT</lastBuildDate>
         <atom:link href="https://allysonjeffredo/feed.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[Allyson Jeffredo 2023]]></copyright>
         <managingEditor><![CDATA[Allyson Jeffredo]]></managingEditor>
         <webMaster><![CDATA[Diego Bernal]]></webMaster>
+        <item>
+            <title><![CDATA[The Invariability of Time and the New Year]]></title>
+            <description><![CDATA[Time has an invariable hold on us, but, thanks to the power of perspective, we're able to control time in small ways to find hope and make positive change in our lives.
+]]></description>
+            <link>https://allysonjeffredo.com/overthink-a-blog/the-invariability-of-time-and-the-new-year</link>
+            <guid isPermaLink="false">the-invariability-of-time-and-the-new-year</guid>
+            <category><![CDATA[blog]]></category>
+            <category><![CDATA[newyear]]></category>
+            <category><![CDATA[time]]></category>
+            <category><![CDATA[change]]></category>
+            <pubDate>Tue, 03 Jan 2023 04:48:40 GMT</pubDate>
+            <enclosure url="https://allysonjeffredo.com/uploads/denny-muller-cruqp9hwnac-unsplash.jpg" length="0" type="image/jpeg"/>
+        </item>
         <item>
             <title><![CDATA[An Overthinkers Journey to Resilient Thinking]]></title>
             <description><![CDATA[The difficult part about overthinking is learning how to turn one’s mind off, but it is possible by learning how to be in the moment and reframing intrusive thoughts.]]></description>

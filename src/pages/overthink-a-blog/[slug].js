@@ -80,7 +80,7 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
             style={{
               paddingBottom: "0.25rem"
             }}>
-            {format(new Date(publish_date), "MMM M, yyyy")}
+            {format(new Date(publish_date), "MMM dd, yyyy")}
           </p>
           <SocialSharingButtons label={title} link={postUrl} />
           <figure className="image is-5by3">
