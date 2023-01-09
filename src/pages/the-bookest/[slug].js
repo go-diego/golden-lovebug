@@ -79,7 +79,9 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
           <figure className="image is-5by3">
             <img
               alt={title}
-              className="is-object-fit-cover"
+              style={{
+                objectFit: "contain !important"
+              }}
               src={image || "./uploads/default-blog.jpg"}
             />
           </figure>
