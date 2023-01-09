@@ -76,15 +76,18 @@ export default function BlogPost({ post, prevPost, nextPost, metadata }) {
             {`Published ${format(new Date(month), "MMM dd yyyy")}`}
           </p>
           <SocialSharingButtons label={title} link={postUrl} />
-          <figure className="image is-5by3">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              maxHeight: "500px"
+            }}>
             <img
               alt={title}
-              style={{
-                objectFit: "contain !important"
-              }}
+              width={300}
               src={image || "./uploads/default-blog.jpg"}
             />
-          </figure>
+          </div>
           {tags && tags.length > 0 && (
             <div
               className="tags"
