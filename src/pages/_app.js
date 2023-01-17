@@ -75,15 +75,6 @@ export default function MyApp({ Component, pageProps }) {
           `
         }}
       />
-      <Script
-        id="adsense-id"
-        async="true"
-        strategy="afterInteractive"
-        onError={(e) => {
-          console.error("Adsense failed to load", e);
-        }}
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${process.env.NEXT_PUBLIC_ADSENSE_ID}`}
-      />
       <ThemeProvider theme={theme}>
         {/* <GlobalStyle /> */}
         <div className={`root ${merriweather.className} ${lato.className}`}>
