@@ -89,7 +89,6 @@ export default function TheBookest({ entries, metadata, data }) {
                 : " is-6 is-offset-3"
             }`}> */}
         <div
-          //   className="card"
           style={{
             display: "flex",
             flexDirection: "column",
@@ -97,81 +96,87 @@ export default function TheBookest({ entries, metadata, data }) {
             marginBottom: "4rem",
             backgroundColor: "#fffaeb"
           }}>
-          <div
-            className="card-image"
-            style={{
-              paddingTop: "2rem",
-              width: 300
-            }}>
-            <figure className="image is-4by3">
-              <img
-                style={{ objectFit: "contain" }}
-                src={featuredEntry.image}
-                alt={featuredEntry.title}
-              />
-            </figure>
-          </div>
-          <div className="card-content">
+          <div className="">
             <div
-              className="is-flex"
+              className="card-image"
               style={{
-                justifyContent: "space-between",
-                alignItems: "center",
-                paddingBottom: "4px"
+                paddingTop: "2rem"
+                // width: 300
               }}>
-              <p
-                className="heading is-size-7"
-                style={{
-                  margin: 0
-                }}>
-                {format(new Date(featuredEntry.month), "MMM dd, yyyy")}
-              </p>
-              <span
-                className="tag"
-                style={{
-                  backgroundColor: "#fffaeb",
-                  color: " #946c00",
-                  border: "1px solid #946c00"
-                }}>
-                New 🔥
-              </span>
+              <figure className="image is-4by3">
+                <img
+                  style={{ objectFit: "contain" }}
+                  src={featuredEntry.image}
+                  alt={featuredEntry.title}
+                />
+              </figure>
             </div>
-
-            <p className="title is-4">
-              <Link
-                legacyBehavior
-                passHref
-                href={`/the-bookest/${featuredEntrySlug}`}>
-                <a className="is-stretched-link">{featuredEntry.title}</a>
-              </Link>
-            </p>
-            <p className="subtitle heading">{featuredEntry.author.name}</p>
-            {featuredEntry.tags && featuredEntry.tags.length > 0 && (
+            <div className="card-content">
               <div
-                className="tags"
+                className="is-flex"
                 style={{
-                  marginTop: "1rem"
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  paddingBottom: "4px"
                 }}>
-                {featuredEntry.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="tag is-dark"
-                    style={{
-                      marginRight: "0.5rem",
-                      marginBottom: "0.5rem"
-                    }}>
-                    {tag}
-                  </span>
-                ))}
+                <p
+                  className="heading is-size-7"
+                  style={{
+                    margin: 0
+                  }}>
+                  {format(new Date(featuredEntry.month), "MMM dd, yyyy")}
+                </p>
+                <span
+                  className="tag"
+                  style={{
+                    backgroundColor: "#fffaeb",
+                    color: " #946c00",
+                    border: "1px solid #946c00"
+                  }}>
+                  New 🔥
+                </span>
               </div>
-            )}
+
+              <p className="title is-4">
+                <Link
+                  legacyBehavior
+                  passHref
+                  href={`/the-bookest/${featuredEntrySlug}`}>
+                  <a className="is-stretched-link">{featuredEntry.title}</a>
+                </Link>
+              </p>
+              <p className="subtitle heading">{featuredEntry.author.name}</p>
+              {featuredEntry.tags && featuredEntry.tags.length > 0 && (
+                <div
+                  className="tags"
+                  style={{
+                    marginTop: "1rem"
+                  }}>
+                  {featuredEntry.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="tag is-dark"
+                      style={{
+                        marginRight: "0.5rem",
+                        marginBottom: "0.5rem"
+                      }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
         <div className="columns">
-          {mostRecent.length > 0 && (
-            <div className="column is-one-third">
-              {mostRecent.map((post, i) => (
-                <div className="card has-background-light">
+          {mostRecent.length > 0 &&
+            mostRecent.map((post, i) => (
+              <div className="column is-one-third">
+                <div
+                  className="card has-background-light"
+                  style={{
+                    height: "100%"
+                  }}>
                   <div className="card-image">
                     <figure className="image is-4by3">
                       <img
@@ -226,9 +231,8 @@ export default function TheBookest({ entries, metadata, data }) {
                     )}
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
         </div>
       </Section>
     </BlogLayout>
