@@ -106,7 +106,7 @@ export default function BlogHomePage({ posts, metadata, data }) {
               </p>
               <RecentPosts>
                 {recentPosts.map((post, i) => (
-                  <PostMediaObject key={i} {...post} />
+                  <PostMediaObject path="overthink-a-blog" key={i} {...post} />
                 ))}
               </RecentPosts>
               <div className="is-flex is-justify-content-center">
@@ -138,9 +138,14 @@ export async function getStaticProps() {
 
   const [data, metadata, posts] = await Promise.all(promises);
 
+  const postsPreview = posts.data.map((post) => {
+    const { title, publish_date, image, description } = post;
+    return { title, publish_date, image, description };
+  });
+
   return {
     props: {
-      posts: posts.data,
+      posts: postsPreview,
       metadata,
       data
     }

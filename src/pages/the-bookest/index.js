@@ -57,7 +57,7 @@ export default function TheBookest({ entries, metadata, data }) {
   // top three most recent entries after the featured entry
   const mostRecent = orderedEntries.slice(
     1,
-    orderedEntries.length > 3 ? 3 : orderedEntries.length
+    orderedEntries.length > 3 ? 4 : orderedEntries.length
   );
 
   return (
@@ -94,7 +94,8 @@ export default function TheBookest({ entries, metadata, data }) {
             flexDirection: "column",
             alignItems: "center",
             marginBottom: "4rem",
-            backgroundColor: "#fffaeb"
+            backgroundColor: "#fffaeb",
+            position: "relative"
           }}>
           <div className="">
             <div
@@ -234,6 +235,16 @@ export default function TheBookest({ entries, metadata, data }) {
               </div>
             ))}
         </div>
+        <div className="is-flex is-justify-content-center">
+          <Link legacyBehavior passHref href="/the-bookest/archive">
+            <a className="is-size-6 is-flex button is-link heading has-text-weight-bold">
+              View All &nbsp;
+              <span className="icon is-small">
+                <i className="fas fa-arrow-right" />
+              </span>
+            </a>
+          </Link>
+        </div>
       </Section>
     </BlogLayout>
   );
@@ -250,9 +261,14 @@ export async function getStaticProps() {
 
   const [data, metadata, entries] = await Promise.all(promises);
 
+  const entriesPreview = entries.data.map((post) => {
+    const { title, month, image, tags, author } = post;
+    return { title, month, image, tags, author };
+  });
+
   return {
     props: {
-      entries: entries.data,
+      entries: entriesPreview,
       metadata,
       data
     }

@@ -6,8 +6,8 @@ import PageTitleHeading from "../../components/PageTitleHeading";
 import BlogLayout from "../../containers/BlogLayout";
 import PostMediaObject from "../../components/PostMediaObject";
 
-export default function BlogArchivePage({ posts, metadata, data }) {
-  const { description, title, content, keywords } = data;
+export default function ReviewsArchivePage({ posts, metadata, data }) {
+  const { description, title, keywords } = data;
   const orderedPosts = posts.sort(
     (a, b) => new Date(b.publish_date) - new Date(a.publish_date)
   );
@@ -19,7 +19,7 @@ export default function BlogArchivePage({ posts, metadata, data }) {
   return (
     <BlogLayout metadata={metadata}>
       <Head tags={tags} />
-      <Link legacyBehavior passHref href="/overthink-a-blog">
+      <Link legacyBehavior passHref href="/the-bookest">
         <a
           style={{
             marginTop: "0.5rem",
@@ -39,31 +39,18 @@ export default function BlogArchivePage({ posts, metadata, data }) {
         {/* <MarkedContent source={content} /> */}
       </AttentionBanner>
       <Section>
-        <div style={{ margin: "1rem 0" }}>
-          <a
-            aria-label="rss-link"
-            href="https://allysonjeffredo.com/feed.xml"
-            target="_blank"
-            rel="noopener"
-            className="button is-dark is-narrow animated bounceIn delay-half-s is-size-7 is-uppercase">
-            Subscribe to feed &nbsp;
-            <span className="icon is-size-6">
-              <i className="fas fa-rss" />
-            </span>
-          </a>
-        </div>
         {orderedPosts.map((post, i) => (
-          <PostMediaObject path="overthink-a-blog" key={i} {...post} />
+          <PostMediaObject path="the-bookest" key={i} {...post} />
         ))}
       </Section>
     </BlogLayout>
   );
 }
 
-BlogArchivePage.getInitialProps = async () => {
-  const asyncData = import("../../_data/_pages/_blog.json");
+ReviewsArchivePage.getInitialProps = async () => {
+  const asyncData = import("../../_data/_pages/_the-beloveds.json");
   const asyncMetadata = import("../../_data/_metadata.json");
-  const asyncPosts = import("../../_data/_posts.json");
+  const asyncPosts = import("../../_data/_book-reviews.json");
 
   const promises = [asyncData, asyncMetadata, asyncPosts].map((p) =>
     p.then((res) => res.default)
@@ -72,8 +59,8 @@ BlogArchivePage.getInitialProps = async () => {
   const [data, metadata, posts] = await Promise.all(promises);
 
   const postsPreview = posts.data.map((post) => {
-    const { title, publish_date, image, description } = post;
-    return { title, publish_date, image, description };
+    const { title, month, image, tags } = post;
+    return { title, publish_date: month, image, tags };
   });
 
   return {
