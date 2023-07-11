@@ -19,9 +19,9 @@ export default function HomePage({ data, metadata }) {
           <ReactMarkdown linkTarget="_blank" children={content} />
         </div>
       </Section>
-      <Section className="has-background-dark has-text-light">
+      {/* <Section className="has-background-dark has-text-light">
         <NewsletterSection />
-      </Section>
+      </Section> */}
     </MainLayout>
   );
 }
