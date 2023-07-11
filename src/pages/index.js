@@ -4,6 +4,7 @@ import HomeHero from "../components/HomeHero";
 import MainLayout from "../containers/MainLayout";
 import Head from "../components/Head";
 import Section from "../components/Section";
+import NewsletterSection from "components/Newsletter";
 
 export default function HomePage({ data, metadata }) {
   const { description, title, content, keywords } = data;
@@ -17,6 +18,9 @@ export default function HomePage({ data, metadata }) {
         <div className="content">
           <ReactMarkdown linkTarget="_blank" children={content} />
         </div>
+      </Section>
+      <Section className="has-background-dark has-text-light">
+        <NewsletterSection />
       </Section>
     </MainLayout>
   );
