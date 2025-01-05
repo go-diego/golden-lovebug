@@ -12,7 +12,7 @@
     "bulma": "^0.7.4",
     "date-fns": "^2.29.3",
     "got": "^12.5.3",
-    "metascraper": "^5.9.0",
+    "metascraper": "^5.0.0",
     "metascraper-author": "^5.0.0",
     "metascraper-clearbit-logo": "^5.0.0",
     "metascraper-date": "^5.0.0",
