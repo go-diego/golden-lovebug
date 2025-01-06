@@ -41,6 +41,10 @@ export async function getStaticProps() {
     const publication = data.publications[i];
     if (publication.isActive) {
       const [error, response] = await scrape(publication.url);
+      // if (publication.url.includes("amazon")) {
+      //   console.log("error", error, publication.url);
+      //   console.log("response", response);
+      // }
       const mergedPublication = { ...(response || {}), ...publication };
       if (!mergedPublication.image) {
         mergedPublication.image = "/uploads/default-publication.jpg";

@@ -44,25 +44,21 @@ export default function PublicationMedia(publication) {
 
             <MarkedContent source={description} />
 
-            {!errorScraping && (
-              <a
-                href={url}
-                target="_blank"
-                rel="noopener"
-                className="button is-primary is-uppercase"
-                style={{ margin: "0.5rem 0" }}>
-                Read It
-              </a>
-            )}
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener"
+              className="button is-primary is-uppercase"
+              style={{ margin: "0.5rem 0" }}>
+              Read It
+            </a>
           </div>
-          {!errorScraping && (
-            <div style={{ paddingTop: "1rem" }}>
-              <p className="heading has-text-link has-text-weight-semibold is-marginless">
-                Share
-              </p>
-              <SocialSharingButtons label={title} link={url} />
-            </div>
-          )}
+          <div style={{ paddingTop: "1rem" }}>
+            <p className="heading has-text-link has-text-weight-semibold is-marginless">
+              Share
+            </p>
+            <SocialSharingButtons label={title} link={url} />
+          </div>
         </Content>
       </Row>
     )
