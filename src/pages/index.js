@@ -26,7 +26,7 @@ export default function HomePage({ data, metadata }) {
   );
 }
 
-HomePage.getInitialProps = async () => {
+export async function getStaticProps() {
   const dataAsync = import("../_data/_pages/_home.json");
   const metadataAsync = import("../_data/_metadata.json");
 
@@ -37,7 +37,9 @@ HomePage.getInitialProps = async () => {
   const [data, metadata] = await Promise.all(promises);
 
   return {
-    data,
-    metadata
+    props: {
+      data,
+      metadata
+    }
   };
-};
+}

@@ -47,7 +47,7 @@ export default function ReviewsArchivePage({ posts, metadata, data }) {
   );
 }
 
-ReviewsArchivePage.getInitialProps = async () => {
+export async function getStaticProps() {
   const asyncData = import("../../_data/_pages/_the-beloveds.json");
   const asyncMetadata = import("../../_data/_metadata.json");
   const asyncPosts = import("../../_data/_book-reviews.json");
@@ -64,8 +64,10 @@ ReviewsArchivePage.getInitialProps = async () => {
   });
 
   return {
-    posts: postsPreview,
-    metadata,
-    data
+    props: {
+      posts: postsPreview,
+      metadata,
+      data
+    }
   };
-};
+}

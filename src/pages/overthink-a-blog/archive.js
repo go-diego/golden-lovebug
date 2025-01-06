@@ -60,7 +60,7 @@ export default function BlogArchivePage({ posts, metadata, data }) {
   );
 }
 
-BlogArchivePage.getInitialProps = async () => {
+export async function getStaticProps() {
   const asyncData = import("../../_data/_pages/_blog.json");
   const asyncMetadata = import("../../_data/_metadata.json");
   const asyncPosts = import("../../_data/_posts.json");
@@ -77,8 +77,10 @@ BlogArchivePage.getInitialProps = async () => {
   });
 
   return {
-    posts: postsPreview,
-    metadata,
-    data
+    props: {
+      posts: postsPreview,
+      metadata,
+      data
+    }
   };
-};
+}

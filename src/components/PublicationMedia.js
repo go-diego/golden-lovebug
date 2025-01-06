@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Skeleton from "react-loading-skeleton";
-import useSWR from "swr";
-import { fetcher } from "lib/fetcher";
 import MarkedContent from "./MarkedContent";
 import SocialSharingButtons from "./SocialSharingButtons";
 
@@ -32,48 +29,22 @@ const Row = styled.div`
 `;
 
 export default function PublicationMedia(publication) {
-  const [data, setData] = React.useState(publication);
-  const {
-    data: scrapedData,
-    error,
-    isLoading
-  } = useSWR(`/api/scrape?url=${publication.url}`, fetcher, {
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false,
-    dedupingInterval: 100_000,
-    focusThrottleInterval: 100_000
-  });
-
-  React.useEffect(() => {
-    const mergedPublication = { ...(scrapedData || {}), ...publication };
-    if (!mergedPublication.image)
-      mergedPublication.image = "/uploads/default-publication.jpg";
-    setData(mergedPublication);
-  }, [scrapedData]);
-
-  const { title, image = null, url, description } = data;
-
+  const { title, image, url, description, errorScraping } = publication;
   return (
-    publication.isActive &&
-    !error && (
+    publication.isActive && (
       <Row className="columns">
         <div className="column is-one-quarter">
-          {!isLoading && (
-            <Figure className="image is-4by5 shadow">
-              <Img alt={publication.title} src={image} />
-            </Figure>
-          )}
-          {isLoading && <Skeleton height={250} />}
+          <Figure className="image is-4by5 shadow">
+            <Img alt={publication.title} src={image} />
+          </Figure>
         </div>
         <Content className="column">
           <div>
-            <h2 className="title is-4">{!isLoading ? title : <Skeleton />}</h2>
-            {isLoading ? (
-              <Skeleton count={5} />
-            ) : (
-              <MarkedContent source={description} />
-            )}
-            {!isLoading ? (
+            <h2 className="title is-4">{title}</h2>
+
+            <MarkedContent source={description} />
+
+            {!errorScraping && (
               <a
                 href={url}
                 target="_blank"
@@ -82,19 +53,15 @@ export default function PublicationMedia(publication) {
                 style={{ margin: "0.5rem 0" }}>
                 Read It
               </a>
-            ) : (
-              <Skeleton height={36} width={92} />
             )}
           </div>
-          {!isLoading ? (
+          {!errorScraping && (
             <div style={{ paddingTop: "1rem" }}>
               <p className="heading has-text-link has-text-weight-semibold is-marginless">
                 Share
               </p>
               <SocialSharingButtons label={title} link={url} />
             </div>
-          ) : (
-            <Skeleton count={2} />
           )}
         </Content>
       </Row>
